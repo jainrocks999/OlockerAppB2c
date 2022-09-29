@@ -1,6 +1,6 @@
 import { Platform, StyleSheet } from "react-native";
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
-
+import colors from '../../../constant/colors'
 export default StyleSheet.create({
 container:{
 flex:1,
@@ -28,17 +28,17 @@ card: {
     height: 28,
     marginLeft:-10
   },
-  textinput:{alignItems:'center',justifyContent:'center',width:wp('50%')},
+  textinput:{alignItems:'center',justifyContent:'center',width:wp('100%')},
   input1: {
     
-   
+   fontSize:18,
     // paddingVertical: 5,
     color: '#474747',
-    width:'100%',
+    width:'80%',
    fontWeight:'700',
-  },
+    },
   input: {
-      borderBottomWidth:0.5,
+      borderBottomWidth:0.2,
   width:'100%',
   marginTop: 20,alignItems:'center'
 //   paddingHorizontal:20
@@ -46,7 +46,7 @@ card: {
   
   buttonView:{paddingHorizontal: 10,alignItems:'center'},
   button: {
-    backgroundColor: '#c45452',
+    backgroundColor:colors.btcolor,
     alignItems: 'center',
     borderRadius: 5,
     justifyContent: 'center',
