@@ -28,7 +28,11 @@ card: {
     height: 28,
     marginLeft:-10
   },
-  textinput:{alignItems:'center',justifyContent:'center',width:wp('100%')},
+  textinput:{
+    alignItems:'center',
+    justifyContent:'center',
+    width:wp('100%')
+  },
   input1: {
     
    fontSize:15,
@@ -56,4 +60,8 @@ card: {
    paddingVertical:17,
   },
  buttonV:{flexDirection:'row',justifyContent:'space-between',paddingHorizontal:10},
+ view1:{
+   flexDirection:'row',
+   marginTop:10
+  },
 })

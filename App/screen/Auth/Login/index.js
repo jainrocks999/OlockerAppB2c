@@ -50,7 +50,7 @@ const [chheck ,setCheck] =useState('')
             </TouchableOpacity>
            
            
-            <View style={{flexDirection:'row',marginTop:10}}>
+            <View style={styles.view1}>
             <HStack space={4}>
      
       <Checkbox value="check" accessibilityLabel="This is a dummy checkbox" defaultIsChecked 

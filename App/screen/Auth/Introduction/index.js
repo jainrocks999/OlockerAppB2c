@@ -63,7 +63,7 @@ const Login = () => {
               style={[styles.button, { backgroundColor: signup == true ? '#ed6660' : '#e3e3e3', alignItems: 'center' }]}>
 
 
-              <Text style={{ color: '#808080', fontSize: 13 }}>Sign Up</Text>
+              <Text style={[styles.text1,{ color: '#808080' }]}>Sign Up</Text>
 
             </TouchableOpacity>
           </View>

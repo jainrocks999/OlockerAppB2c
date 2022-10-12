@@ -28,11 +28,15 @@ export default StyleSheet.create({
   input: {
     borderBottomWidth: 0.2,
     width: '100%',
-    marginTop: 20, alignItems: 'center'
+    marginTop: 20,
+     alignItems: 'center'
     //   paddingHorizontal:20
   },
 
-  buttonView: { paddingHorizontal: 10, alignItems: 'center' },
+  buttonView: { 
+    paddingHorizontal: 10,
+     alignItems: 'center'
+     },
   button: {
     // backgroundColor:colors.btcolor,
     // alignItems: 'center',
@@ -57,7 +61,7 @@ export default StyleSheet.create({
      fontSize: 25,
       fontWeight: '700'
      },
-     text:{ 
+     text1:{ 
        color: '#fff',
         fontSize: 13
        },
