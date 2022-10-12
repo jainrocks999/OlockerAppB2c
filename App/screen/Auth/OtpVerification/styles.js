@@ -7,7 +7,7 @@ flex:1,
 backgroundColor:'#f7f7f7'
 
 },
-main:{paddingHorizontal:40,alignItems:'center'}, 
+main:{paddingHorizontal:50,alignItems:'center'}, 
  main1:{paddingVertical:90,backgroundColor:'#fa8a86'},
 
 card: {
@@ -31,12 +31,11 @@ card: {
   textinput:{alignItems:'center',justifyContent:'center',width:wp('100%')},
   input1: {
     
-   fontSize:15,
+   fontSize:18,
     // paddingVertical: 5,
     color: '#474747',
     width:'80%',
-   fontWeight:'600',
-   textAlign:'center'
+   fontWeight:'700',
     },
   input: {
       borderBottomWidth:0.2,

@@ -1,74 +1,125 @@
-//Example to Use React Native Vector Icons
-// https://aboutreact.com/react-native-vector-icons/
- 
-// Import React
-import React from 'react';
- 
-// Import required component
-import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
- 
-// Import vector icons
-import Icon from 'react-native-vector-icons/FontAwesome';
- 
+import React, {useState} from 'react';
+import {Alert, SafeAreaView, TouchableOpacity, Text, TextInput, View,Image} from 'react-native';
+import Icon1 from 'react-native-vector-icons/Fontisto';
+import Icon from 'react-native-vector-icons/AntDesign';
+import colors from '../../../constant/colors';
+import Icon3 from 'react-native-vector-icons/Ionicons';
+import Icon2 from 'react-native-vector-icons/MaterialCommunityIcons';
+import styles from './styles';
+import { Select } from 'native-base';
+import RNPickerSelect from 'react-native-picker-select';
+import { useNavigation } from '@react-navigation/native';
 const App = () => {
+  const [language, setLanguage] =useState('key0');
+  const navigation =useNavigation()
+  const [gender,setGender]= useState('')
   return (
-    <SafeAreaView style={{flex: 1}}>
-      <View style={{flex: 1, padding: 16}}>
-        <View style={styles.container}>
-          <Text style={styles.heading}>
-            Example to Use React Native Vector Icons
-          </Text>
-          <View style={styles.iconContainer}>
-            <Text>
-              <Icon name="rocket" size={30} color="#900" />
-            </Text>
-            {/* Icon Component */}
-            <Icon name="rocket" size={30} color="#900" />
-          </View>
-          <View style={{marginTop: 16, marginBottom: 16}}>
-            {/* Icon.Button Component */}
-            <Icon.Button
-              name="facebook"
-              backgroundColor="#3b5998"
-              onPress={() => alert('Login with Facebook')}>
-              Login with Facebook
-            </Icon.Button>
-          </View>
-        </View>
-        <Text style={styles.footerTitle}>Vector Icons</Text>
-        <Text style={styles.footerText}>www.aboutreact.com</Text>
-      </View>
-    </SafeAreaView>
+    <SafeAreaView style={{flex: 1,backgroundColor:'#fff'}}>
+      <View style={{marginTop:10}}>
+     
+              {/* <View >
+                 <Icon3 name="ios-chevron-back" size={30} color={colors.lightPink}  />
+               </View> */}
+               <View style={{paddingHorizontal:10,marginTop:20}}>
+                 <Text style={styles.text}>
+                   {'Please fill up the form'}
+                 </Text>
+                 <Text style={[styles.text,{fontSize:26}]}>
+                   {'to complete\nregistration'}
+                 </Text>
+              <View style={styles.main}>
+                    <View style={{alignSelf:'center',width:'9%'}} >
+                       <Icon name="user" size={20} />
+                      </View>
+                      <View style={{width:'24%',borderWidth:0,marginLeft:-8}} >
+                      <View style={{width:'50%'}}>
+                      <RNPickerSelect
+                                       onValueChange={(val)=>setGender(val)}
+                                      items={data}
+                                      style={{ 
+                                      
+                                       inputAndroid: { width:'100%',fontSize:14,marginBottom:-1 },
+                                       inputIOS: { width:'100%',fontSize:14,marginBottom:-1,borderWidth:0 },
+                                      placeholder:{color:'#333333',fontSize:14,borderWidth:0}
+                                      }}
+                                      value={gender}
+                                      useNativeAndroidPickerStyle={false}
+                                      placeholder={{ label: "Mr.", value: 0 }}
+                                      Icon={()=><View style={{alignSelf:'center',alignItems:'center',marginTop:2}}>
+                                      <Icon name ="caretdown" color={colors.lightGrey} />
+                                      </View>
+                                      }
+                                    />
+                  </View>
+                      </View>
+                   <View style ={{width:'33%'}} >
+                     <TextInput style={{width:'90%'}}
+                      placeholder='Fisrt name '
+                     />
+                    </View>
+                    <View style ={{width:'33%'}} >
+                    <TextInput
+                      placeholder='Last name '
+                     />
+                    </View>
+              </View> 
+              <View style={styles.main}>
+              <View style={{alignSelf:'center'}} >
+                       <Icon1 name="email" size={20}   />
+                      </View>
+                      <View  style={{marginLeft:10}}>
+                        <TextInput
+                        placeholder='Enter email'
+                        />
+                      </View>
+                     
+                </View>
+                <View style={styles.main}>
+                <View style={{alignSelf:'center'}} >
+                       <Icon name="mobile1" size={20}  />
+                      </View>
+                      <View>
+                        <TextInput
+                        placeholder='Enter Mobile Number'
+                        />
+                      </View>
+                </View>
+                
+                <View style={styles.main}>
+                <View style={{alignSelf:'center'}} >
+                       <Icon name="mobile1" size={20}  />
+                      </View>
+                      <View style ={{width:'85%'}}>
+                        <TextInput
+                        placeholder='Enter Code'
+                        />
+                      </View>
+                      <View/>
+                      <View style={{alignSelf:'center'}} >
+                       <Icon2 name="qrcode-scan" size={20}  />
+                      </View>
+                </View>
+                 
+                  <TouchableOpacity 
+                          onPress={()=>navigation.navigate("otp")}
+                        style={styles.button}>
+                      <Text style={{color: '#fff'}}>Sign up</Text>
+                 </TouchableOpacity>
+           
+          </View>  
+
+    </View>
+
+ </SafeAreaView>
   );
 };
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  heading: {
-    fontSize: 20,
-    textAlign: 'center',
-    marginBottom: 20,
-  },
-  iconContainer: {
-    marginTop: 16,
-    marginBottom: 16,
-    justifyContent: 'center',
-    alignItems: 'center',
-    textAlign: 'center',
-  },
-  footerTitle: {
-    fontSize: 18,
-    textAlign: 'center',
-    color: 'grey',
-  },
-  footerText: {
-    fontSize: 16,
-    textAlign: 'center',
-    color: 'grey',
-  },
-});
  
 export default App;
+
+const data=[
+  {label:'Mr.',value:'Mr.'},
+  { label: 'Mrs.', value: 'Mrs.' },
+  { label: 'Miss', value: 'Miss' },
+  
+  
+]

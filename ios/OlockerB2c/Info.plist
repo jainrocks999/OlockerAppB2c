@@ -51,7 +51,10 @@
         <string>fonts/Foundation.ttf</string>
          <string>fonts/Ionicons.ttf</string>
           <string>fonts/MaterialCommunityIcons.ttf</string>
-
+            <string>fonts/MaterialIcons.ttf</string>
+			<string>fonts/Octicons.ttf</string>
+    		<string>fonts/SimpleLineIcons.ttf</string>
+           <string>fonts/Zocial.ttf</string>
 		 <string></string>
 	</array>
 	<key>UILaunchStoryboardName</key>
