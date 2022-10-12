@@ -63,6 +63,7 @@ export default StyleSheet.create({
      },
      text1:{ 
        color: '#fff',
-        fontSize: 13
+        fontSize: 13,
+        marginLeft:5
        },
 })

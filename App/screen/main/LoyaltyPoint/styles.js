@@ -15,7 +15,8 @@ circle:{
     borderWidth:0.5,zIndex:15,
     position:'absolute',
     marginTop:59,
-    backgroundColor:'#fff'},
+    backgroundColor:'#fff'
+},
 card: {
     // shadowColor: 'black',
       shadowOpacity: 0.25,

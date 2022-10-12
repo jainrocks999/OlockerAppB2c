@@ -10,7 +10,7 @@ const Loyalty = () => {
     const [value, setValue] = useState('');
     return (
         <SafeAreaView style={styles.container}>
-            <ScrollView style={{ paddingHorizontal: 5, }}>
+            <ScrollView style={{ paddingHorizontal: 5,}}>
                 <View style={styles.card}>
                     <Text style={styles.title}>How was our Jewellry Collection?</Text>
                     <View style={styles.line} />

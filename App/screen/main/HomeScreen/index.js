@@ -75,11 +75,11 @@ const HomeScreen =()=>{
         />
       </View>
           <View style={styles.listv}>
-              <View style={{paddingHorizontal:10,flexDirection:'row',justifyContent:'space-between'}}>
+              <View style={styles.swtich}>
              <Text style={styles.text1}>Smart Deals</Text> 
              <HStack alignContent="center" justifyContent='center'>
       <Text style={styles.text2}>Online</Text>
-      <Switch size="md"  onTrackColor="#fff" offThumbColor="#ed6660"  />
+      <Switch size="sm"  onTrackColor="#fff" offThumbColor="#ed6660"  />
       <Text style={styles.text2}>Local</Text>
     </HStack>
     </View>
@@ -97,7 +97,7 @@ const HomeScreen =()=>{
               </TouchableOpacity>
             )}
           />
-              <View style={{justifyContent:'center',alignItems:'center'}}> 
+              <View style={styles.buttonv1}> 
               <TouchableOpacity 
                 onPress={()=>navigation.navigate('Smart')}
               style={styles.buttonv}>

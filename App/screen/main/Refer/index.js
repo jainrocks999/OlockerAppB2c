@@ -37,12 +37,8 @@ return(
         </View>
         <View style={styles.buttonView}>
            
-           <TouchableOpacity 
-           
-            style={[styles.button,{backgroundColor:'#ed6660',alignItems:'center'}]}>
-              
-            
-             <Text style={{color: '#fff',fontSize:13}}>Share</Text>
+           <TouchableOpacity style={styles.button}>
+             <Text style={styles.btext}>Share</Text>
           
            </TouchableOpacity> 
          </View>

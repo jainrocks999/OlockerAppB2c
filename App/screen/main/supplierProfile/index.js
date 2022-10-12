@@ -43,9 +43,9 @@ const Loyalty = () => {
 
                     <View style={styles.card1}>
                         <FlatList
-                            data={DATA.slice(0,2)}
-                           horizontal={false}
-                            renderItem={({ item, index }) => (
+                             data={DATA.slice(0,2)}
+                             horizontal={false}
+                             renderItem={({ item, index }) => (
                                 <TouchableOpacity onPress={() => navigation.navigate('ProductList')}
                                     style={styles.cardview}>
                                     <Text>{item.title}</Text>

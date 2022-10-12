@@ -63,10 +63,17 @@ rec:{
     marginTop:10
 
   },
-  card:{flexDirection:'row',alignItems:'center',},
+  card:{
+    flexDirection:'row',
+    alignItems:'center',
+   },
   circle:{height:60,width:60,
-    borderRadius:30,borderWidth:1,marginTop:12,
-    marginRight:-33,zIndex:5,backgroundColor:'#fff'
+    borderRadius:30,
+    borderWidth:1
+    ,marginTop:12,
+    marginRight:-33,
+    zIndex:5,
+    backgroundColor:'#fff'
 },
 text1:{
     marginLeft:15,

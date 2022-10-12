@@ -7,17 +7,19 @@ container:{
     backgroundColor:colors.lightPink,
     //backgroundColor:'#56bab5'
 },
-view:{
+view:{ 
+    flex:1,
     alignItems:'center',
     justifyContent:'center',
-    flex:1
-    // paddingVertical:70,
-    // marginTop:250,
 },
 image:{
 
    // height:90,width:'100%',
-}
-
+},
+title:{
+    fontStyle:'italic',
+    fontSize:25,
+    color:colors.white
+},
 
 })

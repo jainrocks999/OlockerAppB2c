@@ -55,9 +55,9 @@ const [chheck ,setCheck] =useState('')
      
       <Checkbox value="check" accessibilityLabel="This is a dummy checkbox" defaultIsChecked 
       />
-     <Text style={{color:'#9a9a9a',fontSize:12}}>I hereby agree to the</Text>
+     <Text style={styles.text2}>I hereby agree to the</Text>
      </HStack>
-              <Text style={{color:'#000000',fontWeight:'600',fontSize:13}}>{' Terms & Condition'}</Text>
+              <Text style={styles.text1}>{' Terms & Condition'}</Text>
               
              
             </View>

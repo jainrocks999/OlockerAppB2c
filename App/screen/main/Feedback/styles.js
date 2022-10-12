@@ -9,8 +9,8 @@ export default StyleSheet.create({
 
     },
     card: {
-        paddingVertical: 14, marginTop: 10,
-
+        paddingVertical: 14,
+         marginTop: 10,
         backgroundColor: '#fddac0',
         borderRadius: 5
     },
@@ -19,14 +19,19 @@ export default StyleSheet.create({
         marginLeft: 10
     },
     main: {
-        paddingHorizontal: 10, marginTop: 10
+        paddingHorizontal: 10,
+         marginTop: 10
     },
     text2: {
         color: '#000',
         fontSize: 15,
         fontWeight: '400',
     },
-    line:{ borderWidth:0.6, marginTop: 10,borderColor:colors.blue },
+    line:{ 
+        borderWidth:0.6,
+         marginTop: 10,
+         borderColor:colors.blue 
+        },
     button:{
         height:40,width:'50%',
         backgroundColor:colors.btcolor,

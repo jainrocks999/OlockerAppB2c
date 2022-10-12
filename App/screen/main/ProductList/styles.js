@@ -22,6 +22,11 @@ export default StyleSheet.create({
         paddingHorizontal:3
         
     },
+    textcard:{
+        marginLeft:10,
+        color:'#000',
+        fontSize:11
+    },
     img:{
         height:18,width:18,marginTop:5,tintColor:colors.blue
     },

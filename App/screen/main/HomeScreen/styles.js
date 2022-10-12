@@ -8,9 +8,19 @@ backgroundColor:'#ffffff',
 marginBottom:0
 
 },
-main:{marginTop:30,alignItems:'center'}, 
- main1:{paddingVertical:90,backgroundColor:'#fa8a86'},
-
+main:{
+  marginTop:30,
+  alignItems:'center'
+}, 
+ main1:{
+  paddingVertical:90,
+  backgroundColor:'#fa8a86'
+},
+swtich:{
+  paddingHorizontal:10,
+  flexDirection:'row',
+  justifyContent:'space-between'
+},
 card: {
    // shadowColor: 'black',
      shadowOpacity: 0.25,
@@ -34,6 +44,7 @@ card: {
   },
   
   buttonView:{paddingHorizontal: 10,},
+
   button: {
      backgroundColor:colors.btcolor,
      alignItems: 'center',
@@ -79,6 +90,10 @@ card: {
           paddingVertical:25,
         //   marginBottom:30,
         //   paddingHorizontal:10
+      },
+      buttonv1:{
+        justifyContent:'center',
+        alignItems:'center'
       },
       buttonv:{
         backgroundColor:colors.btcolor,

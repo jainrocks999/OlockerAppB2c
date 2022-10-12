@@ -12,13 +12,17 @@ main:{
     paddingHorizontal:30,
     marginTop:20
 },
-
+scroll:{
+    flex:1,
+    paddingHorizontal:10
+},
 view3:
     {
         flexDirection:'row',
         alignItems:'center',
         justifyContent:'center',
-        width:'100%',paddingHorizontal:10
+        width:'100%',
+        paddingHorizontal:10
     },
     line1:
     {
@@ -33,7 +37,7 @@ view3:
         height:56,
         borderRadius:28,
         borderColor:colors.btcolor,
-       backgroundColor:colors.white,
+        backgroundColor:colors.white,
         alignItems:'center',
         justifyContent:'center'
     },
@@ -47,11 +51,13 @@ view3:
         flexDirection:'row',
         alignItems:'center',
         justifyContent:'space-between',
-        width:'100%',marginTop:5
+        width:'100%',
+        marginTop:5
     },
     text1:{
         color:colors.btcolor,
         fontSize:13,
+        
 
     },
     main1:{
@@ -111,13 +117,17 @@ view3:
             paddingHorizontal:10,
             width:'50%',
         backgroundColor:"#c6c3c4",
-        paddingVertical:5,
+        paddingVertical:10,
         borderRadius:5
     },
     check1:{
         flexDirection:'row',
         justifyContent:'space-around',
         marginTop:15
+    },
+    tt:{
+        fontSize:15,
+        fontWeight:'500'
     },
     button: {
         backgroundColor:'rgba(237,102,96,255)',

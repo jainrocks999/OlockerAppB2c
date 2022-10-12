@@ -7,6 +7,14 @@
 import { StyleSheet } from "react-native";
 import colors from "../../../constant/colors";
 export default StyleSheet.create({
+  container:{
+    flex: 1,
+    backgroundColor:'#fff'
+  },
+  main1:{
+    paddingHorizontal:10,
+    marginTop:20
+  },
   main:{
     flexDirection:'row',
     marginTop:10,
@@ -15,7 +23,23 @@ export default StyleSheet.create({
     borderRadius:5,
     paddingHorizontal:10
   },
-  text:{color:colors.black,fontWeight:'700',},
+  view1:{
+    alignSelf:'center',
+    width:'9%'
+  },
+  picker:{
+    width:'24%',
+    marginLeft:-8
+  },
+  icon:{
+    alignSelf:'center',
+    alignItems:'center',
+    marginTop:18
+  },
+  text:{
+    color:colors.black,
+    fontWeight:'700',
+  },
   button: {
     backgroundColor:'rgba(237,102,96,255)',
      alignItems: 'center',

@@ -32,6 +32,11 @@ cardview: {
     marginTop:10
 
   },
+view1:{
+  flexDirection:'row',
+  justifyContent:'space-between',
+  paddingHorizontal:10
+},
   list:{
     paddingVertical:20,
     paddingHorizontal:10
@@ -44,6 +49,20 @@ cardview: {
   borderRadius:5,
   paddingVertical:20
      
+  },
+  itemv:{
+    flexDirection:'row',
+    alignItems:'center',
+  },
+  circle:{
+    height:60,
+    width:60,
+    borderRadius:30,
+    borderWidth:1,
+    marginTop:15,
+    marginRight:-30,
+    zIndex:5,
+    backgroundColor:'#fff'
   },
   main1:{
    

@@ -22,7 +22,8 @@ export default StyleSheet.create({
     top: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        backgroundColor: '#fddac0', paddingHorizontal: 15
+        backgroundColor: '#fddac0',
+         paddingHorizontal: 15
     },
     circles: {
         height: 35, width: 35,
@@ -115,6 +116,11 @@ export default StyleSheet.create({
         marginTop: 10
     },
     textbt: {
-        fontSize: 11, width: '33%'
+        fontSize: 11,
+         width: '33%'
+    },
+    btext:{
+        color:'#fff',
+        fontSize:12
     }
 })

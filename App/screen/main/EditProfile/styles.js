@@ -12,6 +12,16 @@ main:{
     paddingHorizontal:30,
     marginTop:20
 },
+circle:{
+    height:70,
+    width:70,
+    borderWidth:1,
+    borderRadius:35
+},
+name:{
+    marginLeft:15,
+    fontWeight:'600'
+},
 scrol:{
     flex:1,
     marginTop:15,
@@ -33,6 +43,14 @@ scrol:{
         color:colors.btcolor,
         fontSize:13,
 
+    },
+    picker:{
+        width:'40%',
+        borderBottomWidth:0.4
+    },
+    picker1:{
+        width:'33.5%',
+        borderBottomWidth:0.4
     },
     main1:{
         paddingVertical:10,

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { View, Text, Image ,TouchableOpacity} from 'react-native';
+import { View, Text, Image ,TouchableOpacity, SafeAreaView} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import styles from './styles';
 
@@ -15,17 +15,17 @@ const Splash = () => {
         setTimeout(() => navigation.replace("Intro"), 2000);
     }
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
            
             <View style={styles.view}>
-              <Text>
+              <Text style ={styles.title}>
                   Welcome To olocker B2c APP
               </Text>
             {/* <Image style={styles.image}
                 source={require('../../../assets/ol.png')} />  
             */}
             </View> 
-        </View>
+        </SafeAreaView>
     )
 }
 export default Splash;

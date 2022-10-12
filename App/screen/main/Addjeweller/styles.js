@@ -55,7 +55,9 @@ card: {
       // borderBottomWidth:0.3,
       
    },
-   buttonView:{paddingHorizontal: 20,},
+   buttonView:{
+    paddingHorizontal: 20,
+   },
    button: {
       backgroundColor:colors.btcolor,
     alignItems: 'center',

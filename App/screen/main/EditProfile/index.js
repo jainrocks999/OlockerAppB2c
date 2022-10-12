@@ -1,30 +1,60 @@
 import React,{useState} from "react";
-import { View,Text, SafeAreaView,TouchableOpacity ,FlatList, ScrollView,TextInput } from "react-native";
+import { View,Text, SafeAreaView,TouchableOpacity , ScrollView,TextInput } from "react-native";
 import styles from "./styles";
-import Icon from 'react-native-vector-icons/Ionicons';
 import Icon1 from 'react-native-vector-icons/AntDesign';
-import { HStack,Box,Switch,Slider ,Checkbox} from "native-base";
-import Icon2 from 'react-native-vector-icons/FontAwesome';
 import { useNavigation } from "@react-navigation/native";
 import RNPickerSelect from 'react-native-picker-select';
+import DateTimePicker from '@react-native-community/datetimepicker';
 const Loyalty =()=>{
     const navigation =useNavigation()
     const [gender,setGender]= useState('')
+    const change = new Date(date2)
+    let Today = change.getFullYear() + "-" + (change.getMonth() + 1) + "-" + change.getDate();
+    const [date, setDate] = useState(new Date());
+    const [date2, setDate2] = useState('Start Date')
+    const [mode, setMode] = useState('date');
+    const [show, setShow] = useState(false);
+
+
+
+    const onChange = (event, selectedDate) => {
+      const currentDate = selectedDate || date
+     console.log('seleced date........start',selectedDate);
+     console.log('seleced date........333',date);
+      const currentDate1 = currentDate.getDate().toString().padStart(2, "0") + "-" + (currentDate.getMonth() + 1).toString().padStart(2, "0") + "-" + currentDate.getFullYear();
+      setShow(false);
+      setDate(currentDate);
+      setDate2(currentDate1);
+      
+    };
+const showMode = (currentMode) => {
+         setShow(true)
+         if (Platform.OS === 'android') {
+          setShow(true);
+   
+          }
+     setMode(currentMode);
+  };
+
+const showDatepicker = () => {
+showMode('date');
+
+};
 return(
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.scrol} >
       <View style={styles.main1}>
           <View style={styles.view}>
-           <View style={{height:70,width:70,borderWidth:1,borderRadius:40}}>
+           <View style={styles.circle}>
 
            </View>
-           <Text style={{marginLeft:15,fontWeight:'600'}}>NAME </Text>
+           <Text style={styles.name}>NAME </Text>
           </View>
         <View style={styles.card2}>
         <View style={styles.main4}>
                     
                       <View style={{width:'33%'}} >
-                      <View style={{width:'40%',borderBottomWidth:0.4}}>
+                      <View style={styles.picker}>
                       <RNPickerSelect
                                        onValueChange={(val)=>setGender(val)}
                                       items={data}
@@ -44,19 +74,19 @@ return(
                                     />
                   </View>
                       </View>
-                   <View style ={{width:'33%',borderBottomWidth:0.4}} >
-                     <TextInput style={{width:'90%'}}
+                   <View style ={styles.picker1} >
+                     <TextInput 
                       placeholder='Fisrt name '
                      />
                     </View>
-                    <View style ={{width:'34%',borderBottomWidth:0.4}} >
+                    <View style ={styles.picker1} >
                     <TextInput
                       placeholder='Last name '
                      />
                     </View>
               </View> 
             
-              <View style={[styles.main4,{borderBottomWidth:0.3}]}>
+              <View style={[styles.main4,{borderBottomWidth:0.4}]}>
                   <View style={{alignSelf:'center'}}>
                   <Text >Email:</Text>
                   </View>
@@ -64,7 +94,31 @@ return(
                       placeholder='Email ID'
                      />
               </View>
-              <View style={[styles.main4,{borderBottomWidth:0.3}]}>
+              <View style={[styles.main4,{borderBottomWidth:0.4}]}>
+                  <View style={{alignSelf:'center'}}>
+                  <Text >DOB:</Text>
+                  </View>
+                  <TouchableOpacity
+                style={{ width: '70%',height:50 }}
+                onPress={() => showDatepicker()}>
+                <Text style={{ marginLeft: -32, fontSize: 14,marginTop:16}}>{`${date2}`}</Text>
+              </TouchableOpacity>
+              {show && (
+                <DateTimePicker
+                 
+                  value = {date}
+                  mode={mode}
+                  is24Hour={true}
+                  onChange={onChange}
+                   display='default'
+                   minimumDate={new Date()}
+                   maximumDate={new Date(2300, 12, 31)}
+                   dateFormat='day month year'
+                // display={Platform.OS == 'android'?'calendar':'calendar'}
+                />
+              )}
+              </View>
+              <View style={[styles.main4,{borderBottomWidth:0.4}]}>
                   <View style={{alignSelf:'center'}}>
                   <Text >Mobile:</Text>
                   </View>
@@ -72,7 +126,7 @@ return(
                       placeholder='Mobile Numebr'
                      />
               </View>
-              <View style={[styles.main4,{borderBottomWidth:0.3}]}>
+              <View style={[styles.main4,{borderBottomWidth:0.4}]}>
                   <View style={{alignSelf:'center'}}>
                   <Text >Pincode:</Text>
                   </View>
@@ -80,7 +134,7 @@ return(
                       placeholder='Pincode'
                      />
               </View>
-              <View style={[styles.main4,{borderBottomWidth:0.3}]}>
+              <View style={[styles.main4,{borderBottomWidth:0.4}]}>
                   <View style={{alignSelf:'center'}}>
                   <Text >City:</Text>
                   </View>
@@ -89,7 +143,7 @@ return(
                      />
               </View>
 
-              <View style={[styles.main4,{borderBottomWidth:0.3}]}>
+              <View style={[styles.main4,{borderBottomWidth:0.4}]}>
                   <View style={{alignSelf:'center'}}>
                   <Text >State:</Text>
                   </View>

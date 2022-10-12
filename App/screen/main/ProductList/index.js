@@ -30,7 +30,7 @@ const MyProducts = () => {
         <View style={styles.main}>
          <View style={[styles.card1,{backgroundColor:'#fff'}]}>
          <Image style={styles.img}  source={require('../../../Assets/Image/updown.png')}/>
-           <Text style={{marginLeft:10,color:'#000',fontSize:11}}>SHORT BY PRICE</Text>
+           <Text style={styles.textcard}>SHORT BY PRICE</Text>
          </View>
          <View style={styles.card1}>
           <TouchableOpacity onPress={()=>manage()}

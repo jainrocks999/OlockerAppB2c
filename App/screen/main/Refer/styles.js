@@ -39,15 +39,17 @@ cardview: {
     justifyContent:'space-between',
     flexDirection:'row',
 },
-buttonView:{paddingHorizontal: 0,alignItems:'center'},
+buttonView:{
+    alignItems:'center'},
   button: {
-    // backgroundColor:colors.btcolor,
-    // alignItems: 'center',
+     backgroundColor:'#ed6660',
+     alignItems: 'center',
     borderRadius: 5,
     // justifyContent: 'space-between',
     marginTop: 10,
     width: '100%',
    paddingVertical:13,
   },
+  btext:{color: '#fff',fontSize:13}
 
 })

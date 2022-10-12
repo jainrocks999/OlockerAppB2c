@@ -104,19 +104,9 @@ const Productdetail = () => {
                         </View>
                     </View>
                     <View style={styles.bottomv}>
-              {/* <TouchableOpacity style={{
-                backgroundColor:'#ea056c',
-                paddingHorizontal:20,
-                paddingVertical:10,
-                borderRadius:20,
-                width:'48%',
-                alignItems:'center',
-                justifyContent:'center'
-                }}>
-                <Text style={{color:'#fff',fontSize:12,fontFamily:'Acephimere'}}>ADD TO CATALOGUE</Text>
-              </TouchableOpacity> */}
+            
               <TouchableOpacity style={styles.button}>
-                <Text style={{color:'#fff',fontSize:12,fontFamily:'Acephimere'}}>ENQURE NOW</Text>
+                <Text style={styles.btext}>ENQURE NOW</Text>
               </TouchableOpacity>
           </View>
 

@@ -7,8 +7,14 @@ flex:1,
 backgroundColor:'#f7f7f7'
 
 },
-main:{paddingHorizontal:40,alignItems:'center'}, 
- main1:{paddingVertical:90,backgroundColor:'#fa8a86'},
+main:{
+  paddingHorizontal:40,
+  alignItems:'center'
+}, 
+ main1:{
+  paddingVertical:90,
+  backgroundColor:'#fa8a86'
+},
 
 card: {
    // shadowColor: 'black',
@@ -49,7 +55,10 @@ card: {
 //   paddingHorizontal:20
   },
   
-  buttonView:{paddingHorizontal: 10,alignItems:'center'},
+  buttonView:{
+    paddingHorizontal: 10,
+    alignItems:'center'
+  },
   button: {
     backgroundColor:colors.btcolor,
     // alignItems: 'center',
@@ -59,9 +68,22 @@ card: {
     width: '100%',
    paddingVertical:17,
   },
- buttonV:{flexDirection:'row',justifyContent:'space-between',paddingHorizontal:10},
+  buttonV:{
+  flexDirection:'row',
+  justifyContent:'space-between',
+  paddingHorizontal:10
+},
  view1:{
    flexDirection:'row',
    marginTop:10
   },
+  text1:{
+    color:'#000000',
+    fontWeight:'600',
+    fontSize:13
+  },
+  text2:{
+    color:'#9a9a9a',
+    fontSize:12
+  }
 })

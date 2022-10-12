@@ -7,12 +7,45 @@ import { HStack,Box,Switch,Slider ,Checkbox} from "native-base";
 import Icon2 from 'react-native-vector-icons/FontAwesome';
 import { useNavigation } from "@react-navigation/native";
 import RNPickerSelect from 'react-native-picker-select';
+import DateTimePicker from '@react-native-community/datetimepicker';
 const Loyalty =()=>{
     const navigation =useNavigation()
     const [gender,setGender]= useState('')
+    const change = new Date(date2)
+    let Today = change.getFullYear() + "-" + (change.getMonth() + 1) + "-" + change.getDate();
+    const [date, setDate] = useState(new Date());
+    const [date2, setDate2] = useState('Start Date')
+    const [mode, setMode] = useState('date');
+    const [show, setShow] = useState(false);
+
+
+
+    const onChange = (event, selectedDate) => {
+      const currentDate = selectedDate || date
+     console.log('seleced date........start',selectedDate);
+     console.log('seleced date........333',date);
+      const currentDate1 = currentDate.getDate().toString().padStart(2, "0") + "-" + (currentDate.getMonth() + 1).toString().padStart(2, "0") + "-" + currentDate.getFullYear();
+      setShow(false);
+      setDate(currentDate);
+      setDate2(currentDate1);
+      
+    };
+const showMode = (currentMode) => {
+         setShow(true)
+         if (Platform.OS === 'android') {
+          setShow(true);
+   
+          }
+     setMode(currentMode);
+  };
+
+const showDatepicker = () => {
+showMode('date');
+
+};
 return(
     <SafeAreaView style={styles.container}>
-      <ScrollView style={{flex:1,paddingHorizontal:10}} >
+      <ScrollView style={styles.scroll} >
                 <View style={styles.main}>
       <View style={styles.view3}>
             <View>
@@ -36,14 +69,14 @@ return(
             </View>
           </View>
           <View style={styles.view}>
-            <View>
-            <Text style={styles.text1}>Check Eligibilty</Text>
+            <View >
+            <Text style={[styles.text1,{marginLeft:-10}]}>Check Eligibilty</Text>
             </View>
             <View >
-            <Text style={styles.text1}>Emi Schedule</Text>
+            <Text style={[styles.text1,{marginLeft:20}]}>Emi Schedule</Text>
             </View>
             <View>
-            <Text style={styles.text1}>Upload Documents</Text>
+            <Text style={[styles.text1,{marginLeft:20}]}>Upload Documents</Text>
             </View>
           </View>
 
@@ -88,6 +121,27 @@ return(
                      />
                     </View>
               </View> 
+              <View style={styles.main4}>
+              <TouchableOpacity
+                style={{ width: '70%',height:50 }}
+                onPress={() => showDatepicker()}>
+                <Text style={{ marginLeft: 0, fontSize: 14,marginTop:16}}>{`${date2}`}</Text>
+              </TouchableOpacity>
+              {show && (
+                <DateTimePicker
+                 
+                  value = {date}
+                  mode={mode}
+                  is24Hour={true}
+                  onChange={onChange}
+                   display='default'
+                   minimumDate={new Date()}
+                   maximumDate={new Date(2300, 12, 31)}
+                   dateFormat='day month year'
+                // display={Platform.OS == 'android'?'calendar':'calendar'}
+                />
+              )}
+              </View>
               <View style={styles.main4}>
               <TextInput
                       placeholder='Mobile Numebr'
@@ -183,11 +237,11 @@ return(
           <View style={styles.check1}>
                 <HStack space={4}>
                <Checkbox value="check" colorScheme="orange"  accessibilityLabel="This is a dummy checkbox" defaultIsChecked  />
-            <Text style={{fontSize:15,fontWeight:'500'}}>Yes</Text>
+            <Text style={styles.tt}>Yes</Text>
             </HStack>
             <HStack space={4}>
                <Checkbox value="check" colorScheme="orange"  accessibilityLabel="This is a dummy checkbox" defaultIsChecked  />
-            <Text style={{fontSize:15,fontWeight:'500'}}>No</Text>
+            <Text style={styles.tt}>No</Text>
             </HStack>
            </View>  
           </View>

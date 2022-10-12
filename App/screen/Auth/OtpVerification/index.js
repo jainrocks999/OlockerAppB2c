@@ -19,7 +19,7 @@ const Login = () => {
 
         <View style={styles.main}>
              <View style={[styles.input,]}>
-                <Text style={{color:'#979797',marginRight:15}}>Enter 6 digit code sent to you</Text>
+                <Text style={styles.title}>Enter 6 digit code sent to you</Text>
                  <View style={styles.textinput}>
                    <TextInput 
                    style={styles.input1}
@@ -33,7 +33,7 @@ const Login = () => {
           
           
           <View style={styles.buttonView}>
-          <View style={{flexDirection:'row',marginTop:30}}>
+          <View style={styles.row}>
         
      
         <Text style={{color:'#9a9a9a'}}>Don't receive the OTP ?</Text>

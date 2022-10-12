@@ -37,7 +37,7 @@ const Loyalty = () => {
                         </View>
                     </View>
                 </View>
-                <View style={{flexDirection:'row'}}>
+                <View style={{flexDirection:'row',}}>
                  <View style={styles.view}>
                      <Text style={styles.textV}>
                          Points earned summary

@@ -7,8 +7,19 @@ flex:1,
 backgroundColor:'#f7f7f7'
 
 },
-main:{paddingHorizontal:50,alignItems:'center'}, 
- main1:{paddingVertical:90,backgroundColor:'#fa8a86'},
+main:{
+  paddingHorizontal:50,
+  alignItems:'center'
+}, 
+
+ main1:{
+  paddingVertical:90,
+  backgroundColor:'#fa8a86'
+},
+title:{
+  color:'#979797',
+  marginRight:15
+},
 
 card: {
    // shadowColor: 'black',
@@ -54,5 +65,14 @@ card: {
     width: '100%',
    paddingVertical:17,
   },
- buttonV:{flexDirection:'row',justifyContent:'space-between',paddingHorizontal:10},
+ buttonV:{
+  flexDirection:'row',
+  justifyContent:'space-between',
+  paddingHorizontal:10
+},
+row:{
+  flexDirection:'row',
+  marginTop:30
+},
+
 })

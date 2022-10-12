@@ -36,6 +36,7 @@ const Login = () => {
           <View style={styles.main}>
             <Text style={styles.title}>{"YOUR FAVORITE"}</Text>
             <Text style={styles.title1}>{"JEWELLER"}</Text>
+            <Text>One stop soluction or all your jewellery</Text>
           </View>
 
 
@@ -52,7 +53,7 @@ const Login = () => {
             </TouchableOpacity>
 
 
-
+ 
           </View>
 
 

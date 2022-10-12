@@ -11,7 +11,7 @@ return(
       <View style={styles.main1}>
       
       <View style={styles.card2}>
-        <View style={{flexDirection:'row',justifyContent:'space-between',paddingHorizontal:10}}>
+        <View style={styles.view1}>
          <Text>All Deals</Text> 
       </View>
         <FlatList
@@ -22,9 +22,9 @@ return(
            
             renderItem={({item}) => (
                
-             <View style={{flexDirection:'row',alignItems:'center',}}>
+             <View style={styles.itemv}>
                
-               <View style={{height:60,width:60,borderRadius:30,borderWidth:1,marginTop:15,marginRight:-30,zIndex:5,backgroundColor:'#fff'}}></View>
+               <View style={styles.circle}></View>
               <TouchableOpacity
                  onPress={()=>navigation.navigate('Dealdetail')}
                 style={styles.cardview}>

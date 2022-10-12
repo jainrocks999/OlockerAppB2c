@@ -14,13 +14,11 @@ const App = () => {
   const navigation =useNavigation()
   const [gender,setGender]= useState('')
   return (
-    <SafeAreaView style={{flex: 1,backgroundColor:'#fff'}}>
+    <SafeAreaView style={styles.container}>
       <View style={{marginTop:10}}>
      
-              {/* <View >
-                 <Icon3 name="ios-chevron-back" size={30} color={colors.lightPink}  />
-               </View> */}
-               <View style={{paddingHorizontal:10,marginTop:20}}>
+            
+               <View style={styles.main1}>
                  <Text style={styles.text}>
                    {'Please fill up the form'}
                  </Text>
@@ -28,10 +26,10 @@ const App = () => {
                    {'to complete\nregistration'}
                  </Text>
               <View style={styles.main}>
-                    <View style={{alignSelf:'center',width:'9%'}} >
+                    <View style={styles.view1} >
                        <Icon name="user" size={20} />
                       </View>
-                      <View style={{width:'24%',borderWidth:0,marginLeft:-8}} >
+                      <View style={styles.picker} >
                       <View style={{width:'50%'}}>
                       <RNPickerSelect
                                        onValueChange={(val)=>setGender(val)}
@@ -45,7 +43,7 @@ const App = () => {
                                       value={gender}
                                       useNativeAndroidPickerStyle={false}
                                       placeholder={{ label: "Mr.", value: 0 }}
-                                      Icon={()=><View style={{alignSelf:'center',alignItems:'center',marginTop:2}}>
+                                      Icon={()=><View style={styles.icon}>
                                       <Icon name ="caretdown" color={colors.lightGrey} />
                                       </View>
                                       }
