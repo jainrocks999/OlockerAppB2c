@@ -30,6 +30,9 @@ import productlist from '../screen/main/ProductList';
 import Refer from '../screen/main/Refer';
 import About from '../screen/main/Aboutus';
 import Feedback from '../screen/main/Feedback';
+import Drawer1 from '../navigation/Drawernavigation/index';
+import Savingscheme from '../screen/main/Savingscheme'
+
 const Stack = createNativeStackNavigator();
 
 function App() {
@@ -45,6 +48,18 @@ function App() {
             
             },
             headerShadowVisible:(false),
+        })}
+        />
+        <Stack.Screen name="main" component={Drawer1} 
+         options={({ navigation }) => ({
+          title: '',
+          // headerTintColor: '#fa8a86',
+            headerStyle: {
+               backgroundColor: 'red',
+            
+            },
+            headerShadowVisible:(false),
+            headerShown:(false),
         })}
         />
         <Stack.Screen name="Login" component={Login} 
@@ -239,7 +254,7 @@ function App() {
             ),
         })}
         />
-         <Stack.Screen name="Home" component={Homescreen} 
+         {/* <Stack.Screen name="Home" component={Homescreen} 
          options={({ navigation }) => ({
           title: '',
           // headerTintColor: '#fa8a86',
@@ -249,7 +264,9 @@ function App() {
             },
             headerLeft: () => (
               <TouchableOpacity 
-               onPress={()=>navigation.navigate('editprofile')}
+              
+                //  onPress={()=>navigation.toggleDrawer()}
+              //onPress={()=>navigation.navigate('editprofile')}
               style={{marginLeft:-10}}
                
               >
@@ -274,8 +291,8 @@ function App() {
           </View>
            ),
         })}
-        />
-         <Stack.Screen name="editprofile" component={EditProfile} 
+        /> */}
+         {/* <Stack.Screen name="editprofile" component={EditProfile} 
          options={({ navigation }) => ({
             headerStyle: {
                backgroundColor: '#fff',
@@ -300,8 +317,8 @@ function App() {
            ),
         
         })}
-        />
-         <Stack.Screen name="supplier" component={Supplierprofile} 
+        /> */}
+         {/* <Stack.Screen name="supplier" component={Supplierprofile} 
          options={({ navigation }) => ({
             headerStyle: {
                backgroundColor: '#fff',
@@ -332,7 +349,7 @@ function App() {
            )
         
         })}
-        />
+        /> */}
          <Stack.Screen name="productdetail" component={ProductsDetail} 
          options={{
           title: '',
@@ -585,6 +602,23 @@ function App() {
           headerTitle:()=>(
             <View>
             <Text style={{color:colors.blue,fontWeight:'500'}}>Feedback</Text>
+            </View>
+         ),
+        
+        })}
+        />
+         <Stack.Screen name="saving" component={Savingscheme} 
+         options={({ navigation }) => ({
+            headerStyle: {
+              backgroundColor: '#fddac0',
+            
+            },
+          headerTitleAlign:'center',
+          // headerBackVisible:(false),
+          headerShadowVisible:(false),
+          headerTitle:()=>(
+            <View>
+            <Text style={{color:colors.blue,fontWeight:'500'}}>My Savings Schemes</Text>
             </View>
          ),
         

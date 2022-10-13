@@ -12,9 +12,9 @@ circle:{
     height:80,
     width:80,
     borderRadius:40,
-    borderWidth:0.5,zIndex:15,
+    borderWidth:0.5,zIndex:5,
     position:'absolute',
-    marginTop:59,
+    marginTop:35,
     backgroundColor:'#fff'
 },
 card: {

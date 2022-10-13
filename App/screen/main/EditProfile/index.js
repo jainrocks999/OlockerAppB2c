@@ -8,15 +8,10 @@ import DateTimePicker from '@react-native-community/datetimepicker';
 const Loyalty =()=>{
     const navigation =useNavigation()
     const [gender,setGender]= useState('')
-    const change = new Date(date2)
-    let Today = change.getFullYear() + "-" + (change.getMonth() + 1) + "-" + change.getDate();
     const [date, setDate] = useState(new Date());
     const [date2, setDate2] = useState('Start Date')
     const [mode, setMode] = useState('date');
     const [show, setShow] = useState(false);
-
-
-
     const onChange = (event, selectedDate) => {
       const currentDate = selectedDate || date
      console.log('seleced date........start',selectedDate);

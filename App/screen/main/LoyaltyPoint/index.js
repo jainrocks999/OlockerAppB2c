@@ -11,6 +11,7 @@ return(
         <View style={styles.main}>
       <View style={styles.card}>
        <Text>Mangal Jewellers Sign</Text>
+       <View style={{paddingHorizontal:5}}>
        <View style={styles.circle}>
 
        </View>
@@ -31,6 +32,7 @@ return(
            <Text style={styles.text}>0</Text>
           </TouchableOpacity>
        </View>
+      </View>
       </View>
       </View>
     </SafeAreaView>

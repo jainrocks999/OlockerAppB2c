@@ -32,13 +32,14 @@ return(
             paddingVertical: 0
           }}
           dotStyle={{
-            width: 5,
-            height: 5,
-            borderRadius: 5,
+            width: 15,
+            height: 15,
+            borderRadius: 8,
             marginHorizontal: 0,
             padding: 0,
             margin: 0,
-            backgroundColor: "rgba(128, 128, 128, 0.92)"
+          
+            backgroundColor: "red"
           }}
            ImageComponentStyle={{borderRadius: 15, width: '95%' ,marginTop: 0}}
            imageLoadingColor="#2196F3"

@@ -36,7 +36,7 @@ const [chheck ,setCheck] =useState('')
           <View style={styles.buttonView}>
            
             <TouchableOpacity 
-             onPress={()=>navigation.navigate("Home")}
+             onPress={()=>navigation.navigate("main")}
               style={styles.button}>
                  <View style={styles.buttonV}>
               <View/>
