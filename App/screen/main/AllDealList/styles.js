@@ -29,7 +29,10 @@ cardview: {
     width:wp('78%'),
     //alignSelf:'',
     backgroundColor: '#fff',
-    marginTop:10
+    marginTop:10,
+    paddingHorizontal:10,
+    paddingVertical:10
+
 
   },
 view1:{
@@ -38,7 +41,7 @@ view1:{
   paddingHorizontal:10
 },
   list:{
-    paddingVertical:20,
+    paddingVertical:0,
     paddingHorizontal:10
     
   },
@@ -61,8 +64,10 @@ view1:{
     borderWidth:1,
     marginTop:15,
     marginRight:-30,
-    zIndex:5,
-    backgroundColor:'#fff'
+    zIndex:1,
+    backgroundColor:'#fff',
+    alignItems:'center',
+    justifyContent:'center'
   },
   main1:{
    

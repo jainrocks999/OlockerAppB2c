@@ -10,10 +10,11 @@ import EditProfile from '../../screen/main/EditProfile';
 import colors from '../../constant/colors';  
 import Supplierprofile from '../../screen/main/supplierProfile';
 import jewelleryport from '../../screen/main/jewelleryPortfolio';
+import AddNewUser from '../../screen/main/AddNewUser'
 const Drawer = createDrawerNavigator();
 function MyDrawer() {
   return (
-    <Drawer.Navigator drawerContent={() => <DrawerContent />} >
+    <Drawer.Navigator drawerContent={() => <DrawerContent />} screenOptions={{headerShown:true}}>
       <Drawer.Screen name ="Home" component={HomeScreen} 
          options={({ navigation }) => ({
           title: '',
@@ -62,7 +63,7 @@ function MyDrawer() {
           headerBackVisible:(false),
           headerTitle:()=>(
             <View>
-            <Text style={{color:colors.blue,fontWeight:'500'}}>PROFILE</Text>
+            <Text style={{color:colors.blue,fontWeight:'500',fontFamily:'Acephimere'}}>PROFILE</Text>
             </View>
          ),
          
@@ -90,7 +91,7 @@ function MyDrawer() {
           headerBackVisible:(false),
           headerTitle:()=>(
             <View>
-            <Text style={{color:colors.blue,fontWeight:'500'}}>Mangal Jewellers</Text>
+            <Text style={{color:colors.blue,fontWeight:'500',fontFamily:'Acephimere'}}>Mangal Jewellers</Text>
             </View>
          ),
          
@@ -130,7 +131,29 @@ function MyDrawer() {
               >
              <Icon1 name="menu" size={27}  />
              </TouchableOpacity>
-             <Text style={{marginLeft:10}}>Your Jewellery Portfolio</Text>
+             <Text style={{marginLeft:10,fontFamily:'Acephimere',color:colors.blue}}>Your Jewellery Portfolio</Text>
+             </View>
+           ),
+        })}
+        />
+         <Drawer.Screen name="addnewuser" component={AddNewUser} 
+         options={({ navigation }) => ({
+          title: '',
+          // headerTintColor: '#fa8a86',
+            headerStyle: {
+               backgroundColor: '#fff',
+            
+            },
+            headerLeft: () => (
+              <View style ={{flexDirection:'row',alignItems:'center'}}> 
+              <TouchableOpacity
+               onPress={()=>navigation.toggleDrawer()}
+              style={{marginLeft:10}}
+               
+              >
+             <Icon1 name="menu" size={27}  />
+             </TouchableOpacity>
+             <Text style={{marginLeft:10,fontFamily:'Acephimere',color:colors.blue}}>Add Uninsured Jewellery</Text>
              </View>
            ),
         })}

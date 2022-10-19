@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {View, Text, TouchableOpacity, FlatList, ScrollView,Image,Dimensions,Share} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-
+import StoreBottom from '../../../Component/StoreBottomTab'
 import styles from './styles';
 
 
@@ -30,7 +30,8 @@ const MyProducts = () => {
                  onPress={()=>navigation.navigate('alldeal')}
                 style={styles.cardview}>
              
-                 
+                 <Image style={{height:'100%',width:'100%',borderRadius:10}}
+                 source={require('../../../Assets/images/womenjewellery.jpg')}/>
                   </TouchableOpacity>
                
          
@@ -39,6 +40,7 @@ const MyProducts = () => {
         </View>
         <View style={{height: 70}} />
       </ScrollView>
+      <StoreBottom/>
     </View>
   );
 };

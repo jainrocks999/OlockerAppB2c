@@ -32,7 +32,7 @@ text:{
    
 },
 card1: {
-    marginTop: 10,
+    marginTop: -5,
     paddingHorizontal: 5,
 },
 
@@ -44,13 +44,13 @@ cardview: {
     marginTop: 5,
     borderRadius: 10,
     elevation: 3,
-    paddingHorizontal:10,
+    paddingHorizontal:0,
     alignItems:'center',
     justifyContent:'center'
 },
 card2: {
     marginTop: 3,paddingVertical:10,
-    paddingHorizontal: 25,backgroundColor:colors.blue
+    paddingHorizontal: 25,
 },
 cardview1: {
     height:170,
@@ -61,6 +61,7 @@ cardview1: {
     borderRadius: 10,
     elevation: 5,
     width: '48%',
+    alignItems:'center',justifyContent:'center'
 },
 cardview2: {
     shadowColor: '#000',
@@ -104,8 +105,8 @@ cardview2: {
     marginTop:15,
   },
  view:{
-   backgroundColor:"#bf9334",
-   width:'50%',
+  //  backgroundColor:"#bf9334",
+   width:'117%',
   height:40,
   marginTop:15,
  justifyContent:'center'
@@ -117,7 +118,8 @@ cardview2: {
   textV:{
     color:colors.white,
     fontWeight:'700',
-    textAlign:'center'
+    marginLeft:10
+     // textAlign:'center'
   },
 
   talkBubble: {

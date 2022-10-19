@@ -1,5 +1,5 @@
 import React from "react";
-import { View,Text, SafeAreaView,TouchableOpacity ,FlatList, ScrollView} from "react-native";
+import { View,Text, SafeAreaView,TouchableOpacity ,FlatList, ScrollView,Image} from "react-native";
 import styles from "./styles";
 import Icon from 'react-native-vector-icons/Ionicons';
 import { HStack,Box,Switch } from "native-base";
@@ -11,6 +11,8 @@ return(
     <SafeAreaView style={styles.container}>
         <ScrollView style={{paddingHorizontal:5}}>
         <View style={styles.main}>
+          <Image style={{   height:250,width:300}} resizeMode="center"
+          source={require('../../../Assets/images/refer_earn_img.png')}/>
 
         </View>
         <View style={styles.item}>

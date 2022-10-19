@@ -7,8 +7,8 @@ export default StyleSheet.create({
     backgroundColor: '#ffffff'
 
   },
-  main: { marginTop: 30, alignItems: 'center' },
-  main1: { paddingVertical: 90, backgroundColor: '#fa8a86' },
+  main: { marginTop: 20,height:100,width:300,alignSelf:'center'},
+  main1: { paddingVertical: 18, backgroundColor: '#fa8a86' },
 
   card: {
     // shadowColor: 'black',
@@ -59,11 +59,14 @@ export default StyleSheet.create({
   title1:{ 
     color: '#ed6660',
      fontSize: 25,
-      fontWeight: '700'
+      fontWeight: '700',
+      fontFamily:'Acephimere'
      },
      text1:{ 
        color: '#fff',
         fontSize: 13,
-        marginLeft:5
+        marginLeft:5,
+        textAlign:'center',
+        fontFamily:'Acephimere'
        },
 })

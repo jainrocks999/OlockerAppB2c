@@ -14,7 +14,7 @@ view:{
 },
 image:{
 
-   // height:90,width:'100%',
+    height:103,width:105,
 },
 title:{
     fontStyle:'italic',

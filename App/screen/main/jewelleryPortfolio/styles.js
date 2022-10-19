@@ -9,11 +9,11 @@ backgroundColor:'#fddac0',
 
 },
 main:{
-    height:hp('20%'),
+    height:hp('21%'),
     width:wp('100%'),
-    backgroundColor:colors.blue,
-   borderBottomEndRadius:hp('3%'),
-    borderBottomStartRadius:hp('3%'),
+    // backgroundColor:colors.blue,
+  //  borderBottomEndRadius:hp('3%'),
+  //   borderBottomStartRadius:hp('3%'),
     
 
 },
@@ -45,7 +45,8 @@ cardview: {
   
   text:{
       color:colors.blue,
-      fontWeight:'600'
+      fontWeight:'600',
+      fontFamily:'Acephimere'
   },
   button: {
     backgroundColor:'rgba(237,102,96,255)',

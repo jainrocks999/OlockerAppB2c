@@ -1,11 +1,11 @@
 import React from "react";
-import { View, Text, SafeAreaView, TouchableOpacity, FlatList, ScrollView } from "react-native";
+import { View, Text, SafeAreaView, TouchableOpacity, FlatList, ScrollView ,Image, ImageBackground} from "react-native";
 import styles from "./styles";
 import Icon from 'react-native-vector-icons/Ionicons';
 import { HStack, Box, Switch } from "native-base";
 import { SliderBox } from "react-native-image-slider-box";
 import { useNavigation } from "@react-navigation/native";
-
+import StoreBottom from '../../../Component/StoreBottomTab'
 const Loyalty = () => {
     const navigation = useNavigation()
     return (
@@ -48,8 +48,10 @@ const Loyalty = () => {
                              renderItem={({ item, index }) => (
                                 <TouchableOpacity onPress={() => navigation.navigate('ProductList')}
                                     style={styles.cardview}>
-                                    <Text>{item.title}</Text>
-                                     
+                                    {/* <Text>{item.title}</Text> */}
+                                    <Image style={{height:'100%',width:'100%',borderRadius:10}}
+                                    source={require('../../../Assets/images/womenjewellery.jpg')}/>
+
                                 </TouchableOpacity>
 
 
@@ -57,22 +59,27 @@ const Loyalty = () => {
                         />
                     </View>
                   
-                    <View style={styles.card2}>
+                    <ImageBackground source={require('../../../Assets/images/referbg.png')}
+                    style={styles.card2}>
                         <FlatList
                             data={DATA.slice(0,2)}
                             numColumns={2}
+                            contentContainerStyle={{
+                                justifyContent:'space-between'
+                            }}
                             // horizontal={true}
                             renderItem={({ item, index }) => (
                                 <TouchableOpacity onPress={() => navigation.navigate('refer')}
                                     style={styles.cardview1}>
                                     {/* <Text>{item.title}</Text> */}
-                                     
+                                    <Image style={{height:'100%',width:'100%',borderRadius:10}}
+                                    source={require('../../../Assets/images/referoffer1.png')}/>
                                 </TouchableOpacity>
 
 
                             )}
                         />
-                    </View>
+                    </ImageBackground>
 
                     <View style={styles.card1}>
                         <FlatList
@@ -81,8 +88,10 @@ const Loyalty = () => {
                             renderItem={({ item, index }) => (
                                 <TouchableOpacity onPress={() => navigation.navigate('ProductList')}
                                     style={styles.cardview}>
-                                    <Text>{item.title}</Text>
-                                     
+                                    {/* <Text>{item.title}</Text> */}
+                                    <Image style={{height:'100%',width:'100%',borderRadius:10}}
+                                    source={require('../../../Assets/images/womenjewellery.jpg')}/>
+ 
                                 </TouchableOpacity>
 
 
@@ -90,8 +99,11 @@ const Loyalty = () => {
                         />
                     </View>
 
-                    <View style={[styles.card2,{paddingHorizontal:0}]}>
-<View style={{marginLeft:90}}>
+                    <ImageBackground resizeMode="cover"
+                                                    //   style={{height:'97%',width:'98%',resizeMode:'stretch'}}
+               source={require('../../../Assets/images/womenjewellery.jpg')}
+                    style={[styles.card2,{}]}>
+           <View style={{marginLeft:90}}>
                         <FlatList
                             data={DATA}
                             // numColumns={2}
@@ -101,26 +113,28 @@ const Loyalty = () => {
                                 <TouchableOpacity onPress={() => navigation.navigate('ProductList')}
                                     style={styles.cardview2}>
                                     {/* <Text>{item.title}</Text> */}
-                                     
+                                    <Image style={{height:'100%',width:'100%',borderRadius:10}}
+                                    source={require('../../../Assets/images/womenjewellery.jpg')}/>
                                 </TouchableOpacity>
                             </View>      
 
                             )}
                         />
                     </View>
-                    </View>
+                    </ImageBackground>
                     <View style={styles.fotter}>
                     <Text style={styles.textV}>
                        WOMEN'S JEWELLERY
                      </Text>
                     </View>
-                    <View style={{flexDirection:'row'}}>
-                 <View style={styles.view}>
+                    <View style={{marginRight:0}}>
+                 <ImageBackground source={require('../../../Assets/images/customer_speak.png')}
+                 style={styles.view}>
                      <Text style={styles.textV}>
                         CUSTOMER'S SPEAK
                      </Text>
-                 </View>
-                 <View style={styles.rec}/>
+                 </ImageBackground>
+                 {/* <View style={styles.rec}/> */}
                  {/* <View style={[styles.rec1,{marginLeft:5}]}/> */}
 
 
@@ -137,7 +151,7 @@ const Loyalty = () => {
                </View>
                <View style={{height:70}}/>
             </ScrollView>
-
+          <StoreBottom/>
         </SafeAreaView>
     )
 }

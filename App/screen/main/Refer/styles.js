@@ -9,16 +9,16 @@ marginBottom:0
 
 },
 main:{
-   paddingVertical:50 
+   paddingVertical:5 ,alignItems:'center'
 },
 item:{
     alignItems:'center'
 },
 text:{
-    color:colors.btcolor,fontSize:22,fontWeight:'500'
+    color:colors.btcolor,fontSize:22,fontWeight:'500',marginTop:-15
 },
 text1:{
-    color:colors.black,fontSize:15,fontWeight:'400'
+    color:colors.black,fontSize:15,fontWeight:'600',
 },
 card:{paddingHorizontal:5,marginTop:30},
 cardview: {

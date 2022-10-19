@@ -14,7 +14,10 @@ const Login = () => {
     <View style={styles.container}>
       <ScrollView>
        <View style={styles.main1}>
-
+       <View style={{height:230,width:300,alignSelf:'center',marginBottom:40}}>
+            <Image style={{height:'100%',width:'100%'}} 
+            source={require('../../../Assets/images/otp.png')}/>
+            </View>
        </View>
 
         <View style={styles.main}>
@@ -36,19 +39,19 @@ const Login = () => {
           <View style={styles.row}>
         
      
-        <Text style={{color:'#9a9a9a'}}>Don't receive the OTP ?</Text>
+        <Text style={{color:'#9a9a9a',fontFamily:'Acephimere'}}>Don't receive the OTP ?</Text>
        
-                 <Text style={{color:'#fa8a86',fontWeight:'500'}}>{' RESEND OTP'}</Text>
+                 <Text style={{color:'#fa8a86',fontWeight:'500',fontFamily:'Acephimere'}}>{' RESEND OTP'}</Text>
                  
                 
                </View>
             <TouchableOpacity 
-             onPress={()=>navigation.navigate("Register")}
+             onPress={()=>navigation.navigate("main")}
               style={styles.button}>
                  <View style={styles.buttonV}>
               <View/>
               <View>
-              <Text style={{color: '#fff'}}>{"Verify & Proceed"}</Text>
+              <Text style={{color: '#fff',fontFamily:'Acephimere'}}>{"Verify & Proceed"}</Text>
               </View>    
               <View >
               <Icon name="arrowright" size={20} color='#fff'  />

@@ -64,12 +64,9 @@ const Loyalty = () => {
                    <View style={{flexDirection:'row',width:'100%',justifyContent:'space-around',paddingHorizontal:15,paddingVertical:10}}>
                     <View style ={styles.buttonV}> 
                 <TouchableOpacity 
-            
-         style ={[styles.button,{width:"55%",backgroundColor:'green'}]}> 
-
-              
-            
-             <Text style={{color: '#fff',fontSize:15,fontStyle:'italic'}}>Make payment</Text>
+             onPress={()=>navigation.navigate('payment')}
+         style ={[styles.button,{width:"55%",backgroundColor:'green'}]}>  
+             <Text style={{color: '#fff',fontSize:15,fontFamily:'Acephimere',}}>Make payment</Text>
           
            </TouchableOpacity>
            </View> 
@@ -80,7 +77,7 @@ const Loyalty = () => {
 
               
             
-             <Text style={{color: '#fff',fontSize:15,fontStyle:'italic'}}>Refund</Text>
+             <Text style={{color: '#fff',fontSize:15,fontFamily:'Acephimere',}}>Refund</Text>
           
            </TouchableOpacity>
            </View> 
@@ -112,10 +109,10 @@ const Loyalty = () => {
                        <Text style={{marginLeft:-10}}>24 June 2020</Text>
                         <View/>
                        </View>
-                    <View style={{marginTop:30}}>
+                    <View style={{marginTop:27}}>
                        <View style={styles.line1} />
 
-                       <View style ={[styles.buttonV,{marginTop:-27}]}> 
+                       <View style ={[styles.buttonV,{marginTop:-22}]}> 
                 <TouchableOpacity 
             
          style ={[styles.button,{width:"55%",}]}> 

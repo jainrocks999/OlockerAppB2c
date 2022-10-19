@@ -1,14 +1,15 @@
 import React from "react";
-import { View,Text, SafeAreaView,TouchableOpacity ,FlatList, ScrollView} from "react-native";
+import { View,Text, SafeAreaView,TouchableOpacity ,FlatList, ScrollView, ImageBackground} from "react-native";
 import styles from "./styles";
 import { useNavigation } from "@react-navigation/native";
-
+import StoreBottom from '../../../Component/StoreBottomTab'
 const Loyalty =()=>{
   const navigation =useNavigation();
 return(
     <SafeAreaView style={styles.container}>
-      <View style={styles.main}/> 
-      <View style={styles.main1}>
+      <ScrollView>
+      <ImageBackground source={require('../../../Assets/images/ornament.png')}
+       style={styles.main}/> 
       
       <View style={styles.card2}>
         <FlatList
@@ -30,13 +31,14 @@ return(
           <View  style={styles.buttonView}>
 
 <TouchableOpacity 
-         //   onPress={()=>navigation.navigate("otp")}
+            onPress={()=>navigation.navigate("addnewuser")}
          style={styles.button}>
-       <Text style={{color: '#fff'}}>ADD NEW JEWELLERY</Text>
+       <Text style={{color: '#fff',fontFamily:'Acephimere'}}>ADD NEW JEWELLERY</Text>
   </TouchableOpacity>
   </View>
         </View> 
-      </View>
+      </ScrollView>
+      <StoreBottom/>
     </SafeAreaView>
 )
 }

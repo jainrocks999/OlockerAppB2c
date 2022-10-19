@@ -18,12 +18,15 @@ const Splash = () => {
         <SafeAreaView style={styles.container}>
            
             <View style={styles.view}>
+
+
+            <Image style={styles.image}
+                source={require('../../../Assets/images/olockericon.png')} />  
+           
               <Text style ={styles.title}>
                   Welcome To olocker B2c APP
               </Text>
-            {/* <Image style={styles.image}
-                source={require('../../../assets/ol.png')} />  
-            */}
+          
             </View> 
         </SafeAreaView>
     )

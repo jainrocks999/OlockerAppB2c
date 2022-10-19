@@ -5,7 +5,7 @@ export default StyleSheet.create({
 container:{
 flex:1,
 backgroundColor:'#ffffff',
-marginBottom:0
+
 
 },
 main:{
@@ -62,28 +62,31 @@ card: {
         shadowRadius: 8,
         elevation: 3,
         borderRadius: 10,
-        width: 120,
+        width:wp('40%'),
         margin: 5,
         alignItems: 'center',
         justifyContent: 'center',
-        height: 120,
+        height:hp('25%'),
         backgroundColor: '#fff'
     
       },
       text:{
         color:colors.btcolor,
         fontSize:18,
-        marginTop:0
+        marginTop:0,fontFamily:'Acephimere'
       },
       text1:{
         color:colors.white,
         fontSize:16,
-       // marginTop:10
+        fontFamily:'Acephimere',
+        marginTop:5
       },
       text2:{
         color:colors.white,
         fontSize:13,
-         marginTop:5
+         marginTop:5,
+          textAlign:'center',
+         fontFamily:'Acephimere'
       },
       listv:{
           backgroundColor:colors.blue,
@@ -105,20 +108,48 @@ card: {
       paddingVertical:10,
       },
       fotter:{
-        backgroundColor:colors.lightPink,
-        paddingVertical:50
+        // backgroundColor:colors.lightPink,
+        // paddingVertical:50
+        height:hp('50%'),
+        width:wp('100%')
+      },
+      logo:{ height:hp('7.9%'),
+      width:wp('65%'),
+      paddingHorizontal:hp('1%'),
+       paddingVertical:hp('1.5%'),
+       marginTop:10
+
+      },
+      img:{
+        height:'100%',
+        width:'100%',
+        borderRadius:10
+       
+      },
+      img3:{
+        height:'100%',
+        width:'100%',
+       borderTopRightRadius:10,
+       borderTopLeftRadius:10
+       
+      },
+      img2:{
+        height:hp('21.5%'),
+        width:wp('39.8%'),
+        marginTop:-28,
+        
       },
       cardfotter:{
-        paddingVertical:5,
+        height:hp("4%"),
         backgroundColor:colors.lightPink,
-        width:"100%",
-        marginTop:90,
-        borderBottomLeftRadius:10,
-        borderBottomRightRadius:10
+        width:wp("40%"),
+        marginTop:0,
+        borderBottomLeftRadius:hp('1%'),
+        borderBottomRightRadius:hp('1%'),
       },
       main:{
         flexDirection:'row',
         justifyContent:'space-between',
-        marginTop:10
+        marginTop:10,paddingHorizontal:5
     }
 })

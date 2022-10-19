@@ -44,7 +44,7 @@ view3:
     text:
     {
         fontSize:30,
-        color:colors.btcolor
+        color:colors.btcolor,fontFamily:'Acephimere'
     },
     view:
     {
@@ -56,7 +56,7 @@ view3:
     },
     text1:{
         color:colors.btcolor,
-        fontSize:13,
+        fontSize:13,fontFamily:'Acephimere'
         
 
     },
@@ -72,11 +72,11 @@ view3:
       },
       text2:{
           fontSize:23,
-          fontWeight:'400'
+          fontWeight:'400',fontFamily:'Acephimere'
       },
       text3:{
         color:colors.lightGrey,
-        fontSize:13
+        fontSize:13,fontFamily:'Acephimere'
       },
       main4:{
         flexDirection:'row',
@@ -127,7 +127,7 @@ view3:
     },
     tt:{
         fontSize:15,
-        fontWeight:'500'
+        fontWeight:'500',fontFamily:'Acephimere'
     },
     button: {
         backgroundColor:'rgba(237,102,96,255)',

@@ -50,7 +50,7 @@ export default StyleSheet.create({
          backgroundColor:'#fddac0'
         },
         line1:{ 
-            borderWidth:1,
+            borderWidth:0.5,
              marginTop: 10,
              backgroundColor:'#fddac0'
             },

@@ -16,7 +16,8 @@ export default StyleSheet.create({
     },
     title: {
         color: colors.black,
-        marginLeft: 10
+        marginLeft: 10,
+        
     },
     main: {
         paddingHorizontal: 10,

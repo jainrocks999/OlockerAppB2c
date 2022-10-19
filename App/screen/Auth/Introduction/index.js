@@ -28,15 +28,18 @@ const Login = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>
-        <ScrollView>
+        <ScrollView style={{}}>
           <View style={styles.main1}>
-
+            <View style={{height:180,width:350,alignSelf:'center'}}>
+            <Image style={{height:'100%',width:'100%'}} source={require('../../../Assets/images/login-register.png')}/>
+            </View>
           </View>
 
           <View style={styles.main}>
-            <Text style={styles.title}>{"YOUR FAVORITE"}</Text>
+            <Image style={{height:'100%',width:'100%',marginLeft:0}} source={require('../../../Assets/images/logo_new.png')}/>
+            {/* <Text style={styles.title}>{"YOUR FAVORITE"}</Text>
             <Text style={styles.title1}>{"JEWELLER"}</Text>
-            <Text>One stop soluction or all your jewellery</Text>
+            <Text>One stop solution for all your jewellery</Text> */}
           </View>
 
 
@@ -47,7 +50,7 @@ const Login = () => {
               style={[styles.button, { backgroundColor: login == true ? '#ed6660' : '#e3e3e3' }]}>
               <View style={styles.buttonV}>
 
-                <Icon name="mobile1" size={20} color='#fff' />
+                <Icon name="mobile1" size={17} color='#fff' />
                 <Text style={styles.text1}>Login With Mobile</Text>
               </View>
             </TouchableOpacity>

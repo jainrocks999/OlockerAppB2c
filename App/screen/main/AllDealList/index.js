@@ -1,18 +1,23 @@
 import React from "react";
-import { View,Text, SafeAreaView,TouchableOpacity ,FlatList, ScrollView} from "react-native";
+import { View,Text, SafeAreaView,TouchableOpacity ,FlatList,Image} from "react-native";
 import styles from "./styles";
 import { useNavigation } from "@react-navigation/native";
-
+import StoreBottom from '../../../Component/StoreBottomTab'
+import { ScrollView } from "native-base";
 const Loyalty =()=>{
   const navigation =useNavigation();
 return(
     <SafeAreaView style={styles.container}>
+      <ScrollView>
       <View style={styles.main}/> 
       <View style={styles.main1}>
       
       <View style={styles.card2}>
         <View style={styles.view1}>
          <Text>All Deals</Text> 
+         <View style={{height:50,width:100,alignSelf:'flex-end'}}>
+         <Image style={{height:'100%',width:'100%'}} resizeMode="center" source={require('../../../Assets/images/grabon_icon.png')}/>
+         </View>
       </View>
         <FlatList
             showsHorizontalScrollIndicator={true}
@@ -24,11 +29,14 @@ return(
                
              <View style={styles.itemv}>
                
-               <View style={styles.circle}></View>
+               <View style={styles.circle}>
+                 <Image style={{height:'100%',width:'100%' ,borderRadius:40}}
+                 source={require('../../../Assets/images/deal_logohome2.jpg')}/>
+               </View>
               <TouchableOpacity
                  onPress={()=>navigation.navigate('Dealdetail')}
                 style={styles.cardview}>
-              
+                  <Text style={{marginLeft:40}}>{item.id}</Text>
                </TouchableOpacity>
               
 
@@ -37,6 +45,8 @@ return(
           />
         </View> 
       </View>
+      </ScrollView>
+      <StoreBottom/>
     </SafeAreaView>
 )
 }

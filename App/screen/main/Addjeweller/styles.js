@@ -18,10 +18,11 @@ card: {
      backgroundColor: 'white',
      paddingHorizontal: 5,
      paddingVertical:10,
-     marginTop: 135,
-     height:hp('26%'),
-   
-     width:wp('95%'),
+     marginTop: 107,
+    paddingHorizontal:10,
+    paddingVertical:5,
+    width:'100%',
+    height:155
     
    },
    text1:{
@@ -29,13 +30,11 @@ card: {
        fontWeight:'500'
    },
    main:{
-      height:hp('50%'),
-       width:wp('180%'),
-       backgroundColor:colors.blue,
+     
+      //  backgroundColor:colors.blue,
      alignItems:'center',
-     alignSelf:'center',
-       borderBottomStartRadius:hp('50%'),
-       borderBottomEndRadius:hp('50%')
+      // alignSelf:'center',
+     paddingHorizontal:0
    },
   
    text:{
@@ -56,15 +55,16 @@ card: {
       
    },
    buttonView:{
-    paddingHorizontal: 20,
+      alignItems:'center',
+    paddingHorizontal: 25,
    },
    button: {
       backgroundColor:colors.btcolor,
     alignItems: 'center',
      borderRadius: 25,
-     marginTop: -30,
-     width: wp('80%'),
-    paddingVertical:14,
+     marginTop: -18,
+     width: wp('85%'),
+    paddingVertical:10,
    },
    
 })

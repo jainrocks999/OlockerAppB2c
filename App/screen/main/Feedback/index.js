@@ -45,7 +45,7 @@ const Loyalty = () => {
                         <View style={{ marginTop: 10 }}>
                             <HStack space={4}>
 
-                                <Checkbox value="check" accessibilityLabel="This is a dummy checkbox" defaultIsChecked
+                                <Checkbox value="check" accessibilityLabel="This is a dummy checkbox" defaultIsChecked    colorScheme= "orange" 
                                 />
                                 <Text style={styles.text2}>Good showroom ambience</Text>
                             </HStack>
@@ -53,7 +53,7 @@ const Loyalty = () => {
                         <View style={{ marginTop: 10 }}>
                             <HStack space={4}>
 
-                                <Checkbox value="check" defaultIsChecked color={'blue.600'}
+                                <Checkbox value="check" defaultIsChecked  colorScheme= "orange" 
                                 />
                                 <Text style={styles.text2}>Proper lighting</Text>
                             </HStack>
@@ -61,7 +61,7 @@ const Loyalty = () => {
                         <View style={{ marginTop: 10 }}>
                             <HStack space={4}>
 
-                                <Checkbox value="check" accessibilityLabel="This is a dummy checkbox" defaultIsChecked
+                                <Checkbox value="check" accessibilityLabel="This is a dummy checkbox" defaultIsChecked   colorScheme= "orange" 
                                 />
                                 <Text style={styles.text2}>Well trained and knowledgeable sales team</Text>
                             </HStack>
@@ -69,7 +69,7 @@ const Loyalty = () => {
                         <View style={{ marginTop: 10 }}>
                             <HStack space={4}>
 
-                                <Checkbox value="check" accessibilityLabel="This is a dummy checkbox" defaultIsChecked
+                                <Checkbox value="check" accessibilityLabel="This is a dummy checkbox" defaultIsChecked   colorScheme= "orange" 
                                 />
                                 <Text style={styles.text2}>you were properly treated by staff</Text>
                             </HStack>
@@ -122,7 +122,7 @@ const Loyalty = () => {
             style={styles.button}>
               
             
-             <Text style={{color: '#fff',fontSize:15}}>SUBMIT</Text>
+             <Text style={{color: '#fff',fontSize:15,fontFamily:'Acephimere'}}>SUBMIT</Text>
           
            </TouchableOpacity>
            </View> 

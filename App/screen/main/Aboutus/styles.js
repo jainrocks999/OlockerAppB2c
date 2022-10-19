@@ -10,7 +10,7 @@ marginBottom:0
 },
 main:{
     backgroundColor:"#fddac0",
-    height:hp('100%')
+    height:'100%',marginBottom:hp('5%')
 },
 main1:{
 height:hp('15%'),
@@ -42,12 +42,7 @@ rec:{
     
    
   },
-  textV:{
-    color:colors.white,
-    fontWeight:'700',
-    marginLeft:10
-    // textAlign:'center'
-  },
+ 
   cardview: {
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 4 },
@@ -79,5 +74,24 @@ text1:{
     marginLeft:15,
    color:colors.black,
    fontSize:13
+},
+view1:{
+  height:70,width:"100%",marginTop:10,
+},
+imgbcg:{
+   height:'60%',
+  width:"70%",
+  // justifyContent:'center',
+   //alignItems:'center',
+},
+textV:{
+  color:colors.white,
+  fontWeight:'700',
+   marginLeft:10,
+  fontFamily:'Acephimere',marginTop:3
+  // textAlign:'center'
+},
+gallery:{
+  height:100,width:100,alignSelf:'center',borderWidth:1,marginTop:-10,
 }
 })

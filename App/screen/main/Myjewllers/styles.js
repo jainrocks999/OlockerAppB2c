@@ -33,8 +33,9 @@ cardview: {
     borderRadius: 10,
     height: hp('17%'),
     width:wp('46%'),
-    
-    backgroundColor: '#fff'
+   // alignItems:'center',
+    backgroundColor: '#fff',
+   // marginBottom:20
 
   },
   list:{

@@ -39,8 +39,8 @@ export default StyleSheet.create({
         justifyContent: 'space-between'
     },
     iconView: {
-        width: 25,
-        height: 24,
+        width: 23,
+        height: 25,
        // backgroundColor: 'grey'
     },
     text: {

@@ -19,15 +19,22 @@ const App = () => {
      
             
                <View style={styles.main1}>
+                <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                <View style={{height:90}}>
                  <Text style={styles.text}>
                    {'Please fill up the form'}
                  </Text>
                  <Text style={[styles.text,{fontSize:26}]}>
                    {'to complete\nregistration'}
                  </Text>
+                 </View>
+                 <View style={{height:80,width:150,marginRight:10}}>
+            <Image style={{height:'100%',width:'100%'}} source={require('../../../Assets/images/registration_img.png')}/>
+            </View>
+            </View>
               <View style={styles.main}>
                     <View style={styles.view1} >
-                       <Icon name="user" size={20} />
+                       <Icon name="user" size={19} />
                       </View>
                       <View style={styles.picker} >
                       <View style={{width:'50%'}}>
@@ -38,46 +45,46 @@ const App = () => {
                                       
                                        inputAndroid: { width:'100%',fontSize:14,marginBottom:-1 },
                                        inputIOS: { width:'100%',fontSize:14,marginBottom:-1,borderWidth:0 },
-                                      placeholder:{color:'#333333',fontSize:14,borderWidth:0}
+                                      placeholder:{color:'#808080',fontSize:14,borderWidth:0}
                                       }}
                                       value={gender}
                                       useNativeAndroidPickerStyle={false}
                                       placeholder={{ label: "Mr.", value: 0 }}
                                       Icon={()=><View style={styles.icon}>
-                                      <Icon name ="caretdown" color={colors.lightGrey} />
+                                      <Icon name ="caretdown" color='#808080' />
                                       </View>
                                       }
                                     />
                   </View>
                       </View>
                    <View style ={{width:'33%'}} >
-                     <TextInput style={{width:'90%'}}
-                      placeholder='Fisrt name '
+                     <TextInput style={{width:'90%',alignItems:'center',fontFamily:'Acephimere'}}
+                      placeholder='Fisrt Name '
                      />
                     </View>
                     <View style ={{width:'33%'}} >
-                    <TextInput
-                      placeholder='Last name '
+                    <TextInput  style={{width:'90%',alignItems:'center',fontFamily:'Acephimere'}}
+                      placeholder='Last Name '
                      />
                     </View>
               </View> 
               <View style={styles.main}>
-              <View style={{alignSelf:'center'}} >
-                       <Icon1 name="email" size={20}   />
+              <View style={{alignSelf:'center',}} >
+                       <Icon1 name="email" size={18}   />
                       </View>
                       <View  style={{marginLeft:10}}>
-                        <TextInput
-                        placeholder='Enter email'
+                        <TextInput style={{width:'100%',alignItems:'center',fontFamily:'Acephimere'}}
+                        placeholder='Enter Email'
                         />
                       </View>
                      
                 </View>
                 <View style={styles.main}>
                 <View style={{alignSelf:'center'}} >
-                       <Icon name="mobile1" size={20}  />
+                       <Icon name="mobile1" size={18}  />
                       </View>
                       <View>
-                        <TextInput
+                        <TextInput  style={{width:'100%',alignItems:'center',fontFamily:'Acephimere'}}
                         placeholder='Enter Mobile Number'
                         />
                       </View>
@@ -85,23 +92,23 @@ const App = () => {
                 
                 <View style={styles.main}>
                 <View style={{alignSelf:'center'}} >
-                       <Icon name="mobile1" size={20}  />
+                       <Icon name="mobile1" size={18}  />
                       </View>
                       <View style ={{width:'85%'}}>
-                        <TextInput
+                        <TextInput style={{width:'90%',alignItems:'center',fontFamily:'Acephimere'}}
                         placeholder='Enter Code'
                         />
                       </View>
                       <View/>
                       <View style={{alignSelf:'center'}} >
-                       <Icon2 name="qrcode-scan" size={20}  />
+                       <Icon2 name="qrcode-scan" size={18}  />
                       </View>
                 </View>
                  
                   <TouchableOpacity 
-                          onPress={()=>navigation.navigate("otp")}
+                          onPress={()=>navigation.navigate("Login")}
                         style={styles.button}>
-                      <Text style={{color: '#fff'}}>Sign up</Text>
+                      <Text style={{color: '#fff',fontFamily:'Acephimere'}}>Sign up</Text>
                  </TouchableOpacity>
            
           </View>  

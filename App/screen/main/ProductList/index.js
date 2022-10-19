@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {View, Text, TouchableOpacity, FlatList, ScrollView,Image,Dimensions,Share} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import Icon  from 'react-native-vector-icons/Fontisto';
+import Icon from 'react-native-vector-icons/EvilIcons';
 import styles from './styles';
 
 
@@ -53,7 +53,23 @@ const MyProducts = () => {
                 // onPress={()=>navigation.navigate('alldeal')}
                 style={styles.cardview}>
              
-                 
+                 <View style={styles.imageicon}>
+                  <Image  style={{height:'100%',width:'100%',resizeMode:'contain'}}
+                  source={require('../../../Assets/images/necklace_product.png')}/>
+                 </View>
+                 <View style={styles.fotter}>
+                   <View style={styles.fottercard}>
+                      <Text style={styles.price}>PRICE ON REQUEST</Text>
+                   </View>
+                   <View style={styles.fotterView}>
+                   <View style={styles.circles}>
+                        <Icon name='heart' size={25} color={"#ed6660"} />
+                    </View>
+                    <View style={styles.circles}>
+                        <Icon name='share-google' size={25} color={'#ed6660'} />
+                    </View>
+                   </View>
+                 </View>
                   </TouchableOpacity>
                
          

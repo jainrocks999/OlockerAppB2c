@@ -12,7 +12,7 @@ main:{
   alignItems:'center'
 }, 
  main1:{
-  paddingVertical:90,
+  paddingVertical:10,
   backgroundColor:'#fa8a86'
 },
 
@@ -51,8 +51,9 @@ card: {
   input: {
       borderBottomWidth:0.2,
   width:'100%',
-  marginTop: 20,alignItems:'center'
-//   paddingHorizontal:20
+  marginTop: 20,alignItems:'center',
+//   paddingHorizontal:20,
+fontFamily:'Acephimere'
   },
   
   buttonView:{
@@ -67,6 +68,7 @@ card: {
     marginTop: 30,
     width: '100%',
    paddingVertical:17,
+ 
   },
   buttonV:{
   flexDirection:'row',
@@ -79,11 +81,13 @@ card: {
   },
   text1:{
     color:'#000000',
-    fontWeight:'600',
-    fontSize:13
+    fontWeight:'700',
+    fontSize:13,
+    fontFamily:'Acephimere'
   },
   text2:{
     color:'#9a9a9a',
-    fontSize:12
+    fontSize:12,
+    fontFamily:'Acephimere'
   }
 })

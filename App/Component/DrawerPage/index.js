@@ -72,8 +72,9 @@ const DrawerContent=()=> {
                     }}>
                     <View style={[styles.drawer, {}]}>
                         <View style={{ flexDirection: 'row',justifyContent:'center',alignItems:'center'}}>
-                            <View style={styles.iconView}>
-                               <Icon name='home-outline' size={25}/>
+                        <View style={[styles.iconView,{height:22,width:22}]}>
+                            <Image style={styles.imageicon} source={require('../../Assets/icon/sid_home.png')}/>
+
                             </View>
                             <Text style={styles.text}>{'Home'}</Text>
                         </View>
@@ -85,8 +86,8 @@ const DrawerContent=()=> {
                     }>
                     <View style={[styles.drawer]}>
                         <View style={{ flexDirection: 'row' }}>
-                        <View style={styles.iconView}>
-                                {/* <Image style={styles.imageicon} source={require('../../assets/Images/register.png')}/> */}
+                        <View style={[styles.iconView,{height:27,width:19}]}>
+                        <Image style={styles.imageicon} source={require('../../Assets/icon/sid_jeweller.png')}/>
                             </View>
                             <Text style={styles.text}> {"My Jeweller"}</Text>
                         </View>
@@ -97,10 +98,11 @@ const DrawerContent=()=> {
                   <View>
                   <TouchableOpacity
                  onPress={()=>navigation.navigate('myjeweller')}>
-                  <View style={[styles.drawer,{backgroundColor:'pink',borderBottomWidth:1}]}>
-                      <View style={{ flexDirection: 'row' }}>
-                      <View style={styles.iconView}>
-                              {/* <Image style={styles.imageicon} source={require('../../assets/Images/register.png')}/> */}
+                  <View style={[styles.drawer,{backgroundColor:'pink',borderBottomWidth:0.5}]}>
+                      <View style={{ flexDirection: 'row' ,paddingHorizontal:20}}>
+                      <View style={[styles.iconView,{height:22,width:27}]}>
+
+                              <Image style={styles.imageicon} source={require('../../Assets/icon/sid_retailer.png')}/>
                           </View>
                           <Text style={styles.text}> {"Retailer's Home"}</Text>
                       </View>
@@ -110,9 +112,9 @@ const DrawerContent=()=> {
               <TouchableOpacity
                    onPress={()=>{navigation.navigate('Addjeweller')}}>
                     <View style={[styles.drawer,{backgroundColor:'pink'}]}>
-                        <View style={{ flexDirection: 'row' }}>
-                        <View style={styles.iconView}>
-                                {/* <Image style={styles.imageicon} source={require('../../assets/Images/register.png')}/> */}
+                        <View style={{ flexDirection: 'row' ,paddingHorizontal:20}}>
+                        <View style={[styles.iconView,{height:22,width:19}]}>
+                                <Image style={styles.imageicon} source={require('../../Assets/icon/user_icon.png')}/>
                             </View>
                             <Text style={styles.text}> {"Add Jeweller"}</Text>
                         </View>
@@ -129,8 +131,8 @@ const DrawerContent=()=> {
                     onPress={() =>app1()}>
                     <View style={[styles.drawer]}>
                         <View style={{  flexDirection: 'row',justifyContent:'center',alignItems:'center' }}>
-                        <View style={styles.iconView}>
-                                {/* <Image style={styles.imageicon} source={require('../../assets/Images/call1.png')}/> */}
+                        <View style={[styles.iconView,{height:23,width:23}]}>
+                        <Image style={styles.imageicon} source={require('../../Assets/icon/sid_my_olocker.png')}/>
                             </View>
                             <Text style={styles.text}>{'My Olocker'}</Text>
                         </View>
@@ -142,9 +144,9 @@ const DrawerContent=()=> {
                   <TouchableOpacity
                   onPress={()=>navigation.navigate('MyFav')}>
                   <View style={[styles.drawer,{backgroundColor:'pink',borderBottomWidth:1}]}>
-                      <View style={{ flexDirection: 'row' }}>
-                      <View style={styles.iconView}>
-                              {/* <Image style={styles.imageicon} source={require('../../assets/Images/register.png')}/> */}
+                      <View style={{ flexDirection: 'row' ,paddingHorizontal:20}}>
+                      <View style={[styles.iconView,{height:22,width:22}]}>
+                              <Image style={styles.imageicon} source={require('../../Assets/icon/sidmenu_myinsuredjewellery.png')}/>
                           </View>
                           <Text style={styles.text}> {"My Insured Jewellery"}</Text>
                       </View>
@@ -154,10 +156,10 @@ const DrawerContent=()=> {
               <TouchableOpacity
                      onPress={()=>navigation.navigate('portfolio')}>
                     <View style={[styles.drawer,{backgroundColor:'pink'}]}>
-                        <View style={{ flexDirection: 'row' }}>
-                        <View style={styles.iconView}>
-                                {/* <Image style={styles.imageicon} source={require('../../assets/Images/register.png')}/> */}
-                            </View>
+                        <View style={{ flexDirection: 'row' ,paddingHorizontal:20}}>
+                        <View style={[styles.iconView,{height:22,width:22}]}>
+                              <Image style={styles.imageicon} source={require('../../Assets/icon/sidmenu_myjewelleryportfolio.png')}/>
+                          </View>
                             <Text style={styles.text}> {"My Jewellery Portfolio"}</Text>
                         </View>
                     </View>
@@ -174,8 +176,8 @@ const DrawerContent=()=> {
                     }}>
                     <View style={[styles.drawer]}>
                         <View style={{  flexDirection: 'row',justifyContent:'center',alignItems:'center' }}>
-                        <View style={styles.iconView}>
-                                {/* <Image style={styles.imageicon} source={require('../../assets/Images/call1.png')}/> */}
+                        <View style={[styles.iconView,{height:23,width:21}]}>
+                        <Image style={styles.imageicon} source={require('../../Assets/icon/sid_my_deals.png')}/>
                             </View>
                             <Text style={styles.text}>{'MY SAVING SCHEMES'}</Text>
                         </View>
@@ -186,8 +188,8 @@ const DrawerContent=()=> {
                     onPress={()=>navigation.navigate('alldeal')}>
                     <View style={[styles.drawer]}>
                         <View style={{  flexDirection: 'row',justifyContent:'center',alignItems:'center' }}>
-                        <View style={styles.iconView}>
-                                {/* <Image style={styles.imageicon} source={require('../../assets/Images/call1.png')}/> */}
+                        <View style={[styles.iconView,{height:23,width:21}]}>
+                                <Image style={styles.imageicon} source={require('../../Assets/icon/sid_my_deals.png')}/>
                             </View>
                             <Text style={styles.text}>{'My Deals'}</Text>
                         </View>
@@ -199,8 +201,8 @@ const DrawerContent=()=> {
                                  >
                     <View style={[styles.drawer]}>
                         <View style={{  flexDirection: 'row',justifyContent:'center',alignItems:'center' }}>
-                        <View style={styles.iconView}>
-                                {/* <Image style={styles.imageicon} source={require('../../assets/Images/call1.png')}/> */}
+                        <View style={[styles.iconView,{height:23,width:19}]}>
+                        <Image style={styles.imageicon} source={require('../../Assets/icon/sid_my_points.png')}/>
                             </View>
                             <Text style={styles.text}>{'My Points'}</Text>
                         </View>
@@ -220,10 +222,10 @@ const DrawerContent=()=> {
                     style={[styles.drawer,{backgroundColor:'#ed6660'}]}>
                       
                         <View style={{  flexDirection: 'row',justifyContent:'center',alignItems:'center' }}>
-                        <View style={styles.iconView}>
-                                {/* <Image style={styles.imageicon} source={require('../../assets/Images/logout.png')}/> */}
+                        <View style={[styles.iconView,{height:23,width:21}]}>
+                                <Image style={styles.imageicon} source={require('../../Assets/icon/logout.png')}/>
                             </View>
-                            <Text style={styles.text}>{'Logout'}</Text>
+                            <Text style={[styles.text,{color:'#fff'}]}>{'Logout'}</Text>
                         </View>
                     </TouchableOpacity>
                     </View>  

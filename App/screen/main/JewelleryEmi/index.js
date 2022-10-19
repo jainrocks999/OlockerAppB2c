@@ -125,7 +125,7 @@ return(
               <TouchableOpacity
                 style={{ width: '70%',height:50 }}
                 onPress={() => showDatepicker()}>
-                <Text style={{ marginLeft: 0, fontSize: 14,marginTop:16}}>{`${date2}`}</Text>
+                <Text style={{ marginLeft: 0, fontSize: 14,marginTop:16,fontFamily:'Acephimere'}}>{`${date2}`}</Text>
               </TouchableOpacity>
               {show && (
                 <DateTimePicker
@@ -164,7 +164,7 @@ return(
               </View>
               <View style={styles.loanv}>
                 <View style={{alignSelf:'center'}}>
-                 <Text>Loan Needed</Text>
+                 <Text style={{fontFamily:'Acephimere'}}>Loan Needed</Text>
                 </View>
                 <View style={styles.loanview}>
                    <View style={{alignSelf:'center'}}>
@@ -189,18 +189,18 @@ return(
              <View style={[styles.loanv,{width:'90%',alignSelf:'center'}]}>
              <View style={styles.slider}>
                     <Icon2 name="rupee" size={13} />
-                    <Text style={{marginLeft:5,color:'#062a47'}}>0</Text>
+                    <Text style={{marginLeft:5,color:'#062a47',fontFamily:'Acephimere'}}>0</Text>
                     </View>
                     <View style={styles.slider}>
                     <Icon2 name="rupee" size={13} />
-                    <Text style={{marginLeft:5,color:'#062a47'}}>15 L</Text>
+                    <Text style={{marginLeft:5,color:'#062a47',fontFamily:'Acephimere'}}>15 L</Text>
                     </View>
              </View>
              
              <View style={styles.check}>
                 <HStack space={4}>
                <Checkbox value="check" colorScheme="orange"  accessibilityLabel="This is a dummy checkbox" defaultIsChecked  />
-            <Text style={{fontSize:15,fontWeight:'500'}}>Salaried</Text>
+            <Text style={{fontSize:15,fontWeight:'500',fontFamily:'Acephimere'}}>Salaried</Text>
             </HStack>
            </View>        
             
@@ -249,7 +249,7 @@ return(
           <TouchableOpacity 
                           onPress={()=>navigation.navigate("otp")}
                         style={styles.button}>
-                      <Text style={{color: '#fff'}}>SUBMIT</Text>
+                      <Text style={{color: '#fff',fontFamily:'Acephimere'}}>SUBMIT</Text>
                  </TouchableOpacity>
            
 

@@ -9,13 +9,15 @@ marginBottom:0
 
 },
 circle:{
-    height:80,
-    width:80,
+    height:70,
+    width:70,
     borderRadius:40,
-    borderWidth:0.5,zIndex:5,
+    borderWidth:0.5,zIndex:1,
     position:'absolute',
-    marginTop:35,
-    backgroundColor:'#fff'
+    marginTop:25,
+    backgroundColor:'#fff',
+    alignItems:'center',
+    justifyContent:'center'
 },
 card: {
     // shadowColor: 'black',

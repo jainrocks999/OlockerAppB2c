@@ -1,10 +1,11 @@
 import React from "react";
-import { View,Text, SafeAreaView,TouchableOpacity ,FlatList, ScrollView} from "react-native";
+import { View,Text, SafeAreaView,TouchableOpacity ,FlatList, ScrollView,Image, ImageBackground} from "react-native";
 import styles from "./styles";
 import Icon from 'react-native-vector-icons/Ionicons';
 import { HStack,Box,Switch } from "native-base";
 import { SliderBox } from "react-native-image-slider-box";
 import { useNavigation } from "@react-navigation/native";
+import StoreBottom from '../../../Component/StoreBottomTab'
 const HomeScreen =()=>{
     const navigation = useNavigation();
     return(
@@ -13,10 +14,10 @@ const HomeScreen =()=>{
            <View style={styles.buttonView}> 
               <TouchableOpacity onPress={()=>{navigation.navigate('Addjeweller')}}
                style={[styles.button]}>
-              <Text style={{color: '#fff',fontSize:13}}>Add New Jeweller</Text>
+              <Text style={{color: '#fff',fontSize:14,fontFamily:'Acephimere'}}>Add New Jeweller</Text>
              </TouchableOpacity>
         
-          <View>
+          <View style={{paddingVertical:16}}>
              <View style={styles.main}>
              <Text style={styles.text}>My Jewellers</Text> 
              <TouchableOpacity onPress={()=>navigation.navigate('myjeweller')}
@@ -30,11 +31,18 @@ const HomeScreen =()=>{
             data={DATA}
             style={{marginTop:7}}
             renderItem={({item}) => (
+              <View style={{alignItems:'center'}}> 
               <TouchableOpacity
             onPress={()=>navigation.navigate('supplier')}
                 style={styles.cardview}>
-              <Text>{item.title}</Text>
+               <View style={{height:'100%',width:'100%',}}>
+               <Image style={{height:'100%',width:'100%',borderRadius:10}} source={require('../../../Assets/images/deal_logohome1.jpg')}/>
+               </View>
               </TouchableOpacity>
+              <Text style={{fontFamily:'Acephimere',fontSize:13}}>
+                {item.title}
+              </Text>
+              </View>
             )}
           />
           </View>
@@ -74,7 +82,9 @@ const HomeScreen =()=>{
           
         />
       </View>
-          <View style={styles.listv}>
+          <ImageBackground 
+           source={require('../../../Assets/images/deal_bg_home.jpg')}
+          style={styles.listv}>
               <View style={styles.swtich}>
              <Text style={styles.text1}>Smart Deals</Text> 
              <HStack alignContent="center" justifyContent='center'>
@@ -92,8 +102,9 @@ const HomeScreen =()=>{
               <TouchableOpacity
               onPress={()=>navigation.navigate('alldeal')}
                 style={styles.cardview}>
-
-            <Text>{item.title}</Text>
+               <View style={{height:'100%',width:'100%',}}>
+               <Image style={{height:'100%',width:'100%',borderRadius:10}} source={require('../../../Assets/images/deal_logohome2.jpg')}/>
+               </View>
               </TouchableOpacity>
             )}
           />
@@ -104,11 +115,18 @@ const HomeScreen =()=>{
                   <Text style={styles.text2}>View All</Text>
               </TouchableOpacity>
               </View>
-          </View>
-          <View style={styles.fotter}>
+          </ImageBackground>
+          {/* <View style={styles.fotter}>
              <Text style={[styles.text1,{marginTop:-45,marginLeft:10}]}>Olocker Services</Text> 
-             </View>
-             <View style={{marginTop:-70}}>
+             </View> */}
+             <ImageBackground  source={require('../../../Assets/images/olocker_logo_home_bg.jpg')}
+              style={styles.fotter}
+              >
+              <View style={styles.logo}>
+              <Image  style={styles.img}
+              source={require('../../../Assets/images/olocker_logo_home.png')}/>
+              </View>
+             <View style={{marginTop:0}}>
           <FlatList
             showsHorizontalScrollIndicator={false}
             horizontal={true}
@@ -121,9 +139,12 @@ const HomeScreen =()=>{
               
                  onPress={()=>navigation.navigate('portfolio')}
                 style={styles.cardview}>
-                   
+                    <View style={styles.img2}>
+               <Image style={styles.img3} source={require('../../../Assets/images/olocker_logo_homebx1.jpg')}/>
+             
                  <View style={styles.cardfotter}>
                    <Text style={styles.text2}>Jewellery Insurence</Text>
+                 </View>
                  </View>
               </TouchableOpacity>:
               <TouchableOpacity
@@ -131,18 +152,24 @@ const HomeScreen =()=>{
               onPress={()=>navigation.navigate('emi')}
              style={styles.cardview}>
                 
-              <View style={styles.cardfotter}>
-                <Text style={styles.text2}>Jewellery Insurence</Text>
-              </View>
+                <View style={styles.img2}>
+               <Image style={styles.img3} source={require('../../../Assets/images/olocker_logo_homebx2.png')}/>
+             
+                 <View style={styles.cardfotter}>
+                   <Text style={styles.text2}>Jewellery Insurence</Text>
+                 </View>
+                 </View>
            </TouchableOpacity>
               }
               </View>
             )}
           />
           </View>
-         
-          <View style={{height:100}}/>
+          </ImageBackground>
+
+          {/* <View style={{height:100}}/> */}
     </ScrollView>
+    <StoreBottom/>
  </SafeAreaView>
     )
 }

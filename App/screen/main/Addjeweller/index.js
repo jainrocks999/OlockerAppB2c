@@ -1,15 +1,19 @@
 import React from "react";
-import { View,Text, SafeAreaView,TouchableOpacity ,FlatList, ScrollView, TextInput} from "react-native";
+import { View,Text, SafeAreaView,TouchableOpacity ,ImageBackground, ScrollView, TextInput} from "react-native";
 import styles from "./styles";
 import colors from "../../../constant/colors";
 import { useNavigation } from "@react-navigation/native";
-
+import StoreBottom from '../../../Component/StoreBottomTab'
 const Loyalty =()=>{
+  const navigation=useNavigation()
 return(
     <SafeAreaView style={styles.container}>
             
-             <View style={styles.main}>
-                
+       {/* <ScrollView> */}
+                <ImageBackground style={{height:"100%",width:'100%',}}
+                 source={require('../../../Assets/images/add_jeweller.png')}
+                >
+                <View style={{paddingHorizontal:10}}>
               <View style={styles.card}>
                  <Text style={styles.text1}>RETAILER CODE</Text>
                 <View style={styles.Input1}>
@@ -38,7 +42,10 @@ return(
      
                </View>
     
+               </ImageBackground>
 
+               {/* </ScrollView>       */}
+               {/* <StoreBottom/> */}
     </SafeAreaView>
 )
 }

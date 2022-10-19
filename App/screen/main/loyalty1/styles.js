@@ -17,7 +17,9 @@ circle:{
     borderWidth:0.5,
     zIndex:1,
     marginTop:-40,
-    backgroundColor:'#fff'
+    backgroundColor:'#fff',
+    alignItems:'center',
+    justifyContent:'center'
   },
     
 circle1:{
@@ -27,6 +29,7 @@ circle1:{
         justifyContent:'center',
         borderRadius:40,
         borderWidth:0.5,
+        
       },
 card: {
     // shadowColor: 'black',
@@ -56,11 +59,11 @@ card: {
 
     textAlign:'center',
     fontSize:15,
-    fontWeight:'700'
+    fontWeight:'700',fontFamily:'Acephimere'
 },
    main:{
        
-       paddingHorizontal:10
+       paddingHorizontal:10,marginTop:0
    },
    item:{
       
@@ -74,7 +77,7 @@ card: {
        alignSelf:'flex-end'
    },
    text:{
-       color:colors.white,
+       color:colors.white,fontFamily:'Acephimere'
 
    },
    card1: {
@@ -82,7 +85,7 @@ card: {
      borderRadius:5,
      backgroundColor: 'white',
      height:50,
-     marginTop: 10,
+     marginTop: -5,
      borderWidth: 1,
      width:'100%',
      
@@ -103,33 +106,22 @@ card: {
       borderStyle: 'solid',
       marginTop:15,
     },
-    rec1:{
-      borderBottomWidth: 40,
-      height:40,
-     
-      borderBottomColor:"pink",
-     borderLeftWidth: 30,
-     borderLeftColor: 'red',
-     borderRightWidth: 0,
-     borderRightColor:colors.blue,
-      borderStyle: 'solid',
-      marginTop:15,
-    },
-   view:{
-     backgroundColor:"pink",
-     width:'50%',
-    height:40,
-    marginTop:15,
-   justifyContent:'center'
-    
+   view3:{
+    //  backgroundColor:"pink",
+     width:'100%',
+    height:50,
+     marginTop:5,
+ justifyContent:'center',
  
       
      
     },
+    view:{height:'70%',width:'80%'},
     textV:{
       color:colors.blue,
       fontWeight:'700',
-      textAlign:'center'
+      marginLeft:30,fontFamily:'Acephimere',marginTop:3
+      // textAlign:'center'
     },
     bottomv:{ 
       backgroundColor: '#fff',

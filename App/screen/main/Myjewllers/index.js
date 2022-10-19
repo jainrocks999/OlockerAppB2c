@@ -1,14 +1,16 @@
 import React from "react";
-import { View,Text, SafeAreaView,TouchableOpacity ,FlatList, ScrollView} from "react-native";
+import { View,Text, SafeAreaView,TouchableOpacity ,FlatList,Image} from "react-native";
 import styles from "./styles";
 import Icon from 'react-native-vector-icons/Ionicons';
-import { HStack,Box,Switch } from "native-base";
+import { HStack,Box,Switch, ScrollView } from "native-base";
 import { SliderBox } from "react-native-image-slider-box";
 import { useNavigation } from "@react-navigation/native";
-
+import StoreBottom from '../../../Component/StoreBottomTab'
 const Loyalty =()=>{
+  const navigation=useNavigation()
 return(
     <SafeAreaView style={styles.container}>
+      <ScrollView>
       <View style={styles.main}>
       <View style={styles.slider1}>
         <SliderBox
@@ -57,24 +59,26 @@ return(
             style={styles.list}
             numColumns={2}
             renderItem={({item}) => (
+              <View style={{alignItems:'center'}}> 
               <TouchableOpacity
-            
+              onPress={()=>navigation.navigate('supplier')}
+
                 style={styles.cardview}>
-               {/* <Image
-                  style={{
-                    width: win.width * 0.33,
-                    height: '100%',
-                    resizeMode: 'contain',
-                    // alignSelf: 'center',
-                    borderRadius: 15,
-                  }}
-                  source={require('../../../assets/Image/Not.jpeg')} />  */}
+              <View style={{height:'80%',width:'100%',borderRadius:15,borderWidth:0}}>
+               <Image style={{height:'100%',width:'100%',borderRadius:10}} source={require('../../../Assets/images/deal_logohome1.jpg')}/>
+               </View>
+               <View style={{height:'19%',width:'100%',alignItems:'center',justifyContent:'center',alignSelf:'center'}}>
+                <Text>  {item.title} </Text>
+               </View>
               </TouchableOpacity>
+             </View>
             )}
           />
         </View>
       
       </View>
+      </ScrollView>
+      <StoreBottom/>
     </SafeAreaView>
 )
 }

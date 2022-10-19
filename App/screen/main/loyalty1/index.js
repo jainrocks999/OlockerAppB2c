@@ -1,18 +1,22 @@
 import React from "react";
-import { View, Text, SafeAreaView, TouchableOpacity, FlatList, ScrollView } from "react-native";
+import { View, Text, SafeAreaView, TouchableOpacity, FlatList, Image, ImageBackground, ScrollView } from "react-native";
 import styles from "./styles";
 import colors from "../../../constant/colors";
 import { useNavigation } from "@react-navigation/native";
-
+import StoreBottom from '../../../Component/StoreBottomTab'
 const Loyalty = () => {
+    const navigation =useNavigation()
     return (
         <SafeAreaView style={styles.container}>
+            <ScrollView>
             <View style={styles.main}>
 
                 <Text style={styles.title} >Mangal Jewellers Sign</Text>
                 <View style={styles.main1}>
                     <View style={styles.circle}>
-
+  
+                    <Image style={{height:'100%',width:'100%',borderRadius:40}} 
+                     source={require('../../../Assets/images/deal_logohome1.jpg')}/>
                     </View>
 
                     <View style={styles.card}>
@@ -37,18 +41,16 @@ const Loyalty = () => {
                         </View>
                     </View>
                 </View>
-                <View style={{flexDirection:'row',}}>
-                 <View style={styles.view}>
+                </View>
+                <View style={styles.view3}>
+                 <ImageBackground source={require('../../../Assets/images/loyalty_bg.png')}
+                 style={styles.view}>
                      <Text style={styles.textV}>
                          Points earned summary
                      </Text>
+                 </ImageBackground>
                  </View>
-                 <View style={styles.rec}/>
-                 {/* <View style={[styles.rec1,{marginLeft:5}]}/> */}
-
-
-                 
-                 </View>
+        <View style={styles.main}> 
                 <View style={styles.card1}>
                     <View style={styles.bottomv}>
                         <View style={styles.bottomv1}>
@@ -68,8 +70,10 @@ const Loyalty = () => {
                         </View>
                     </View>
                 </View>
-                <Text style={[styles.title,{marginTop:10,alignSelf:'flex-start'}]}>*Note: 1 Loyalty Point = 1 INR</Text>
-            </View>
+                <Text style={[styles.title,{marginTop:10,alignSelf:'flex-start',fontFamily:'Acephimere'}]}>*Note: 1 Loyalty Point = 1 INR</Text>
+                </View>
+                </ScrollView>
+               <StoreBottom/> 
         </SafeAreaView>
     )
 }

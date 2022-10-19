@@ -1,33 +1,36 @@
-import { Platform, StyleSheet } from "react-native";
-import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
-import colors from '../../../constant/colors'
+import {Platform, StyleSheet} from 'react-native';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
+import colors from '../../../constant/colors';
 export default StyleSheet.create({
-container:{
-flex:1,
-backgroundColor:'#f7f7f7'
+  container: {
+    flex: 1,
+    backgroundColor: '#f7f7f7',
+  },
+  main: {
+    paddingHorizontal: 50,
+    alignItems: 'center',
+  },
 
-},
-main:{
-  paddingHorizontal:50,
-  alignItems:'center'
-}, 
+  main1: {
+    paddingVertical: 10,
+    backgroundColor: '#fa8a86',
+  },
+  title: {
+    color: '#979797',
+    marginRight: 15,
+    fontFamily: 'Acephimere',
+  },
 
- main1:{
-  paddingVertical:90,
-  backgroundColor:'#fa8a86'
-},
-title:{
-  color:'#979797',
-  marginRight:15
-},
-
-card: {
-   // shadowColor: 'black',
-     shadowOpacity: 0.25,
+  card: {
+    // shadowColor: 'black',
+    shadowOpacity: 0.25,
     shadowRadius: 4,
-    shadowOffset: { height: 2, width: 0 },
-     elevation: 2,
-   // borderRadius: 10,
+    shadowOffset: {height: 2, width: 0},
+    elevation: 2,
+    // borderRadius: 10,
     //backgroundColor: 'white',
     paddingHorizontal: 15,
     paddingVertical: 10,
@@ -37,42 +40,50 @@ card: {
   image: {
     width: 28,
     height: 28,
-    marginLeft:-10
+    marginLeft: -10,
   },
-  textinput:{alignItems:'center',justifyContent:'center',width:wp('100%')},
+  textinput: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: wp('100%'),
+  },
   input1: {
-    
-   fontSize:18,
+    fontSize: 18,
     // paddingVertical: 5,
     color: '#474747',
-    width:'80%',
-   fontWeight:'700',
-    },
-  input: {
-      borderBottomWidth:0.2,
-  width:'100%',
-  marginTop: 20,alignItems:'center'
-//   paddingHorizontal:20
+    width: '80%',
+    fontWeight: '700',
+    fontFamily: 'Acephimere',
+    justifyContent: 'center',
+    alignSelf: 'center',
   },
-  
-  buttonView:{paddingHorizontal: 10,alignItems:'center'},
+  input: {
+    borderBottomWidth: 0.2,
+    width: '100%',
+    marginTop: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+
+    //   paddingHorizontal:20
+  },
+
+  buttonView: {paddingHorizontal: 10, alignItems: 'center'},
   button: {
-    backgroundColor:colors.btcolor,
+    backgroundColor: colors.btcolor,
     // alignItems: 'center',
     borderRadius: 5,
     // justifyContent: 'space-between',
     marginTop: 30,
     width: '100%',
-   paddingVertical:17,
+    paddingVertical: 17,
   },
- buttonV:{
-  flexDirection:'row',
-  justifyContent:'space-between',
-  paddingHorizontal:10
-},
-row:{
-  flexDirection:'row',
-  marginTop:30
-},
-
-})
+  buttonV: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 10,
+  },
+  row: {
+    flexDirection: 'row',
+    marginTop: 30,
+  },
+});

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, TouchableOpacity, Keyboard, ScrollView, Image, TextInput } from 'react-native';
+import { View, Text, TouchableOpacity, Keyboard, ScrollView, Image, TextInput, ImageBackground } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { SliderBox } from "react-native-image-slider-box";
 import styles from './styles';
@@ -22,33 +22,36 @@ const Productdetail = () => {
                     </View>
 
                 </View>
-                <View style={styles.main}>
+                <ImageBackground 
+                source={require('../../../Assets/images/product_detail.png')}
+                style={styles.main}>
                         <SliderBox
                             images={images}
-                            sliderBoxHeight={150}
+                            sliderBoxHeight={100}
                             onCurrentImagePressed={index => console.warn(`image ${index} pressed`)}
-                            dotColor="#FFEE58"
+                            dotColor="blue"
                             inactiveDotColor="#90A4AE"
                             //    paginationBoxVerticalPadding={10}
                             //   autoplay
                             //   circleLoop
                             //   resizeMethod={'resize'}
                             resizeMode={'cover'}
-                            //   paginationBoxStyle={{
-                            //     position: "absolute",
-                            //     bottom: 0,
-                            //     padding: 0,
-                            //     alignItems: "center",
-                            //     alignSelf: "center",
-                            //     justifyContent: "center",
-                            //     paddingVertical: 0
-                            //   }}
+                              paginationBoxStyle={{
+                                position: "absolute",
+                                bottom: 60,
+                                right:-20,
+                                padding: 0,
+                                // alignItems: "center",
+                                // alignSelf: "center",
+                                // justifyContent: "center",
+                                paddingVertical: 10
+                              }}
     
-                            ImageComponentStyle={{ borderRadius: 75, width:150,height:150}}
+                            ImageComponentStyle={{ borderRadius: 100, width:200,height:200}}
                             imageLoadingColor="#2196F3"
 
                         />
-                </View>
+                </ImageBackground>
 
                 <View style={{ alignItems: 'center',marginTop:10}}>
                     <Text style={styles.text2}>PRICE ON REQUEST</Text>
@@ -103,17 +106,19 @@ const Productdetail = () => {
                         <Text style={styles.textbt}>FREE JEWELLERY INSURANCE</Text>
                         </View>
                     </View>
-                    <View style={styles.bottomv}>
-            
-              <TouchableOpacity style={styles.button}>
-                <Text style={styles.btext}>ENQURE NOW</Text>
-              </TouchableOpacity>
-          </View>
-
+                   
 
                 </View>
-                <View style={{ height: 100 }} />
+               
             </ScrollView>
+            <View style={{ height: 10 }} />
+
+            <View style={styles.bottomv}>
+            
+            <TouchableOpacity style={styles.button}>
+              <Text style={styles.btext}>ENQURE NOW</Text>
+            </TouchableOpacity>
+        </View>
         </View>
     );
 };

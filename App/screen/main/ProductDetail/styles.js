@@ -10,11 +10,12 @@ export default StyleSheet.create({
 
     },
     main: {
-        height: hp('27%'),
-        width: wp('129%'),
-        backgroundColor: '#fddac0',
-        borderBottomEndRadius: hp("27%"),
-        borderBottomStartRadius: hp('27%'),
+        // height: hp('27%'),
+        // width: wp('129%'),
+        // // backgroundColor: '#fddac0',
+        // borderBottomEndRadius: hp("27%"),
+        // borderBottomStartRadius: hp('27%'),
+        height:250,width:'100%',
         alignItems: 'center',
         alignSelf: 'center',
     },
@@ -94,7 +95,7 @@ export default StyleSheet.create({
     bottomv: {
         alignItems: 'center',
         justifyContent: 'space-between',
-        marginTop: 20,
+        marginTop: 2,
         // flexDirection:'row',
     },
     text1: {

@@ -4,6 +4,7 @@ import styles from "./styles";
 import Icon1 from 'react-native-vector-icons/AntDesign';
 import { useNavigation } from "@react-navigation/native";
 import RNPickerSelect from 'react-native-picker-select';
+import StoreBottom from '../../../Component/StoreBottomTab'
 import DateTimePicker from '@react-native-community/datetimepicker';
 const Loyalty =()=>{
     const navigation =useNavigation()
@@ -160,7 +161,7 @@ return(
       </View>
       <View style={{height:70}}/>
       </ScrollView> 
-
+<StoreBottom/>
     </SafeAreaView>
 )
 }
