@@ -37,134 +37,6 @@ import Drawer1 from '../navigation/Drawernavigation/index';
 import Savingscheme from '../screen/main/Savingscheme';
 import Paymentmethod from '../screen/main/PaymentMethod'
 import PaymentStatus from '../screen/main/PaymentStatus'
-const Tab = createBottomTabNavigator();
-function TabNavigatior(){
-  return(
- 
-      <Tab.Navigator 
-      screenOptions={{
-        headerShown:false,
-          tabBarShowLabel: true,
-          tabBarStyle: {
-            backgroundColor:colors.btcolor,paddingVertical:10,
-          }
-      
-      }}>
-        <Tab.Screen name="Home" component={App1}
-        options={{  
-          tabBarLabel:({navigation})=>{
-            return(
-              <View style={{}}>
-                <Text style={{color:colors.white,fontSize:12,fontFamily:'Acephimere'}}>HOME</Text>
-              </View>
-            )
-          },
-          tabBarIcon: ({ focused }) => {
-            return <Image style={{ tintColor: focused ? '#fff' : '#fff',height:24,width:24 }} source={require('../Assets/images/home_footer.png')} />;
-           },
-          }} />
-        <Tab.Screen name="editprofile" component={App3} options={{
-           tabBarLabel:({navigation})=>{
-            return(
-              <View style={{}}>
-                <Text style={{color:colors.white, fontSize:12,fontFamily:'Acephimere'}}>PROFILE</Text>
-              </View>
-            )
-          },
-          tabBarIcon: ({ focused }) => {
-            return (
-            // <TouchableOpacity onPress={()=>navigation.navigate('Drawer1', {Screen:'editprofile'})}>
-            <Image style={{ tintColor: focused ? '#fff' : '#fff', height: 23, width: 24 }} source={require('../Assets/images/user.png')} />
-            // </TouchableOpacity>
-   ) },
-         }} />
-        <Tab.Screen name="Notification" component={App2} options={{
-           tabBarLabel:({navigation})=>{
-            return(
-              <View style={{}}>
-                <Text style={{color:colors.white,fontSize:12,fontFamily:'Acephimere'}}>NOFIFICATION</Text>
-              </View>
-            )
-          },
-          
-          tabBarIcon: ({ focused }) => {
-            return <Image style={{ tintColor: focused ? '#fff' : '#fff', height: 24, width: 24 }} source={require('../Assets/images/footer_notification.png')} />;
-         
-          },
-          }} />
-
-          
-        
-      </Tab.Navigator>
-  )
-}
-
-const Stack3 =createNativeStackNavigator();
-function App3(){
-  return(
-    <Stack3.Navigator>
-       {/* <Stack3.Screen name="editprofile" component={EditProfile} 
-     options={({ navigation }) => ({
-        headerStyle: {
-           backgroundColor: '#fff',
-        
-        },
-      headerTitleAlign:'center',
-      headerBackVisible:(false),
-      headerTitle:()=>(
-        <View>
-        <Text style={{color:colors.blue,fontWeight:'500',fontFamily:'Acephimere'}}>PROFILE</Text>
-        </View>
-     ),
-     
-        headerLeft: () => (
-         
-          <TouchableOpacity 
-          onPress={()=>navigation.navigate('MyDrawer', { screen: 'editprofile' })}
-          // onPress={()=>navigation.toggleDrawer()}
-          style={{marginLeft:-10}}
-
-          >
-         <Icon1 name="menu" size={27}  />
-         </TouchableOpacity>
-       ),
-    
-    })}
-    />  */}
-    </Stack3.Navigator>
-  )
-}
-
-const Stack2=createNativeStackNavigator();
-function App2(){
-  return(
-    <Stack2.Navigator>
-      
-    </Stack2.Navigator>
-  )
-}
-
- const Stack1=createNativeStackNavigator();
- function App1(){
-  return(
-    <Stack1.Navigator screenOptions={{headerShown:false}}>
-     
-      
-    </Stack1.Navigator>
-  )
-
- }   
-
-
-
-
-
-
-
-
-
-
-
 const Stack = createNativeStackNavigator();
 function App() {
   return (
@@ -198,7 +70,7 @@ function App() {
           title: '',
           // headerTintColor: '#fa8a86',
             headerStyle: {
-               backgroundColor: '#fa8a86',
+               backgroundColor:colors.btcolor,
             
             },
             headerShadowVisible:(false),
@@ -278,14 +150,14 @@ function App() {
             headerBackVisible:(false),
             headerTitle:()=>(
               <View>
-                  <Text style={{fontWeight:'500',color:colors.blue,fontFamily:'Acephimere' }}>Loyalty Points</Text>
+                  <Text style={{fontWeight:'700',color:colors.blue,fontFamily:'Acephimere' }}>Loyalty Points</Text>
               </View>
             ),
             headerLeft:()=>(
               <View style={{flexDirection:'row',}}>
                < TouchableOpacity onPress={()=>navigation.goBack()}
                >
-                 <Icon name ="arrow-back"size={25}/>
+             <Icon name="ios-chevron-back" size={27}  />
                 
                </TouchableOpacity>
                
@@ -304,22 +176,24 @@ function App() {
           
           },
           headerTitleAlign:'center',
-          headerBackVisible:(false),
+          // headerBackVisible:(false),
+          headerTintColor:colors.lightGrey,
+
           headerTitle:()=>(
             <View>
-                <Text style={{fontWeight:'500',color:colors.blue,fontFamily:'Acephimere' }}>Loyalty Points</Text>
+                <Text style={{fontWeight:'700',color:colors.blue,fontFamily:'Acephimere' }}>Loyalty Points</Text>
             </View>
           ),
-          headerLeft:()=>(
-            <View style={{flexDirection:'row',}}>
-             < TouchableOpacity onPress={()=>navigation.goBack()}
-             >
-               <Icon name ="arrow-back"size={20}/>
+          // headerLeft:()=>(
+          //   <View style={{flexDirection:'row',}}>
+          //    < TouchableOpacity onPress={()=>navigation.goBack()}
+          //    >
+          //                <Icon name="ios-chevron-back" size={27}  />
               
-             </TouchableOpacity>
-              {/* <Text style={{fontSize:15,color:colors.blue ,marginLeft:15,fontFamily:'Acephimere'}}>Loyalty Points</Text> */}
-              </View>
-          ),
+          //    </TouchableOpacity>
+          //     {/* <Text style={{fontSize:15,color:colors.blue ,marginLeft:15,fontFamily:'Acephimere'}}>Loyalty Points</Text> */}
+          //     </View>
+          // ),
       })}
    
     />
@@ -341,7 +215,7 @@ function App() {
      <Stack.Screen name="Addjeweller" component={Addretailer} 
      options={({ navigation }) => ({
       headerTitle:()=>(
-        <View>
+        <View style={{width:'100%',marginRight:10}}>
         <Text style={{fontSize:15,color:colors.blue,fontFamily:'Acephimere'}}>Add Retailer</Text>
         </View>
         ),
@@ -372,10 +246,21 @@ function App() {
      
         },
         headerTitleAlign:'center',
+        // headerBackVisible:(false),
+        headerTintColor:colors.lightGrey,
+        
+      //   headerLeft: () => (
+      //     <TouchableOpacity onPress={()=>navigation.goBack()}
+      //     style={{marginLeft:-10}}
+           
+      //     >
+      //    <Icon name="ios-chevron-back" size={24}  />
+      //    </TouchableOpacity>
+      //  ),
         headerTitle:()=>(
           <View>
       
-          <Text style={{fontSize:15,color:colors.blue,fontFamily:'Acephimere'}}>My Jewellers</Text>
+          <Text style={{fontSize:15,color:colors.blue,fontFamily:'Acephimere',fontWeight:'700'}}>My Jewellers</Text>
           </View>
           ),
         headerRight:()=>(  
@@ -397,7 +282,8 @@ function App() {
         // backgroundColor: '#fff',
       
       },
-      headerBackVisible:(false),
+      // headerTintColor:colors.lightGrey,
+       headerBackVisible:(false),
       headerTitle:()=>(
         <View>
         <Text style={{color:colors.blue,fontWeight:'500',fontFamily:'Acephimere'}}>Cleartrip</Text>
@@ -408,7 +294,7 @@ function App() {
        style={{marginLeft:-10}}
         
        >
-      <Icon name="ios-chevron-back" size={27} color={"#fa8a86"} />
+      <Icon name="ios-chevron-back" size={27} />
       </TouchableOpacity>
     )
   })}
@@ -433,77 +319,6 @@ function App() {
         ),
     })}
     />
-     {/* <Stack1.Screen name="Home" component={Homescreen} 
-     options={({ navigation }) => ({
-      title: '',
-      // headerTintColor: '#fa8a86',
-        headerStyle: {
-           backgroundColor: '#fff',
-        
-        },
-        headerLeft: () => (
-          <TouchableOpacity 
-          
-            //  onPress={()=>navigation.toggleDrawer()}
-          //onPress={()=>navigation.navigate('editprofile')}
-          style={{marginLeft:-10}}
-           
-          >
-         <Icon1 name="menu" size={27}  />
-         </TouchableOpacity>
-       ),
-       headerRight:()=>(
-        <View style={{flexDirection:'row'}}>
-          <TouchableOpacity  
-           onPress={()=>navigation.navigate('Loyalty')}
-          style={{marginLeft:-10}}>
-          <Icon name="gift" size={20} color={'#fa8a86'} />
-          </TouchableOpacity>
-        <TouchableOpacity 
-        onPress={()=>navigation.navigate('MyFav')}
-       style={{marginLeft:5}}
-        
-       >
-      <Icon1 name="heart" size={20} color={'#fa8a86'} />
-     
-      </TouchableOpacity>
-      </View>
-       ),
-    })}
-    /> */}
-    
-     {/* <Stack1.Screen name="supplier" component={Supplierprofile} 
-     options={({ navigation }) => ({
-        headerStyle: {
-           backgroundColor: '#fff',
-        
-        },
-      headerTitleAlign:'center',
-      headerBackVisible:(false),
-      headerTitle:()=>(
-        <View>
-        <Text style={{color:colors.blue,fontWeight:'500',fontFamily:'Acephimere'}}>Mangal Jewellers</Text>
-        </View>
-     ),
-     
-        headerLeft: () => (
-         
-          <TouchableOpacity 
-          style={{marginLeft:-10}}
-          >
-         <Icon1 name="menu" size={27}  />
-         </TouchableOpacity>
-       ),
-       headerRight:()=>(
-        <TouchableOpacity 
-        style={{marginLeft:-10}}
-        >
-       <Icon2 name="email-outline" size={27} color={'#fa8a86'}  />
-       </TouchableOpacity>
-       )
-    
-    })}
-    /> */}
      <Stack.Screen name="productdetail" component={ProductsDetail} 
      options={{
       title: '',
@@ -533,8 +348,8 @@ function App() {
         headerTitleAlign:'center',
         // headerBackVisible:(false),
         headerTitle:()=>(
-          <View>
-          <Text style={{color:colors.blue,fontWeight:'500',fontFamily:'Acephimere'}}>Online deals</Text>
+          <View style={{width:'100%',marginLeft:-10}}> 
+          <Text style={{color:colors.blue,fontWeight:'600',fontFamily:'Acephimere'}}>Online Deals</Text>
           </View>
         ),
 
@@ -601,41 +416,7 @@ function App() {
        ),
     })}
     />
-     {/* <Stack.Screen name="ProductList" component={productlist} 
-     options={({ navigation }) => ({
-      title: '',
-      // headerTintColor: '#fa8a86',
-        headerStyle: {
-           backgroundColor: '#fff',
-        
-        },
-        
-        headerTitle: () => (
-          <View style={{flexDirection:'row',alignItems:'center'}}>
-         
-         <Text style={{fontWeight:'700',color:colors.blue,marginLeft:-10,fontFamily:'Acephimere'}}>New Arrival</Text>
-         </View>
-       ),
-       headerRight:()=>(
-        <View style={{flexDirection:'row',justifyContent:'space-between'}}>
-          <TouchableOpacity  
-           onPress={()=>navigation.navigate('Loyalty')}
-          style={{marginLeft:-10}}>
-            <Icon name="search" size={20}  />
-          </TouchableOpacity>
-        <TouchableOpacity 
-        onPress={()=>navigation.navigate('MyFav')}
-       style={{marginLeft:0}}
-        
-       >
-     <Icon name="md-heart-outline" size={25}  />
-     
-      </TouchableOpacity>
-      <Icon2 name="email-outline" size={25}   />
-      </View>
-       ),
-    })}
-    /> */}
+    
      <Stack.Screen name="refer" component={Refer} 
      options={{
       title: '',
@@ -674,6 +455,10 @@ function App() {
         <TouchableOpacity 
         style={{marginLeft:-10}}
         >
+           {/* <Image style={{height:19,width:25}}
+            source={require('../../Assets/icon/message_icon_new.png')}
+            /> */}
+
        <Icon2 name="email-outline" size={25}   />
        </TouchableOpacity>
        )
@@ -707,7 +492,7 @@ function App() {
       headerShadowVisible:(false),
       headerTitle:()=>(
         <View>
-        <Text style={{color:colors.blue,fontWeight:'500',fontFamily:'Acephimere'}}>My Savings Schemes</Text>
+        <Text style={{color:colors.blue,fontWeight:'700',fontFamily:'Acephimere'}}>My Savings Schemes</Text>
         </View>
      ),
      headerLeft: () => (
@@ -716,7 +501,7 @@ function App() {
       style={{marginLeft:-10}}
        onPress={()=>navigation.goBack()}
       >
-     <Icon name="ios-chevron-back" size={27} color={"#fa8a86"} />
+     <Icon name="ios-chevron-back" size={27}  />
      </TouchableOpacity>
      {/* <Text style={{marginLeft:10,fontWeight:'700',fontFamily:'Acephimere'}}>Jewellery on Emi</Text> */}
      </View>
@@ -735,7 +520,7 @@ function App() {
       headerShadowVisible:(false),
       headerTitle:()=>(
         <View>
-        <Text style={{color:colors.blue,fontWeight:'500',fontFamily:'Acephimere'}}>Make Payments</Text>
+        <Text style={{color:colors.blue,fontWeight:'700',fontFamily:'Acephimere'}}>Make Payments</Text>
         </View>
      ),
      headerLeft: () => (
@@ -744,7 +529,7 @@ function App() {
       style={{marginLeft:-10}}
        onPress={()=>navigation.goBack()}
       >
-     <Icon name="ios-chevron-back" size={27} color={"#fa8a86"} />
+     <Icon name="ios-chevron-back" size={27}  />
      </TouchableOpacity>
      {/* <Text style={{marginLeft:10,fontWeight:'700',fontFamily:'Acephimere',fontFamily:'Acephimere'}}>Jewellery on Emi</Text> */}
      </View>
@@ -780,35 +565,6 @@ function App() {
     />
 
 
-         {/* <Stack.Screen name="Notification" component={Notification1} 
-         options={({ navigation }) => ({
-          title: '',
-          // headerTintColor: '#fa8a86',
-            headerStyle: {
-               backgroundColor:colors.white,
-            
-            },
-            headerTitleAlign:'center',
-            headerShadowVisible:(false),
-            headerTitle:()=>(
-              <View>
-              <Text style={{fontWeight:'500',color:colors.blue,fontFamily:'Acephimere'}}>Notification</Text>
-              </View>
-
-            ),
-            headerLeft: () => (
-              <TouchableOpacity onPress={()=>navigation.goBack()}
-              style={{marginLeft:-10}}
-               
-              >
-             <Icon name="ios-chevron-back" size={27} color={"#fff"} />
-             </TouchableOpacity>
-           )
-         
-        })}
-        /> */}
-
-
 <Stack.Screen name="Notification" component={Notification1} 
          options={({ navigation }) => ({
           title: '',
@@ -819,21 +575,22 @@ function App() {
             },
             headerTitleAlign:'center',
             headerShadowVisible:(false),
-            headerBackVisible:(false),
+            // headerBackVisible:(false),
+            headerTintColor:colors.lightGrey,
             headerTitle:()=>(
               <View>
-              <Text style={{fontWeight:'500',color:colors.blue,fontFamily:'Acephimere'}}>Notification</Text>
+              <Text style={{fontWeight:'700',color:colors.blue,fontFamily:'Acephimere'}}>Notification</Text>
               </View>
 
             ),
-            headerLeft: () => (
-              <TouchableOpacity onPress={()=>navigation.goBack()}
-              style={{marginLeft:-10}}
+          //   headerLeft: () => (
+          //     <TouchableOpacity onPress={()=>navigation.goBack()}
+          //     style={{marginLeft:-10}}
                
-              >
-             <Icon name="ios-chevron-back" size={27} />
-             </TouchableOpacity>
-           )
+          //     >
+          //    <Icon name="ios-chevron-back" size={27} />
+          //    </TouchableOpacity>
+          //  )
          
         })}
         />
@@ -856,18 +613,20 @@ function App() {
         <View style={{flexDirection:'row',justifyContent:'space-between'}}>
           <TouchableOpacity  
            onPress={()=>navigation.navigate('Loyalty')}
-          style={{marginLeft:-10}}>
-            <Icon name="search" size={20}  />
+          style={{marginLeft:0}}>
+            <Icon name="search" size={25}  />
           </TouchableOpacity>
         <TouchableOpacity 
         onPress={()=>navigation.navigate('MyFav')}
-       style={{marginLeft:0}}
+       style={{marginLeft:4}}
         
        >
      <Icon name="md-heart-outline" size={25}  />
      
       </TouchableOpacity>
+      <TouchableOpacity   style={{marginLeft:4}}>
       <Icon2 name="email-outline" size={25}   />
+      </TouchableOpacity> 
       </View>
        ),
     })}

@@ -20,26 +20,24 @@ const MyProducts = () => {
     }
   
   const win = Dimensions.get('window');
-  
-  
-  return (
+    return (
     <View style={styles.container}>
      
       <ScrollView>
        
         <View style={styles.main}>
          <View style={[styles.card1,{backgroundColor:'#fff'}]}>
-         <Image style={styles.img}  source={require('../../../Assets/Image/updown.png')}/>
-           <Text style={styles.textcard}>SHORT BY PRICE</Text>
+         <Image style={styles.img}  source={require('../../../Assets/icon/filter_icon.png')}/>
+           <Text style={styles.textcard}>SORT BY PRICE</Text>
          </View>
          <View style={styles.card1}>
           <TouchableOpacity onPress={()=>manage()}
-          style={[styles.touch,{backgroundColor:low?'white':'green'}]}>
-             <Text style={[styles.text,{color:low?'green':"white"}]}>Low</Text>
+          style={[styles.touch,{backgroundColor:low?'white':'#2fbb9c'}]}>
+             <Text style={[styles.text,{color:low?'#2fbb9c':"white"}]}>LOW</Text>
           </TouchableOpacity>
           <TouchableOpacity onPress={()=>manage1()}
-          style={[styles.touch,{backgroundColor:high?'white':'green'}]}>
-          <Text style={[styles.text,{color:high?'green':"white"}]}>High</Text>
+          style={[styles.touch,{backgroundColor:high?'white':'#2fbb9c'}]}>
+          <Text style={[styles.text,{color:high?'#2fbb9c':"white"}]}>HIGH</Text>
         </TouchableOpacity>
          </View>
         </View>

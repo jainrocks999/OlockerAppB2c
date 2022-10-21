@@ -11,7 +11,7 @@ const Loyalty = () => {
             <ScrollView>
             <View style={styles.main}>
 
-                <Text style={styles.title} >Mangal Jewellers Sign</Text>
+                <Text style={[styles.title,{marginTop:15}]} >Mangal Jewellers, Sion</Text>
                 <View style={styles.main1}>
                     <View style={styles.circle}>
   
@@ -21,23 +21,23 @@ const Loyalty = () => {
 
                     <View style={styles.card}>
 
-                        <View style={{ alignSelf: 'center' }}>
+                        <View style={{ alignSelf: 'center',alignItems:'center', }}>
                             <TouchableOpacity style={[styles.circle1, { backgroundColor: colors.btcolor }]}>
 
                                 <Text style={styles.title}>100</Text>
                             </TouchableOpacity>
                             <Text style={[styles.title1, { color: colors.blue, marginTop: 10 }]}>TOTAL POINTS</Text>
                         </View>
-                        <View style={{ alignSelf: 'center' }}>
-                            <Text style={[styles.title1, { color: colors.blue, marginTop: -5 }]}>Reedemed</Text>
-                            <Text style={[styles.title1, { color: colors.btcolor, marginTop: 5 }]}>0</Text>
+                        <View style={{ alignSelf: 'center',}}>
+                            <Text style={[styles.title1, { color: colors.blue, marginTop: -5,marginRight:14 }]}>REDEEMED</Text>
+                            <Text style={[styles.title1, { color: colors.btcolor, marginTop: 5,marginRight:16 }]}>0</Text>
                         </View>
-                        <View style={{ alignSelf: 'center' }}>
+                        <View style={{ alignSelf: 'center',alignItems:'center',}}>
                             <TouchableOpacity style={[styles.circle1, { backgroundColor: colors.btcolor }]}>
 
                                 <Text style={styles.title}>100</Text>
                             </TouchableOpacity>
-                            <Text style={[styles.title1, { color: colors.blue, marginTop: 10 }]}>REMAINING</Text>
+                            <Text style={[styles.title1, { color: colors.blue, marginTop: 10, }]}>REMAINING</Text>
                         </View>
                     </View>
                 </View>
@@ -56,7 +56,7 @@ const Loyalty = () => {
                         <View style={styles.bottomv1}>
 
                             <Text>Date</Text>
-                            <Text>Point</Text>
+                            <Text>Points</Text>
                             <Text>Occassion</Text>
                             <Text>Expiry date</Text>
                         </View>
@@ -70,7 +70,11 @@ const Loyalty = () => {
                         </View>
                     </View>
                 </View>
-                <Text style={[styles.title,{marginTop:10,alignSelf:'flex-start',fontFamily:'Acephimere'}]}>*Note: 1 Loyalty Point = 1 INR</Text>
+                <View style={{flexDirection:'row'}}>
+                <Text style={[styles.title,{marginTop:10,alignSelf:'flex-start',fontWeight:'700',textAlignVertical:'center'}]}>* Note:</Text>
+                <Text style={[styles.title,{marginTop:10,alignSelf:'flex-start',}]}> 1 Loyalty Point = 1 INR</Text>
+
+               </View>
                 </View>
                 </ScrollView>
                <StoreBottom/> 

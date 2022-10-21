@@ -4,7 +4,7 @@ import {
   Text,
   SafeAreaView,
   TouchableOpacity,
-  FlatList,
+  Image,
   ScrollView,
   ImageBackground,TextInput
 } from 'react-native';
@@ -12,13 +12,13 @@ import styles from './styles';
 import Icon1 from 'react-native-vector-icons/AntDesign';
 import RNPickerSelect from 'react-native-picker-select';
 import DateTimePicker from '@react-native-community/datetimepicker';
-
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import {useNavigation} from '@react-navigation/native';
 import StoreBottomTab from '../../../Component/StoreBottomTab';
-
-
+import DocumentPicker from 'react-native-document-picker';
 const Loyalty = () => {
     const navigation=useNavigation()
+    const [photo,setPhoto]=useState('')
     const [gender,setGender] =useState('')
     const [date, setDate] = useState(new Date());
     const [date2, setDate2] = useState('Start Date')
@@ -33,6 +33,27 @@ const Loyalty = () => {
       setDate(currentDate);
       setDate2(currentDate1);
       
+    };
+
+    const uploadPhoto = async () => {
+      try {
+  
+        const res = await DocumentPicker.pickMultiple({
+          type: [DocumentPicker.types.images],
+          
+        });
+        console.log('resspone res',res);
+        let dec = decodeURIComponent(res[0].name)
+        console.log('dec',dec);
+        setPhoto(res[0].uri);
+        // setPhotoType(res[0].type);
+        // setPhoto(res[0].name);
+      } catch (err) {
+        if (DocumentPicker.isCancel(err)) {
+        } else {
+          throw err;
+        }
+      }
     };
 const showMode = (currentMode) => {
          setShow(true)
@@ -321,11 +342,21 @@ showMode('date');
 
             <View style={styles.card}>
                 <View style={styles.row}>
-                    <View style={{height:80,width:120,borderRadius:10,borderWidth:1,alignSelf:'center'}}>
-
+                    <View style={{height:80,width:120,borderRadius:10,borderWidth:0.3,alignSelf:'center'}}>
+                    <TouchableOpacity >
+              {console.log('photo upload',photo)}
+               {photo?<Image
+                style={[styles.img1,{borderRadius:10,height:'100%',width:'100%'}]}
+                source={{uri:photo}}
+               />
+               :<Image 
+               style={{borderRadius:10,height:'100%',width:'100%'}} 
+               source={require('../../../Assets/images/noLogoimage.png')}/>}
+             </TouchableOpacity>
+             
                     </View>
             <View style ={[styles.buttonV,{width:'50%',}]}> 
-                <TouchableOpacity 
+                <TouchableOpacity onPress={()=>uploadPhoto()}
             style={[styles.button,{width:'100%'}]}>
              <Text style={styles.btext}>Upload Flie</Text>
           

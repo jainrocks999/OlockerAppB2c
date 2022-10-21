@@ -13,7 +13,7 @@ main:{
 }, 
  main1:{
   paddingVertical:10,
-  backgroundColor:'#fa8a86'
+  backgroundColor:colors.btcolor
 },
 
 card: {
@@ -77,17 +77,20 @@ fontFamily:'Acephimere'
 },
  view1:{
    flexDirection:'row',
-   marginTop:10
+   marginTop:10,borderBottomWidth:0
   },
   text1:{
     color:'#000000',
     fontWeight:'700',
-    fontSize:13,
-    fontFamily:'Acephimere'
+     fontSize:12,
+    fontFamily:'Acephimere',
+    //  textDecorationLine:'underline',
+    marginTop:0.5
   },
   text2:{
     color:'#9a9a9a',
     fontSize:12,
-    fontFamily:'Acephimere'
+    fontFamily:'Acephimere',
+    //  textDecorationLine:'underline'
   }
 })

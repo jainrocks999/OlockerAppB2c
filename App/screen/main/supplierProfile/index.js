@@ -14,7 +14,7 @@ const Loyalty = () => {
                 <View >
                     <View style={{ borderWidth: 0.3 }} />
                     <View style={styles.main1}>
-                        <Text style={{ fontSize: 11 }}>Loyalty Benifit</Text>
+                        <Text style={{ fontSize: 11 }}>Loyalty Benefits</Text>
                         <Text style={{ fontSize: 11 }}>EMI Available</Text>
                         <Text style={{ fontSize: 11 }}>Free Jewellery Insurance</Text>
                     </View>
@@ -23,11 +23,11 @@ const Loyalty = () => {
                     <View style={styles.main1}>
                         <TouchableOpacity onPress={() => navigation.navigate('MyFav')}
                             style={styles.card}>
-                            <Text style={styles.text}>{'    My   \nFavorites'}</Text>
+                            <Text style={styles.text}>{'       My\nFavourites'}</Text>
                         </TouchableOpacity>
                         <TouchableOpacity onPress={() => navigation.navigate('loyalty1')}
                             style={styles.card}>
-                            <Text style={styles.text}>{'   Loyalty   \n    Points'}</Text>
+                            <Text style={styles.text}>{'  Loyalty\n  Points'}</Text>
                         </TouchableOpacity>
                         <TouchableOpacity onPress={() => navigation.navigate('About')}
                         style={styles.card}>
@@ -41,7 +41,7 @@ const Loyalty = () => {
                         </TouchableOpacity>
                     </View>
 
-                    <View style={styles.card1}>
+                    <View style={[styles.card1,{zIndex:5}]}>
                         <FlatList
                              data={DATA.slice(0,2)}
                              horizontal={false}
@@ -81,7 +81,7 @@ const Loyalty = () => {
                         />
                     </ImageBackground>
 
-                    <View style={styles.card1}>
+                    <View style={[styles.card1,{marginTop:-15}]}>
                         <FlatList
                             data={DATA.slice(0,2)}
                            horizontal={false}
@@ -102,7 +102,7 @@ const Loyalty = () => {
                     <ImageBackground resizeMode="cover"
                                                     //   style={{height:'97%',width:'98%',resizeMode:'stretch'}}
                source={require('../../../Assets/images/womenjewellery.jpg')}
-                    style={[styles.card2,{}]}>
+                    style={[styles.card2,{marginTop:0}]}>
            <View style={{marginLeft:90}}>
                         <FlatList
                             data={DATA}
@@ -115,7 +115,11 @@ const Loyalty = () => {
                                     {/* <Text>{item.title}</Text> */}
                                     <Image style={{height:'100%',width:'100%',borderRadius:10}}
                                     source={require('../../../Assets/images/womenjewellery.jpg')}/>
+                                   
                                 </TouchableOpacity>
+                                <View>
+                                        <Text style={{color:'#fff',textAlign:'center',fontFamily:'Acephimere'}}>{item.title}</Text>
+                                    </View>
                             </View>      
 
                             )}
@@ -143,7 +147,7 @@ const Loyalty = () => {
                  <View style={styles.talkBubble}>
                     
       <View style={styles.talkBubbleSquare} >
-       <Text style={{color:"#fff"}}>Sagar jain</Text>
+       <Text style={{color:"#fff",fontFamily:'Acephimere'}}>Sagar jain</Text>
        </View>
       <View style={styles.talkBubbleTriangle} />
     </View>

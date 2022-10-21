@@ -70,6 +70,22 @@ card: {
         backgroundColor: '#fff'
     
       },
+      cardview3: {
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.6,
+        shadowRadius: 8,
+        elevation: 3,
+        borderRadius: 10,
+        width:wp('40%'),
+        margin: 5,
+        alignItems: 'center',
+        justifyContent: 'center',
+        height:hp('20%'),
+        backgroundColor: '#fff'
+    
+      },
+
       text:{
         color:colors.btcolor,
         fontSize:18,
@@ -83,14 +99,14 @@ card: {
       },
       text2:{
         color:colors.white,
-        fontSize:13,
-         marginTop:5,
-          textAlign:'center',
+        fontSize:15,
+        //  marginTop:5,
+          // textAlign:'center',
          fontFamily:'Acephimere'
       },
       listv:{
-          backgroundColor:colors.blue,
-          paddingVertical:25,
+          // backgroundColor:colors.blue,
+          paddingVertical:10,
         //   marginBottom:30,
         //   paddingHorizontal:10
       },
@@ -102,7 +118,7 @@ card: {
         backgroundColor:colors.btcolor,
         alignItems: 'center',
        borderRadius: 45,
-       // justifyContent: 'space-between',
+       justifyContent: 'center',alignSelf:'center',
        marginTop: 20,
        width: '40%',
       paddingVertical:10,
@@ -110,11 +126,11 @@ card: {
       fotter:{
         // backgroundColor:colors.lightPink,
         // paddingVertical:50
-        height:hp('50%'),
+        height:hp('42%'),
         width:wp('100%')
       },
-      logo:{ height:hp('7.9%'),
-      width:wp('65%'),
+      logo:{ height:hp('6.9%'),
+      width:wp('55%'),
       paddingHorizontal:hp('1%'),
        paddingVertical:hp('1.5%'),
        marginTop:10
@@ -139,13 +155,19 @@ card: {
         marginTop:-28,
         
       },
+      cardimg:{
+        height:25,width:25,
+        borderRadius:15,backgroundColor:'#fff',
+        alignSelf:'flex-end',
+        marginTop:-17,zIndex:3,marginRight:5
+      },
       cardfotter:{
         height:hp("4%"),
         backgroundColor:colors.lightPink,
         width:wp("40%"),
-        marginTop:0,
+        marginTop:-8,
         borderBottomLeftRadius:hp('1%'),
-        borderBottomRightRadius:hp('1%'),
+        borderBottomRightRadius:hp('1%'),justifyContent:'center',alignItems:'center'
       },
       main:{
         flexDirection:'row',

@@ -18,7 +18,7 @@ export default StyleSheet.create({
     },
     card: {
         marginTop: 10,
-        paddingHorizontal: 5,
+        paddingHorizontal: 10,
     },
     cardview: {
         height:200,
@@ -28,6 +28,7 @@ export default StyleSheet.create({
         margin: 5,
         borderRadius: 10,
         elevation: 5,
+       
         width: '48%',
     },
     

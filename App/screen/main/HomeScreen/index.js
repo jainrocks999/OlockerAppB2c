@@ -1,13 +1,32 @@
-import React from "react";
-import { View,Text, SafeAreaView,TouchableOpacity ,FlatList, ScrollView,Image, ImageBackground} from "react-native";
+import React, { useEffect } from "react";
+import { View,Text, SafeAreaView,TouchableOpacity ,FlatList, ScrollView,Image, ImageBackground, Alert} from "react-native";
 import styles from "./styles";
 import Icon from 'react-native-vector-icons/Ionicons';
 import { HStack,Box,Switch } from "native-base";
 import { SliderBox } from "react-native-image-slider-box";
 import { useNavigation } from "@react-navigation/native";
 import StoreBottom from '../../../Component/StoreBottomTab'
+import colors from "../../../constant/colors";
 const HomeScreen =()=>{
     const navigation = useNavigation();
+
+    // useEffect(()=>{
+    //   Alert.alert(
+    //     "Alert",
+    //     "Your details will help us serve you better. Kindly update your profile details  ",
+    //     [
+    //         {
+    //             text: "Cancel",
+    //             onPress: () => {
+    //                 cancelable: false;
+    //             },
+    //             style:'cancel',
+    //         },
+    //         { text: "ok",onPress: () => navigation.navigate('editprofile') },
+    //     ],
+    //     { cancelable: false }
+    // );
+    // },[])
     return(
  <SafeAreaView style={styles.container}>
    <ScrollView>
@@ -34,7 +53,7 @@ const HomeScreen =()=>{
               <View style={{alignItems:'center'}}> 
               <TouchableOpacity
             onPress={()=>navigation.navigate('supplier')}
-                style={styles.cardview}>
+                style={styles.cardview3}>
                <View style={{height:'100%',width:'100%',}}>
                <Image style={{height:'100%',width:'100%',borderRadius:10}} source={require('../../../Assets/images/deal_logohome1.jpg')}/>
                </View>
@@ -47,13 +66,13 @@ const HomeScreen =()=>{
           />
           </View>
           </View>
-          <View style={{}}>
+          <View style={{borderWidth:0}}>
         <SliderBox
           images={images}
-        //   sliderBoxHeight={200}
+          sliderBoxHeight={200}
           onCurrentImagePressed={index => console.warn(`image ${index} pressed`)}
-          dotColor="#FFEE58"
-          inactiveDotColor="#90A4AE"
+          // dotColor="#FFEE58"
+          // inactiveDotColor="#90A4AE"
         //   paginationBoxVerticalPadding={20}
           autoplay
           circleLoop
@@ -69,15 +88,15 @@ const HomeScreen =()=>{
         //     paddingVertical: 0
         //   }}
           dotStyle={{
-            width: 5,
-            height: 5,
+            width: 0,
+            height: 0,
             borderRadius: 5,
             marginHorizontal: 0,
             padding: 0,
             margin: 0,
             backgroundColor: "rgba(128, 128, 128, 0.92)"
           }}
-        //   ImageComponentStyle={{borderRadius: 15, width: '97%', marginTop: 5}}
+           ImageComponentStyle={{borderRadius: 0, width: '100%', marginTop: 0,height:170}}
         //   imageLoadingColor="#2196F3"
           
         />
@@ -87,21 +106,23 @@ const HomeScreen =()=>{
           style={styles.listv}>
               <View style={styles.swtich}>
              <Text style={styles.text1}>Smart Deals</Text> 
-             <HStack alignContent="center" justifyContent='center'>
+          <View style={{flexDirection:'row',alignItems:'center',justifyContent:'center'}}>  
       <Text style={styles.text2}>Online</Text>
+   
       <Switch size="sm"  onTrackColor="#fff" offThumbColor="#ed6660"  />
-      <Text style={styles.text2}>Local</Text>
-    </HStack>
+    
+      <Text style={[styles.text2,{color:colors.lightGrey}]}>Local</Text>
+      </View>
     </View>
           <FlatList
-            showsHorizontalScrollIndicator={false}
+            showsHorizontalScrollIndicator={true}
             horizontal={true}
             data={DATA}
             style={{marginTop:7}}
             renderItem={({item}) => (
               <TouchableOpacity
               onPress={()=>navigation.navigate('alldeal')}
-                style={styles.cardview}>
+                style={styles.cardview3}>
                <View style={{height:'100%',width:'100%',}}>
                <Image style={{height:'100%',width:'100%',borderRadius:10}} source={require('../../../Assets/images/deal_logohome2.jpg')}/>
                </View>
@@ -112,7 +133,7 @@ const HomeScreen =()=>{
               <TouchableOpacity 
                 onPress={()=>navigation.navigate('Smart')}
               style={styles.buttonv}>
-                  <Text style={styles.text2}>View All</Text>
+                  <Text style={styles.text2}>VIEW ALL</Text>
               </TouchableOpacity>
               </View>
           </ImageBackground>
@@ -141,9 +162,13 @@ const HomeScreen =()=>{
                 style={styles.cardview}>
                     <View style={styles.img2}>
                <Image style={styles.img3} source={require('../../../Assets/images/olocker_logo_homebx1.jpg')}/>
-             
+               <View style={styles.cardimg}>
+                  <Image style={styles.img3} 
+                   source={require('../../../Assets/images/next_homeicon.png')}
+                  />
+                  </View>
                  <View style={styles.cardfotter}>
-                   <Text style={styles.text2}>Jewellery Insurence</Text>
+                   <Text style={styles.text2}>Jewellery Insurance</Text>
                  </View>
                  </View>
               </TouchableOpacity>:
@@ -154,9 +179,13 @@ const HomeScreen =()=>{
                 
                 <View style={styles.img2}>
                <Image style={styles.img3} source={require('../../../Assets/images/olocker_logo_homebx2.png')}/>
-             
+                  <View style={styles.cardimg}>
+                  <Image style={styles.img3} 
+                   source={require('../../../Assets/images/next_homeicon.png')}
+                  />
+                  </View>
                  <View style={styles.cardfotter}>
-                   <Text style={styles.text2}>Jewellery Insurence</Text>
+                   <Text style={[styles.text2]}>Jewellery Insurance</Text>
                  </View>
                  </View>
            </TouchableOpacity>

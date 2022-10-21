@@ -52,8 +52,8 @@ card: {
        color:colors.white,
        textAlign:'center',
        fontSize:20,
-       fontWeight:'600',
-       marginTop:10
+       fontWeight:'600',textAlign:'center',fontFamily:'Acephimere'
+      //  marginTop:10
    },
    title1:{
 
@@ -120,7 +120,7 @@ card: {
     textV:{
       color:colors.blue,
       fontWeight:'700',
-      marginLeft:30,fontFamily:'Acephimere',marginTop:3
+      marginLeft:8,fontFamily:'Acephimere',padding:5
       // textAlign:'center'
     },
     bottomv:{ 

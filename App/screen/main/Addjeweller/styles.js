@@ -4,9 +4,12 @@ import colors from '../../../constant/colors'
 export default StyleSheet.create({
 container:{
 flex:1,
-backgroundColor:colors.white,
+// backgroundColor:colors.white,
 
 
+},
+main3:{
+  flex:1
 },
 card: {
     // shadowColor: 'black',
@@ -18,16 +21,15 @@ card: {
      backgroundColor: 'white',
      paddingHorizontal: 5,
      paddingVertical:10,
-     marginTop: 107,
+     marginTop:hp('11.5%'),
     paddingHorizontal:10,
     paddingVertical:5,
     width:'100%',
-    height:155
-    
+    height:hp('22%')
    },
    text1:{
        color:colors.blue,
-       fontWeight:'500'
+       fontWeight:'700',fontFamily:'Acephimere'
    },
    main:{
      
@@ -39,7 +41,7 @@ card: {
   
    text:{
        color:colors.white,
-    fontSize:11
+    fontSize:12,fontFamily:'Acephimere'
 
    },
    input:{
@@ -50,7 +52,7 @@ card: {
    },
    Input1:{
        width:'100%',
-       paddingHorizontal:5,
+       paddingHorizontal:5,fontFamily:'Acephimere'
       // borderBottomWidth:0.3,
       
    },

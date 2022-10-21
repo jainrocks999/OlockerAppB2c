@@ -8,12 +8,12 @@ const Loyalty =()=>{
   const navigation=useNavigation()
 return(
     <SafeAreaView style={styles.container}>
-            
-       {/* <ScrollView> */}
-                <ImageBackground style={{height:"100%",width:'100%',}}
+     
+
+                <ImageBackground style={{flex:1}}
                  source={require('../../../Assets/images/add_jeweller.png')}
                 >
-                <View style={{paddingHorizontal:10}}>
+                <View style={{paddingHorizontal:12}}>
               <View style={styles.card}>
                  <Text style={styles.text1}>RETAILER CODE</Text>
                 <View style={styles.Input1}>
@@ -43,9 +43,9 @@ return(
                </View>
     
                </ImageBackground>
-
-               {/* </ScrollView>       */}
-               {/* <StoreBottom/> */}
+            
+               <StoreBottom/> 
+              
     </SafeAreaView>
 )
 }

@@ -12,7 +12,7 @@ return(
       <ScrollView>
         <View style={styles.main}>
       <View style={styles.card}>
-       <Text>Mangal Jewellers Sign</Text>
+       <Text style={styles.tt}>Mangal Jewellers, Sion</Text>
        <View style={{paddingHorizontal:5}}>
        <View style={styles.circle}>
        

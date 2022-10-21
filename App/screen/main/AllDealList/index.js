@@ -4,6 +4,7 @@ import styles from "./styles";
 import { useNavigation } from "@react-navigation/native";
 import StoreBottom from '../../../Component/StoreBottomTab'
 import { ScrollView } from "native-base";
+import colors from "../../../constant/colors";
 const Loyalty =()=>{
   const navigation =useNavigation();
 return(
@@ -14,9 +15,16 @@ return(
       
       <View style={styles.card2}>
         <View style={styles.view1}>
-         <Text>All Deals</Text> 
-         <View style={{height:50,width:100,alignSelf:'flex-end'}}>
-         <Image style={{height:'100%',width:'100%'}} resizeMode="center" source={require('../../../Assets/images/grabon_icon.png')}/>
+         <Text style={{color:colors.blue,fontWeight:'500'}}>All Deals</Text> 
+         <View>
+         <View style={{alignSelf:'flex-end',marginRight:0}}>
+
+         <Text style={{color:colors.blue,textAlign:'right',fontWeight:'500'}}>Deal Partner</Text>
+
+         </View>
+         <View style={{height:20,width:100,alignSelf:'flex-end',marginRight:0}}>
+         <Image style={{height:'100%',width:'100%'}}  source={require('../../../Assets/images/grabon_icon.png')}/>       
+         </View>
          </View>
       </View>
         <FlatList

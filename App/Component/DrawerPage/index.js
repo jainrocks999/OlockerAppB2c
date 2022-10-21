@@ -6,6 +6,7 @@ import {
 import { useNavigation } from '@react-navigation/native';
 import styles from './styles';
 import  Icon  from 'react-native-vector-icons/MaterialCommunityIcons';
+import { heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
 
 const DrawerContent=()=> {
@@ -46,12 +47,12 @@ const DrawerContent=()=> {
         <SafeAreaView style={{flex:1}}>
         <DrawerContentScrollView style={{height:'100%'}}>
             {/* <View style={styles.drawerContent}> */}
-            <ScrollView showsVerticalScrollIndicator={false} style={styles.drawerContent}>
-                <View style={[styles.drawers,{backgroundColor:'#ed6660'}]}>
-                    <View style={{width:'50%',alignItems:'center',padding:10}}>
-                    {/* <Image style={{width:100,height:100,marginLeft:20}} source={require('../../assets/Images/GPL.png')}/> */}
+            <ScrollView showsVerticalScrollIndicator={true} style={styles.drawerContent}>
+                <View style={[styles.drawers,{backgroundColor:'#ed6660',}]}>
+                    <View style={{width:90,height:90,borderRadius:45,marginRight:20,borderWidth:1}}>
+                    <Image style={{height:'100%',width:'100%',borderRadius:45,}} source={require('../../Assets/images/men.png')}/>
                     </View>
-                    <View style={{marginLeft:10,width:'60%'}}>
+                    <View style={{marginLeft:10,width:'50%'}}>
                   
                    <View style={styles.profile}>
                     <Text style={styles.title}>{'title'}</Text>
@@ -72,11 +73,11 @@ const DrawerContent=()=> {
                     }}>
                     <View style={[styles.drawer, {}]}>
                         <View style={{ flexDirection: 'row',justifyContent:'center',alignItems:'center'}}>
-                        <View style={[styles.iconView,{height:22,width:22}]}>
+                        <View style={[styles.iconView,{height:17,width:19}]}>
                             <Image style={styles.imageicon} source={require('../../Assets/icon/sid_home.png')}/>
 
                             </View>
-                            <Text style={styles.text}>{'Home'}</Text>
+                            <Text style={[styles.text,]}>{'Home'}</Text>
                         </View>
                     </View>
                 </TouchableOpacity>
@@ -86,10 +87,10 @@ const DrawerContent=()=> {
                     }>
                     <View style={[styles.drawer]}>
                         <View style={{ flexDirection: 'row' }}>
-                        <View style={[styles.iconView,{height:27,width:19}]}>
-                        <Image style={styles.imageicon} source={require('../../Assets/icon/sid_jeweller.png')}/>
+                        <View style={[styles.iconView,{width:14,}]}>
+                        <Image style={[styles.imageicon,{marginLeft:3}]} source={require('../../Assets/icon/sid_jeweller.png')}/>
                             </View>
-                            <Text style={styles.text}> {"My Jeweller"}</Text>
+                            <Text style={[styles.text,{marginRight:3}]}> {"My Jeweller"}</Text>
                         </View>
                     </View>
                 </TouchableOpacity>
@@ -100,7 +101,7 @@ const DrawerContent=()=> {
                  onPress={()=>navigation.navigate('myjeweller')}>
                   <View style={[styles.drawer,{backgroundColor:'pink',borderBottomWidth:0.5}]}>
                       <View style={{ flexDirection: 'row' ,paddingHorizontal:20}}>
-                      <View style={[styles.iconView,{height:22,width:27}]}>
+                      <View style={[styles.iconView,{width:22}]}>
 
                               <Image style={styles.imageicon} source={require('../../Assets/icon/sid_retailer.png')}/>
                           </View>
@@ -112,9 +113,9 @@ const DrawerContent=()=> {
               <TouchableOpacity
                    onPress={()=>{navigation.navigate('Addjeweller')}}>
                     <View style={[styles.drawer,{backgroundColor:'pink'}]}>
-                        <View style={{ flexDirection: 'row' ,paddingHorizontal:20}}>
-                        <View style={[styles.iconView,{height:22,width:19}]}>
-                                <Image style={styles.imageicon} source={require('../../Assets/icon/user_icon.png')}/>
+                        <View style={{ flexDirection: 'row' ,paddingHorizontal:25}}>
+                        <View style={[styles.iconView,{width:17}]}>
+                                <Image style={[styles.imageicon,{marginLeft:-1}]} source={require('../../Assets/icon/user_icon.png')}/>
                             </View>
                             <Text style={styles.text}> {"Add Jeweller"}</Text>
                         </View>
@@ -131,10 +132,10 @@ const DrawerContent=()=> {
                     onPress={() =>app1()}>
                     <View style={[styles.drawer]}>
                         <View style={{  flexDirection: 'row',justifyContent:'center',alignItems:'center' }}>
-                        <View style={[styles.iconView,{height:23,width:23}]}>
+                        <View style={[styles.iconView,{width:20,marginRight:1}]}>
                         <Image style={styles.imageicon} source={require('../../Assets/icon/sid_my_olocker.png')}/>
                             </View>
-                            <Text style={styles.text}>{'My Olocker'}</Text>
+                            <Text style={[styles.text,]}>{'My Olocker'}</Text>
                         </View>
                     </View>
                 </TouchableOpacity>
@@ -144,9 +145,9 @@ const DrawerContent=()=> {
                   <TouchableOpacity
                   onPress={()=>navigation.navigate('MyFav')}>
                   <View style={[styles.drawer,{backgroundColor:'pink',borderBottomWidth:1}]}>
-                      <View style={{ flexDirection: 'row' ,paddingHorizontal:20}}>
-                      <View style={[styles.iconView,{height:22,width:22}]}>
-                              <Image style={styles.imageicon} source={require('../../Assets/icon/sidmenu_myinsuredjewellery.png')}/>
+                      <View style={{ flexDirection: 'row' ,paddingHorizontal:23}}>
+                      <View style={[styles.iconView,{width:20}]}>
+                              <Image style={[styles.imageicon,{marginRight:3}]} source={require('../../Assets/icon/sidmenu_myinsuredjewellery.png')}/>
                           </View>
                           <Text style={styles.text}> {"My Insured Jewellery"}</Text>
                       </View>
@@ -156,11 +157,11 @@ const DrawerContent=()=> {
               <TouchableOpacity
                      onPress={()=>navigation.navigate('portfolio')}>
                     <View style={[styles.drawer,{backgroundColor:'pink'}]}>
-                        <View style={{ flexDirection: 'row' ,paddingHorizontal:20}}>
-                        <View style={[styles.iconView,{height:22,width:22}]}>
-                              <Image style={styles.imageicon} source={require('../../Assets/icon/sidmenu_myjewelleryportfolio.png')}/>
+                        <View style={{ flexDirection: 'row' ,paddingHorizontal:23}}>
+                        <View style={[styles.iconView,{width:20}]}>
+                        <Image style={[styles.imageicon,{marginLeft:1.5}]} source={require('../../Assets/icon/sidmenu_myjewelleryportfolio.png')}/>
                           </View>
-                            <Text style={styles.text}> {"My Jewellery Portfolio"}</Text>
+                            <Text style={[styles.text,{marginRight:5}]}> {"My Jewellery Portfolio"}</Text>
                         </View>
                     </View>
                 </TouchableOpacity>   
@@ -176,7 +177,7 @@ const DrawerContent=()=> {
                     }}>
                     <View style={[styles.drawer]}>
                         <View style={{  flexDirection: 'row',justifyContent:'center',alignItems:'center' }}>
-                        <View style={[styles.iconView,{height:23,width:21}]}>
+                        <View style={[styles.iconView,{width:18}]}>
                         <Image style={styles.imageicon} source={require('../../Assets/icon/sid_my_deals.png')}/>
                             </View>
                             <Text style={styles.text}>{'MY SAVING SCHEMES'}</Text>
@@ -188,7 +189,7 @@ const DrawerContent=()=> {
                     onPress={()=>navigation.navigate('alldeal')}>
                     <View style={[styles.drawer]}>
                         <View style={{  flexDirection: 'row',justifyContent:'center',alignItems:'center' }}>
-                        <View style={[styles.iconView,{height:23,width:21}]}>
+                        <View style={[styles.iconView,{width:18}]}>
                                 <Image style={styles.imageicon} source={require('../../Assets/icon/sid_my_deals.png')}/>
                             </View>
                             <Text style={styles.text}>{'My Deals'}</Text>
@@ -201,7 +202,7 @@ const DrawerContent=()=> {
                                  >
                     <View style={[styles.drawer]}>
                         <View style={{  flexDirection: 'row',justifyContent:'center',alignItems:'center' }}>
-                        <View style={[styles.iconView,{height:23,width:19}]}>
+                        <View style={[styles.iconView,{width:17}]}>
                         <Image style={styles.imageicon} source={require('../../Assets/icon/sid_my_points.png')}/>
                             </View>
                             <Text style={styles.text}>{'My Points'}</Text>
@@ -222,7 +223,7 @@ const DrawerContent=()=> {
                     style={[styles.drawer,{backgroundColor:'#ed6660'}]}>
                       
                         <View style={{  flexDirection: 'row',justifyContent:'center',alignItems:'center' }}>
-                        <View style={[styles.iconView,{height:23,width:21}]}>
+                        <View style={[styles.iconView,{width:18}]}>
                                 <Image style={styles.imageicon} source={require('../../Assets/icon/logout.png')}/>
                             </View>
                             <Text style={[styles.text,{color:'#fff'}]}>{'Logout'}</Text>

@@ -16,17 +16,17 @@ const [chheck ,setCheck] =useState('')
       <ScrollView>
        <View style={styles.main1}>
        <View style={{height:300,width:300,alignSelf:'center',marginBottom:20}}>
-            <Image style={{height:'100%',width:'100%'}} source={require('../../../Assets/images/login_top_img.png')}/>
+            <Image style={{height:'100%',width:'100%',}} source={require('../../../Assets/images/login_top_img.png')}/>
             </View>
        </View>
 
         <View style={styles.main}>
              <View style={[styles.input,]}>
-                <Text style={{color:'#979797', fontFamily:'Acephimere'}}>Enter Mobile Number</Text>
+                <Text style={{fontWeight:'600', fontFamily:'Acephimere'}}>Enter Mobile Number</Text>
                  <View style={styles.textinput}>
                    <TextInput 
                    style={styles.input1}
-                   placeholder="Enter your moblie number"
+                   placeholder="Enter your mobile number"
                    placeholderTextColor={'#808080'}
                    returnKeyType="go"
                    />
@@ -53,13 +53,13 @@ const [chheck ,setCheck] =useState('')
            
            
             <View style={styles.view1}>
-            <HStack space={4}>
+            <HStack space={3} alignSelf='center' justifyItems={'center'}>
      
       <Checkbox value="check" accessibilityLabel="This is a dummy checkbox" defaultIsChecked 
       colorScheme= "orange" />
      <Text style={styles.text2}>I hereby agree to the</Text>
      </HStack>
-              <Text style={styles.text1}>{' Terms & Condition'}</Text>
+              <Text style={[styles.text1]}>{' Terms & Conditions'}</Text>
               
              
             </View>

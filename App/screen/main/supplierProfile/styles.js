@@ -28,7 +28,7 @@ card:{
     paddingHorizontal:5
 },
 text:{
-    fontSize:13,color:colors.white,
+    fontSize:13,color:colors.white, fontFamily:'Acephimere'
    
 },
 card1: {
@@ -40,17 +40,17 @@ cardview: {
     height:160,
   
     backgroundColor: '#fff',
-   borderWidth:1,
+   borderWidth:0.5,
     marginTop: 5,
     borderRadius: 10,
     elevation: 3,
     paddingHorizontal:0,
     alignItems:'center',
-    justifyContent:'center'
+    justifyContent:'center',
 },
 card2: {
-    marginTop: 3,paddingVertical:10,
-    paddingHorizontal: 25,
+    marginTop: 3,paddingVertical:25,
+    paddingHorizontal: 25,marginTop:-10,
 },
 cardview1: {
     height:170,
@@ -61,7 +61,7 @@ cardview1: {
     borderRadius: 10,
     elevation: 5,
     width: '48%',
-    alignItems:'center',justifyContent:'center'
+    alignItems:'center',justifyContent:'center',
 },
 cardview2: {
     shadowColor: '#000',
@@ -70,11 +70,11 @@ cardview2: {
     shadowRadius: 8,
     elevation: 3,
     borderRadius: 10,
-    width: 120,
+    width:wp('40%'),
     margin: 5,
     alignItems: 'center',
     justifyContent: 'center',
-    height: 120,
+    height: hp('17'),
     backgroundColor: '#fff'
 
   },
@@ -118,7 +118,7 @@ cardview2: {
   textV:{
     color:colors.white,
     fontWeight:'700',
-    marginLeft:10
+    marginLeft:10,fontFamily:'Acephimere'
      // textAlign:'center'
   },
 

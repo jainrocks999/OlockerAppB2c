@@ -13,7 +13,7 @@ export default StyleSheet.create({
   },
   card1: {
     flexDirection: 'row',
-    backgroundColor: 'green',
+    backgroundColor: '#2fbb9c',
     height: 35,
     width: '40%',
     borderRadius: 20,
@@ -25,7 +25,7 @@ export default StyleSheet.create({
   textcard: {
     marginLeft: 10,
     color: '#000',
-    fontSize: 11,
+    fontSize: 13,fontFamily:'Acephimere'
   },
   img: {
     height: 18,

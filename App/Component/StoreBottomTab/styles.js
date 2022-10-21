@@ -3,7 +3,7 @@ import colors from '../../constant/colors';
 export default StyleSheet.create({
   header: {
     flexDirection: 'row',
-    paddingHorizontal: 20,
+    paddingHorizontal: 15,
     backgroundColor:colors.btcolor,
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -47,6 +47,6 @@ export default StyleSheet.create({
   },
   container:{
     justifyContent: 'center', 
-    alignItems: 'center'
+    alignItems: 'center',
   }
 });

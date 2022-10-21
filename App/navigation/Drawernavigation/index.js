@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, TouchableOpacity, View,Text } from 'react-native';
+import {Image, TouchableOpacity, View,Text } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import DrawerContent from '../../Component/DrawerPage';
 import HomeScreen from '../../screen/main/HomeScreen';
@@ -63,12 +63,12 @@ function MyDrawer() {
           headerBackVisible:(false),
           headerTitle:()=>(
             <View>
-            <Text style={{color:colors.blue,fontWeight:'500',fontFamily:'Acephimere'}}>PROFILE</Text>
+            {/* <Text style={{color:colors.blue,fontWeight:'700',fontFamily:'Acephimere'}}>PROFILE</Text> */}
             </View>
          ),
          
             headerLeft: () => (
-             
+              <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-between',width:'70%'}}>
               <TouchableOpacity        
               onPress={()=>navigation.toggleDrawer()}
 
@@ -77,6 +77,8 @@ function MyDrawer() {
               >
              <Icon1 name="menu" size={27}  />
              </TouchableOpacity>
+             <Text style={{color:colors.blue,fontWeight:'700',fontFamily:'Acephimere'}}>PROFILE</Text>
+             </View>
            ),
         
         })}
@@ -91,7 +93,7 @@ function MyDrawer() {
           headerBackVisible:(false),
           headerTitle:()=>(
             <View>
-            <Text style={{color:colors.blue,fontWeight:'500',fontFamily:'Acephimere'}}>Mangal Jewellers</Text>
+            <Text style={{color:colors.blue,fontWeight:'700',fontFamily:'Acephimere'}}>Mangal Jewellers</Text>
             </View>
          ),
          
@@ -106,9 +108,13 @@ function MyDrawer() {
            ),
            headerRight:()=>(
             <TouchableOpacity 
-            style={{marginRight:5}}
+            style={{marginRight:15}}
             >
-           <Icon2 name="email-outline" size={27} color={'#fa8a86'}  />
+            <Image style={{height:15,width:20}}
+            source={require('../../Assets/icon/message_icon_new.png')}
+            />
+
+           {/* <Icon2 name="email-outline" size={23} color={'#fa8a86'}  /> */}
            </TouchableOpacity>
            )
         
@@ -131,7 +137,7 @@ function MyDrawer() {
               >
              <Icon1 name="menu" size={27}  />
              </TouchableOpacity>
-             <Text style={{marginLeft:10,fontFamily:'Acephimere',color:colors.blue}}>Your Jewellery Portfolio</Text>
+             <Text style={{marginLeft:10,fontFamily:'Acephimere',color:colors.blue,fontWeight:'700'}}>Your Jewellery Portfolio</Text>
              </View>
            ),
         })}

@@ -28,9 +28,10 @@ return(
             position: "absolute",
             bottom: 0,
             padding: 0,
-            alignItems: "center",
-            alignSelf: "center",
-            justifyContent: "center",
+            right:0,
+            // alignItems: "center",
+            // alignSelf: "center",
+            // justifyContent: "center",
             paddingVertical: 0
           }}
           dotStyle={{
@@ -41,7 +42,7 @@ return(
             padding: 0,
             margin: 0,
           
-            backgroundColor: "red"
+            backgroundColor: ""
           }}
            ImageComponentStyle={{borderRadius: 15, width: '95%' ,marginTop: 0}}
            imageLoadingColor="#2196F3"

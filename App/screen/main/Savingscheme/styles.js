@@ -45,14 +45,14 @@ export default StyleSheet.create({
         fontWeight: '400',
     },
     line:{ 
-        borderWidth:0.5,
+        borderWidth:0.7,
          marginTop: 10,
-         backgroundColor:'#fddac0'
+         borderColor:'#fddac0'
         },
         line1:{ 
             borderWidth:0.5,
              marginTop: 10,
-             backgroundColor:'#fddac0'
+             borderColor:'#fddac0'
             },
     button:{
        paddingVertical:12,

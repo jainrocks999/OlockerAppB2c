@@ -25,7 +25,7 @@ card: {
      shadowRadius: 4,
      shadowOffset: { height: 2, width: 0 },
       elevation: 2,
-     borderRadius: 5,
+     borderRadius: 10,
      backgroundColor: 'white',
      paddingHorizontal: 5,
      paddingVertical:10,
@@ -52,7 +52,7 @@ card: {
    },
    main:{
        flex:1,
-       paddingHorizontal:5
+       paddingHorizontal:8
    },
    item:{
       
@@ -66,7 +66,9 @@ card: {
        alignSelf:'flex-end'
    },
    text:{
-       color:colors.white
-   }
-   
+       color:colors.white, fontFamily:'Acephimere',
+   },
+   tt:{
+    color:colors.blue,fontWeight:'700', fontFamily:'Acephimere',
+}
 })

@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import { View, Text, SafeAreaView, TouchableOpacity, FlatList, ScrollView, TextInput } from "react-native";
+import { View, Text, SafeAreaView, TouchableOpacity, FlatList, ScrollView, Image } from "react-native";
 import styles from "./styles";
-import Icon from 'react-native-vector-icons/AntDesign';
-import { HStack, Box, Switch, Radio, Checkbox } from "native-base";
-import { SliderBox } from "react-native-image-slider-box";
 import { useNavigation } from "@react-navigation/native";
+import colors from "../../../constant/colors";
 
 const Loyalty = () => {
 
@@ -17,10 +15,13 @@ const Loyalty = () => {
                     <View style={[styles.top,{paddingHorizontal:5}]}>
                      <View style={styles.top1}> 
                      <View style={styles.small}></View>  
-                    <Text style={styles.title}>Folio Number AJMJ-16</Text>
+                    <Text style={styles.title}>Folio Number</Text>
+                    <Text style={[styles.title,{fontWeight:'700',marginLeft:0}]}>AJMJ-16</Text>
                     </View>
                        <View>
-                        <Icon name="rightsquareo" size={23} color='green'/>
+                       <Image style={{height:23,width:23}} source={require('../../../Assets/icon/right_side_errr.png')}/>
+
+                        {/* <Icon name="rightsquareo" size={23} color='green'/> */}
                        </View>
                     </View>
                     <View style={styles.line} />
@@ -28,17 +29,17 @@ const Loyalty = () => {
                        <Text style={{fontSize:24,color:'black',fontWeight:'500',marginLeft:10}}>Akshay Jewels, Jalgaon</Text>
                        <View style={[styles.top,{marginTop:10}]}>
                        <Text style={{marginLeft:10}}>Start date</Text>
-                       <Text style={{marginLeft:10}}>24 June 2020</Text>
+                       <Text style={{marginLeft:10,color:colors.blue}}>24 June 2020</Text>
                         <View/>
                        </View>
                        <View style={[styles.top,{marginTop:10}]}>
                        <Text style={{marginLeft:10}}>Maturity date</Text>
-                       <Text style={{marginLeft:-10}}>24 June 2020</Text>
+                       <Text style={{marginLeft:-10,color:colors.blue}}>24 June 2020</Text>
                         <View/>
                        </View>
                        <View style={[styles.top,{marginTop:10}]}>
                        <Text style={{marginLeft:10}}>Next payment date</Text>
-                       <Text style={{marginLeft:-45}}>24 June 2021</Text>
+                       <Text style={{marginLeft:-45,color:colors.blue}}>24 June 2021</Text>
                         <View/>
                        </View>
                        <View style={styles.card1}>
@@ -48,16 +49,16 @@ const Loyalty = () => {
                        </View>
                        <View style={[styles.top,{marginTop:10,paddingHorizontal:10}]}>
                         <View>
-                       <Text style={{marginLeft:10}}>₹ 250000</Text>
-                       <Text style={{marginLeft:0}}>Monthly amount</Text>
+                       <Text style={{marginLeft:10,color:colors.blue,fontWeight:'500'}}>₹ 250000</Text>
+                       <Text style={{marginLeft:0,color:colors.blue}}>Monthly amount</Text>
                        </View>
                        <View>
-                       <Text style={{marginLeft:10}}>₹ 25000</Text>
-                       <Text style={{marginLeft:10}}>Total paid</Text>
+                       <Text style={{marginLeft:3,color:colors.btcolor,fontWeight:'500'}}>₹ 25000</Text>
+                       <Text style={{marginLeft:0,color:colors.blue}}>Total paid</Text>
                        </View>
                        <View>
-                       <Text style={{marginLeft:10}}>₹ 2500</Text>
-                       <Text style={{marginLeft:0}}>Maturity amount</Text>
+                       <Text style={{marginLeft:30,color:'green',fontWeight:'500'}}>₹ 2500</Text>
+                       <Text style={{marginLeft:0,color:colors.blue}}>Maturity amount</Text>
                        </View>
                        </View>
                     </View>
@@ -66,7 +67,7 @@ const Loyalty = () => {
                 <TouchableOpacity 
              onPress={()=>navigation.navigate('payment')}
          style ={[styles.button,{width:"55%",backgroundColor:'green'}]}>  
-             <Text style={{color: '#fff',fontSize:15,fontFamily:'Acephimere',}}>Make payment</Text>
+             <Text style={{color: '#fff',fontSize:15,fontFamily:'Acephimere',fontStyle:'italic'}}>MAKE PAYMNET</Text>
           
            </TouchableOpacity>
            </View> 
@@ -77,7 +78,7 @@ const Loyalty = () => {
 
               
             
-             <Text style={{color: '#fff',fontSize:15,fontFamily:'Acephimere',}}>Refund</Text>
+             <Text style={{color: '#fff',fontSize:15,fontFamily:'Acephimere',fontStyle:'italic'}}>REFUND</Text>
           
            </TouchableOpacity>
            </View> 
@@ -90,23 +91,24 @@ const Loyalty = () => {
                     <View style={[styles.top,{paddingHorizontal:5}]}>
                      <View style={styles.top1}> 
                      <View style={styles.small}></View>  
-                    <Text style={styles.title}>Folio Number AJMJ-16</Text>
+                     <Text style={styles.title}>Folio Number</Text>
+                    <Text style={[styles.title,{fontWeight:'700',marginLeft:0}]}>AJMJ-16</Text>
                     </View>
                        <View>
-                        <Icon name="rightsquareo" size={23} color='green'/>
+                       <Image style={{height:23,width:23}} source={require('../../../Assets/icon/right_side_errr.png')}/>
                        </View>
                     </View>
                     <View style={styles.line} />
                     <View style={styles.main}>
                        <Text style={{fontSize:24,color:'black',fontWeight:'500',marginLeft:10}}>Akshay Jewels, Jalgaon</Text>
                        <View style={[styles.top,{marginTop:10}]}>
-                       <Text style={{marginLeft:10}}>Start date</Text>
-                       <Text style={{marginLeft:10}}>24 June 2020</Text>
+                       <Text style={{marginLeft:10,}}>Start date</Text>
+                       <Text style={{marginLeft:10,color:colors.blue}}>24 June 2020</Text>
                         <View/>
                        </View>
                        <View style={[styles.top,{marginTop:10}]}>
                        <Text style={{marginLeft:10}}>Maturity date</Text>
-                       <Text style={{marginLeft:-10}}>24 June 2020</Text>
+                       <Text style={{marginLeft:-10,color:colors.blue}}>24 June 2020</Text>
                         <View/>
                        </View>
                     <View style={{marginTop:27}}>
@@ -114,34 +116,30 @@ const Loyalty = () => {
 
                        <View style ={[styles.buttonV,{marginTop:-22}]}> 
                 <TouchableOpacity 
-            
-         style ={[styles.button,{width:"55%",}]}> 
-
-              
-            
-             <Text style={{color: '#fff',fontSize:15,fontStyle:'italic'}}>Make payment</Text>
+             style ={[styles.button]}> 
+             <Text style={{color: '#fff',fontSize:15,fontStyle:'italic'}}>MATURED</Text>
           
            </TouchableOpacity>
            </View> 
           
            </View>
 
-
-
-                       <View style={[styles.top,{marginTop:10,paddingHorizontal:10}]}>
+           <View style={[styles.top,{marginTop:10,paddingHorizontal:10}]}>
                         <View>
-                       <Text style={{marginLeft:10}}>₹ 250000</Text>
-                       <Text style={{marginLeft:0}}>Monthly amount</Text>
+                       <Text style={{marginLeft:10,color:colors.blue,fontWeight:'500'}}>₹ 250000</Text>
+                       <Text style={{marginLeft:0,color:colors.blue}}>Monthly amount</Text>
                        </View>
                        <View>
-                       <Text style={{marginLeft:10}}>₹ 25000</Text>
-                       <Text style={{marginLeft:10}}>Total paid</Text>
+                       <Text style={{marginLeft:3,color:colors.btcolor,fontWeight:'500'}}>₹ 25000</Text>
+                       <Text style={{marginLeft:0,color:colors.blue}}>Total paid</Text>
                        </View>
                        <View>
-                       <Text style={{marginLeft:10}}>₹ 2500</Text>
-                       <Text style={{marginLeft:0}}>Maturity amount</Text>
+                       <Text style={{marginLeft:30,color:'green',fontWeight:'500'}}>₹ 2500</Text>
+                       <Text style={{marginLeft:0,color:colors.blue}}>Maturity amount</Text>
                        </View>
                        </View>
+
+                      
                     </View>
                   
                   

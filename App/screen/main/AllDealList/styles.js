@@ -38,7 +38,7 @@ cardview: {
 view1:{
   flexDirection:'row',
   justifyContent:'space-between',
-  paddingHorizontal:10
+  paddingHorizontal:20
 },
   list:{
     paddingVertical:0,

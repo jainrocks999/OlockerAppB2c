@@ -6,11 +6,12 @@ import { useNavigation } from "@react-navigation/native";
 import RNPickerSelect from 'react-native-picker-select';
 import StoreBottom from '../../../Component/StoreBottomTab'
 import DateTimePicker from '@react-native-community/datetimepicker';
+import colors from "../../../constant/colors";
 const Loyalty =()=>{
     const navigation =useNavigation()
     const [gender,setGender]= useState('')
     const [date, setDate] = useState(new Date());
-    const [date2, setDate2] = useState('Start Date')
+    const [date2, setDate2] = useState('Enter DOB')
     const [mode, setMode] = useState('date');
     const [show, setShow] = useState(false);
     const onChange = (event, selectedDate) => {
@@ -58,13 +59,13 @@ return(
                                       
                                        inputAndroid: { width:'100%',fontSize:14,marginBottom:-1, },
                                        inputIOS: { width:'100%',fontSize:14,marginBottom:-1,borderWidth:0 },
-                                      placeholder:{color:'#333333',fontSize:14,borderWidth:0}
+                                      placeholder:{color:colors.lightGrey,fontSize:14,borderWidth:0}
                                       }}
                                       value={gender}
                                       useNativeAndroidPickerStyle={false}
                                       placeholder={{ label: "Mr.", value: 0 }}
                                       Icon={()=><View style={{alignSelf:'center',alignItems:'center',marginTop:19}}>
-                                      <Icon1 name ="caretdown" color={'grey'} />
+                                      <Icon1 name ="caretdown" color={colors.lightGrey} />
                                       </View>
                                       }
                                     />
@@ -97,7 +98,7 @@ return(
                   <TouchableOpacity
                 style={{ width: '70%',height:50 }}
                 onPress={() => showDatepicker()}>
-                <Text style={{ marginLeft: -32, fontSize: 14,marginTop:16}}>{`${date2}`}</Text>
+                <Text style={{ marginLeft: -32, fontSize: 14,marginTop:16,color:colors.lightGrey}}>{`${date2}`}</Text>
               </TouchableOpacity>
               {show && (
                 <DateTimePicker

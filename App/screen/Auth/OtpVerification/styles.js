@@ -19,7 +19,7 @@ export default StyleSheet.create({
     backgroundColor: '#fa8a86',
   },
   title: {
-    color: '#979797',
+    // color: '#979797',
     marginRight: 15,
     fontFamily: 'Acephimere',
   },
@@ -54,10 +54,10 @@ export default StyleSheet.create({
     width: '80%',
     fontWeight: '700',
     fontFamily: 'Acephimere',
-    justifyContent: 'center',
-    alignSelf: 'center',
+    textAlign:'center'
   },
   input: {
+    borderBottomColor:'#979797',
     borderBottomWidth: 0.2,
     width: '100%',
     marginTop: 20,
