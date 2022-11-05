@@ -7,8 +7,20 @@ export default StyleSheet.create({
     backgroundColor: '#ffffff'
 
   },
-  main: { marginTop: 20,height:100,width:300,alignSelf:'center'},
-  main1: { paddingVertical: 18, backgroundColor: '#fa8a86' },
+  imgbcg:{
+    height:180,
+    width:350,
+    alignSelf:'center'
+  },
+  img:{height:'100%',width:'100%'},
+  main: { 
+    marginTop: 20,
+    height:100,
+    width:300,alignSelf:'center'},
+  main1: { 
+    paddingVertical: 18,
+    backgroundColor: '#fa8a86'
+  },
 
   card: {
     // shadowColor: 'black',
@@ -50,17 +62,6 @@ export default StyleSheet.create({
     flexDirection: 'row',
      justifyContent: 'center',
       paddingHorizontal: 10
-     },
-  title: { 
-    color: '#ed6660',
-     fontSize: 15,
-      fontWeight: '500',
-     },
-  title1:{ 
-    color: '#ed6660',
-     fontSize: 25,
-      fontWeight: '700',
-      fontFamily:'Acephimere'
      },
      text1:{ 
        color: '#fff',

@@ -23,7 +23,7 @@ return(
        <View style={styles.card1}>
           <TouchableOpacity onPress={()=>navigation.navigate('loyalty1')}
           style={[styles.item,{backgroundColor:colors.blue}]}>
-           <Text style={styles.text}>Total Points</Text>
+           <Text style={styles.text}>TOTAL POINTS</Text>
            <Text style={styles.text}>100</Text>
           </TouchableOpacity>
           <TouchableOpacity onPress={()=>navigation.navigate('loyalty1')}
@@ -32,7 +32,7 @@ return(
            <Text style={styles.text}>0</Text>
           </TouchableOpacity>
           <TouchableOpacity onPress={()=>navigation.navigate('loyalty1')}
-          style={[styles.item,{backgroundColor:colors.btcolor}]}>
+          style={[styles.item,{backgroundColor:'#f65c78'}]}>
            <Text style={styles.text}>Remaining</Text>
            <Text style={styles.text}>0</Text>
           </TouchableOpacity>

@@ -9,14 +9,14 @@ marginBottom:0
 
 },
 circle:{
-    height:80,
-    width:80,
+    height:100,
+    width:100,
     alignItems:'center',
     position:'absolute',
-    borderRadius:40,
+    borderRadius:60,
     borderWidth:0.5,
     zIndex:1,
-    marginTop:-40,
+    marginTop:-50,
     backgroundColor:'#fff',
     alignItems:'center',
     justifyContent:'center'
@@ -50,7 +50,6 @@ card: {
    },
    title:{
        color:colors.white,
-       textAlign:'center',
        fontSize:20,
        fontWeight:'600',textAlign:'center',fontFamily:'Acephimere'
       //  marginTop:10
@@ -58,7 +57,7 @@ card: {
    title1:{
 
     textAlign:'center',
-    fontSize:15,
+    fontSize:13,
     fontWeight:'700',fontFamily:'Acephimere'
 },
    main:{
@@ -134,14 +133,14 @@ card: {
         width: '100%', 
         paddingHorizontal: 20, 
         borderTopLeftRadius:5,
-        borderTopRightRadius:5
+        borderTopRightRadius:5,
       },
       bottomv2:{ 
        flexDirection: 'row',
        justifyContent:'space-between', 
        width: '100%',
        marginTop: 5,
-       paddingHorizontal: 10
+       paddingHorizontal: 5,borderWidth:0
        
       },
 

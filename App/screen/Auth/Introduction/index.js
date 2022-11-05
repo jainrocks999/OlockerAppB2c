@@ -2,9 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, Image, TouchableOpacity, TextInput, ScrollView, SafeAreaView } from 'react-native';
 import styles from './styles';
 import { useNavigation } from '@react-navigation/native';
-import { NativeBaseProvider, Checkbox, HStack, Box } from "native-base";
 import Icon from 'react-native-vector-icons/AntDesign';
-import colors from '../../../constant/colors';
 
 
 const Login = () => {
@@ -28,18 +26,16 @@ const Login = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>
-        <ScrollView style={{}}>
+        {/* <ScrollView style={{}}> */}
           <View style={styles.main1}>
-            <View style={{height:180,width:350,alignSelf:'center'}}>
-            <Image style={{height:'100%',width:'100%'}} source={require('../../../Assets/images/login-register.png')}/>
+            <View style={styles.imgbcg}>
+            <Image style={styles.img} source={require('../../../Assets/images/login-register.png')}/>
             </View>
           </View>
 
           <View style={styles.main}>
-            <Image style={{height:'100%',width:'100%',marginLeft:0}} source={require('../../../Assets/images/logo_new.png')}/>
-            {/* <Text style={styles.title}>{"YOUR FAVORITE"}</Text>
-            <Text style={styles.title1}>{"JEWELLER"}</Text>
-            <Text>One stop solution for all your jewellery</Text> */}
+            <Image style={styles.img} source={require('../../../Assets/images/logo_new.png')}/>
+            
           </View>
 
 
@@ -73,7 +69,7 @@ const Login = () => {
           </View>
 
 
-        </ScrollView>
+        {/* </ScrollView> */}
       </View>
     </SafeAreaView>
   );

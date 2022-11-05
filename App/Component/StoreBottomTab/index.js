@@ -9,12 +9,12 @@ const BottomTab = () => {
   const renderHome = () => {
     return (
       <View style={styles.container}>
-        <View style={{width:30}}>
+        <View style={{width:30,marginLeft:20}}>
           <Image
            style={{height:21,width:21,tintColor:'#fff'}}
             source={require('../../Assets/icon/sid_home.png')}/>
         </View>
-        <Text style={[styles.text,{marginTop:0}]}>{'HOME'}</Text>
+        <Text style={[styles.text,{marginLeft:20}]}>{'HOME'}</Text>
       </View>
     )
   };
@@ -22,13 +22,13 @@ const BottomTab = () => {
   const PROFILE = () => {
     return (
       <View style={styles.container}>
-        <View style={{width:30,marginLeft:30}}>
+        <View style={{width:30,marginLeft:20}}>
           <Image
           style={{height:21,width:21,tintColor:'#fff',marginLeft:5}}
           source={require('../../Assets/images/user.png')}/>
           
         </View>
-        <Text style={[styles.text,{marginLeft:36}]}>{'PROFILE'}</Text>
+        <Text style={[styles.text,{marginLeft:26}]}>{'PROFILE'}</Text>
       </View>
     );
   }

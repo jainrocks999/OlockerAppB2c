@@ -23,7 +23,7 @@ const Loyalty = () => {
                     <View style={styles.main1}>
                         <TouchableOpacity onPress={() => navigation.navigate('MyFav')}
                             style={styles.card}>
-                            <Text style={styles.text}>{'       My\nFavourites'}</Text>
+                            <Text style={styles.text}>{'      My   \nFavorites'}</Text>
                         </TouchableOpacity>
                         <TouchableOpacity onPress={() => navigation.navigate('loyalty1')}
                             style={styles.card}>
@@ -69,14 +69,22 @@ const Loyalty = () => {
                             }}
                             // horizontal={true}
                             renderItem={({ item, index }) => (
+                                <View>
+                                {index==0 ? 
                                 <TouchableOpacity onPress={() => navigation.navigate('refer')}
                                     style={styles.cardview1}>
                                     {/* <Text>{item.title}</Text> */}
                                     <Image style={{height:'100%',width:'100%',borderRadius:10}}
                                     source={require('../../../Assets/images/referoffer1.png')}/>
+                                </TouchableOpacity>: <TouchableOpacity onPress={() => navigation.navigate('saving12')}
+                                    style={styles.cardview1}>
+                                    {/* <Text>{item.title}</Text> */}
+                                    <Image style={{height:'100%',width:'100%',borderRadius:10}}
+                                    source={require('../../../Assets/images/referoffer2.png')}/>
                                 </TouchableOpacity>
+                               }
 
-
+                                </View>
                             )}
                         />
                     </ImageBackground>

@@ -26,11 +26,11 @@ cardview: {
     borderRadius: 10,
     paddingHorizontal:10,
     paddingVertical:10,
-    height:hp('13%'),
+    height:hp('17%'),
     width:wp('95%'),
     alignSelf:'center',
     backgroundColor: '#fff',
-    marginTop:10
+    marginTop:10,marginBottom:0
 
   },
   list:{
@@ -45,7 +45,7 @@ cardview: {
   
   text:{
       color:colors.blue,
-      fontWeight:'600',
+      fontWeight:'700',
       fontFamily:'Acephimere'
   },
   button: {
@@ -55,7 +55,7 @@ cardview: {
     // justifyContent: 'space-between',
     // marginTop: 10,
     width: '100%',
-   paddingVertical:15,
+   paddingVertical:13,
   },
   buttonView:{
       alignItems:'center',

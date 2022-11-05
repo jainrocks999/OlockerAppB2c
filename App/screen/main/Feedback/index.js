@@ -1,41 +1,63 @@
 import React, { useState } from "react";
 import { View, Text, SafeAreaView, TouchableOpacity, FlatList, ScrollView, TextInput } from "react-native";
 import styles from "./styles";
-import Icon from 'react-native-vector-icons/Ionicons';
-import { HStack, Box, Switch, Radio, Checkbox } from "native-base";
-import { SliderBox } from "react-native-image-slider-box";
+import { HStack, Checkbox } from "native-base";
 import { useNavigation } from "@react-navigation/native";
+import { RadioButton } from 'react-native-paper';
+import colors from "../../../constant/colors";
 
 const Loyalty = () => {
+    const navigation=useNavigation()
     const [value, setValue] = useState('');
+    const [checked, setChecked] = React.useState('first');
     return (
         <SafeAreaView style={styles.container}>
             <ScrollView style={{ paddingHorizontal: 5,}}>
                 <View style={styles.card}>
                     <Text style={styles.title}>How was our Jewellry Collection?</Text>
                     <View style={styles.line} />
-                    <View style={styles.main}>
-                        <Radio.Group
-                            name="myRadioGroup"
-                            value={value}
-                            color='#032e63'
-                            onChange={(nextValue) => {
-                                setValue(nextValue);
-                            }}
-                        >
-                            <Radio value="one" my="1"  >
-                                Letest Designs,Great variety
-                            </Radio>
-                            <Radio value="two" my="1">
-                                Average,Very much like others
-                            </Radio>
-                            <Radio value="three" my="1">
-                                Lakes variety
-                            </Radio>
-                            <Radio value="four" my="1">
-                                Designs not letest
-                            </Radio>
-                        </Radio.Group>
+                    <View style={[styles.main,{paddingHorizontal:0}]}>
+                    <View style={{flexDirection:'row',alignItems:'center'}}>
+      <RadioButton
+        value="first"
+        color={colors.blue}
+        uncheckedColor='#474747'
+        status={ checked === 'first' ? 'checked' : 'unchecked' }
+        onPress={() => setChecked('first')}
+      />
+        <Text style={styles.text2}>Latest Designs, Great variety</Text>
+      </View>
+      <View style={{flexDirection:'row',alignItems:'center'}}>
+      <RadioButton
+        value="second"
+        color={colors.blue}
+        uncheckedColor='#474747'
+        status={ checked === 'second' ? 'checked' : 'unchecked' }
+        onPress={() => setChecked('second')}
+      />
+        <Text style={styles.text2}>Average, Very much like others</Text>
+      </View>
+      <View style={{flexDirection:'row',alignItems:'center'}}>
+      <RadioButton
+        value="three"
+        color={colors.blue}
+        uncheckedColor='#474747'
+        status={ checked === 'three' ? 'checked' : 'unchecked' }
+        onPress={() => setChecked('three')}
+      />
+       <Text style={styles.text2}>Lakes variety</Text>
+      </View>
+      <View style={{flexDirection:'row',alignItems:'center'}}>
+      <RadioButton
+        value="four"
+        color={colors.blue}
+        uncheckedColor='#474747'
+        status={ checked === 'four' ? 'checked' : 'unchecked' }
+        onPress={() => setChecked('four')}
+      />
+        <Text style={styles.text2}>Designs not letest</Text>
+      </View>
+                       
                     </View>
                 </View>
                 <View style={styles.card}>
@@ -43,33 +65,41 @@ const Loyalty = () => {
                     <View style={styles.line} />
                     <View style={styles.main}>
                         <View style={{ marginTop: 10 }}>
-                            <HStack space={4}>
+                            <HStack space={2}>
 
-                                <Checkbox value="check" accessibilityLabel="This is a dummy checkbox" defaultIsChecked    colorScheme= "orange" 
+                                <Checkbox value="check" accessibilityLabel="This is a dummy checkbox" 
+                                // defaultIsChecked  
+                                  colorScheme= "orange" 
                                 />
                                 <Text style={styles.text2}>Good showroom ambience</Text>
                             </HStack>
                         </View>
                         <View style={{ marginTop: 10 }}>
-                            <HStack space={4}>
+                            <HStack space={2}>
 
-                                <Checkbox value="check" defaultIsChecked  colorScheme= "orange" 
+                                <Checkbox value="check" 
+                                // defaultIsChecked 
+                                 colorScheme= "orange" 
                                 />
                                 <Text style={styles.text2}>Proper lighting</Text>
                             </HStack>
                         </View>
                         <View style={{ marginTop: 10 }}>
-                            <HStack space={4}>
+                            <HStack space={2}>
 
-                                <Checkbox value="check" accessibilityLabel="This is a dummy checkbox" defaultIsChecked   colorScheme= "orange" 
+                                <Checkbox value="check" accessibilityLabel="This is a dummy checkbox" 
+                                // defaultIsChecked   
+                                colorScheme= "orange" 
                                 />
                                 <Text style={styles.text2}>Well trained and knowledgeable sales team</Text>
                             </HStack>
                         </View>
                         <View style={{ marginTop: 10 }}>
-                            <HStack space={4}>
+                            <HStack space={2}>
 
-                                <Checkbox value="check" accessibilityLabel="This is a dummy checkbox" defaultIsChecked   colorScheme= "orange" 
+                                <Checkbox value="check" accessibilityLabel="This is a dummy checkbox" 
+                                // defaultIsChecked  
+                                 colorScheme= "orange" 
                                 />
                                 <Text style={styles.text2}>you were properly treated by staff</Text>
                             </HStack>
@@ -97,23 +127,30 @@ const Loyalty = () => {
                 <View style={styles.card}>
                     <Text style={styles.title}>{"Would you Recommend us to your friends and Relatives?"}</Text>
                     <View style={styles.line} />
-                    <View style={styles.main}>
-                    <Radio.Group
-                            name="myRadioGroup"
-                            value={value}
-                            color='#032e63'
-                            onChange={(nextValue) => {
-                                setValue(nextValue);
-                            }}
-                        >
-                            <Radio value="one" my="1"  >
-                               Yes
-                            </Radio>
-                            <Radio value="two" my="1">
-                                No
-                            </Radio>
-                           
-                        </Radio.Group>
+                    <View style={[styles.main,{paddingHorizontal:0}]}>
+                    <View style={{flexDirection:'row',alignItems:'center'}}>
+      <RadioButton
+        value="first"
+        color={colors.blue}
+        uncheckedColor='#474747'
+        status={ checked === 'first' ? 'checked' : 'unchecked' }
+        onPress={() => setChecked('first')}
+      />
+      <Text style={styles.text2}>Yes</Text>
+      </View>
+      <View style={{flexDirection:'row',alignItems:'center'}}>
+
+      <RadioButton
+       color={colors.blue}
+       uncheckedColor='#474747'
+        value="second"
+        status={ checked === 'second' ? 'checked' : 'unchecked' }
+        onPress={() => setChecked('second')}
+      />
+             <Text style={styles.text2}>No</Text>
+
+      </View>
+                  
                     </View>
                 </View>
              <View style ={styles.buttonV}> 

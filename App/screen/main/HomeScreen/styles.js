@@ -17,7 +17,7 @@ main:{
   backgroundColor:'#fa8a86'
 },
 swtich:{
-  paddingHorizontal:10,
+  paddingHorizontal:13,
   flexDirection:'row',
   justifyContent:'space-between'
 },
@@ -99,7 +99,7 @@ card: {
       },
       text2:{
         color:colors.white,
-        fontSize:15,
+        fontSize:11,
         //  marginTop:5,
           // textAlign:'center',
          fontFamily:'Acephimere'
@@ -149,6 +149,13 @@ card: {
        borderTopLeftRadius:10
        
       },
+      img4:{
+        height:'100%',
+        width:'100%',
+      //  borderTopRightRadius:10,
+      //  borderTopLeftRadius:10
+       
+      },
       img2:{
         height:hp('21.5%'),
         width:wp('39.8%'),
@@ -156,16 +163,16 @@ card: {
         
       },
       cardimg:{
-        height:25,width:25,
-        borderRadius:15,backgroundColor:'#fff',
+        height:20,width:20,
+        borderRadius:15,
         alignSelf:'flex-end',
-        marginTop:-17,zIndex:3,marginRight:5
+        marginTop:-10,zIndex:5,marginRight:5
       },
       cardfotter:{
         height:hp("4%"),
-        backgroundColor:colors.lightPink,
+        backgroundColor:colors.btcolor,
         width:wp("40%"),
-        marginTop:-8,
+        marginTop:-10,
         borderBottomLeftRadius:hp('1%'),
         borderBottomRightRadius:hp('1%'),justifyContent:'center',alignItems:'center'
       },

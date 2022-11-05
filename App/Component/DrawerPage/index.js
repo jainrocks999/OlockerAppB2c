@@ -50,12 +50,13 @@ const DrawerContent=()=> {
             <ScrollView showsVerticalScrollIndicator={true} style={styles.drawerContent}>
                 <View style={[styles.drawers,{backgroundColor:'#ed6660',}]}>
                     <View style={{width:90,height:90,borderRadius:45,marginRight:20,borderWidth:1}}>
-                    <Image style={{height:'100%',width:'100%',borderRadius:45,}} source={require('../../Assets/images/men.png')}/>
+                    <Image style={{height:'100%',width:'100%',borderRadius:30,resizeMode:'center'}} source={require('../../Assets/images/men.png')}/>
                     </View>
-                    <View style={{marginLeft:10,width:'50%'}}>
+                    <View style={{marginLeft:0,width:'50%'}}>
                   
                    <View style={styles.profile}>
-                    <Text style={styles.title}>{'title'}</Text>
+                   <Text style={styles.title}>{'Welcome'}</Text>
+                    <Text style={styles.title}>{'Yogendra Yadav'}</Text>
                     </View>
                     {/* <TouchableOpacity
                     onPress={()=>navigation.navigate('Profile',{name,email,mobile,address,area,dob,pincode,gender,last_name})}
@@ -135,7 +136,7 @@ const DrawerContent=()=> {
                         <View style={[styles.iconView,{width:20,marginRight:1}]}>
                         <Image style={styles.imageicon} source={require('../../Assets/icon/sid_my_olocker.png')}/>
                             </View>
-                            <Text style={[styles.text,]}>{'My Olocker'}</Text>
+                            <Text style={[styles.text,{marginLeft:7}]}>{'My Olocker'}</Text>
                         </View>
                     </View>
                 </TouchableOpacity>

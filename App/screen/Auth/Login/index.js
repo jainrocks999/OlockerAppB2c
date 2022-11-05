@@ -15,8 +15,8 @@ const [chheck ,setCheck] =useState('')
     <View style={styles.container}>
       <ScrollView>
        <View style={styles.main1}>
-       <View style={{height:300,width:300,alignSelf:'center',marginBottom:20}}>
-            <Image style={{height:'100%',width:'100%',}} source={require('../../../Assets/images/login_top_img.png')}/>
+       <View style={styles.imgbcg}>
+            <Image style={styles.img} source={require('../../../Assets/images/login_top_img.png')}/>
             </View>
        </View>
 
@@ -42,8 +42,8 @@ const [chheck ,setCheck] =useState('')
               style={styles.button}>
                  <View style={styles.buttonV}>
               <View ></View>
-              <View style={{justifyContent:'center',alignSelf:'center'}}>
-              <Text style={{color: '#fff',marginLeft:25,fontFamily:'Acephimere'}}>GET OTP</Text>
+              <View style={styles.bottom}>
+              <Text style={styles.tt2}>GET OTP</Text>
               </View>    
               <View >
               <Icon name="arrowright" size={20} color='#fff'  />
@@ -53,12 +53,11 @@ const [chheck ,setCheck] =useState('')
            
            
             <View style={styles.view1}>
-            <HStack space={3} alignSelf='center' justifyItems={'center'}>
      
-      <Checkbox value="check" accessibilityLabel="This is a dummy checkbox" defaultIsChecked 
-      colorScheme= "orange" />
+       <Checkbox value="check" accessibilityLabel="This is a dummy checkbox" 
+        //  defaultIsChecked 
+           colorScheme= "orange" />
      <Text style={styles.text2}>I hereby agree to the</Text>
-     </HStack>
               <Text style={[styles.text1]}>{' Terms & Conditions'}</Text>
               
              

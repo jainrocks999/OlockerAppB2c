@@ -14,7 +14,7 @@ imagecard:{
 },
 main:{
     paddingHorizontal:10,
-    marginTop:-200
+    marginTop:-250
 },
 card: {
     paddingVertical:10,
@@ -25,26 +25,25 @@ card: {
     marginBottom:0
 },
 view1:{
-    height:40,width:"100%",
+    height:50,width:"100%", borderBottomWidth:0.2,borderBottomColor:colors.lightGrey
 },
 imgbcg:{
-     height:'80%',
-    width:"90%",
+     height:'75%',
+    width:"93%",
     // justifyContent:'center',
      alignItems:'center',
 },
 text: {
     color:colors.blue,
-     textAlign:'center',
-    //fontSize: 15,
+    fontSize: 15,marginTop:3,marginLeft:30,
     fontWeight: '400',fontFamily:'Acephimere',
-    marginTop:2
+  
 },
 
 input:{
     height:"100%",
-    width:'100%',
-    borderBottomWidth:0.5
+    width:'100%',marginLeft:10
+   
 },
 button:{
     height:40,width:'50%',

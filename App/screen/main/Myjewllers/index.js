@@ -17,11 +17,12 @@ return(
           images={images}
            sliderBoxHeight={150}
           onCurrentImagePressed={index => console.warn(`image ${index} pressed`)}
-          dotColor="#FFEE58"
-          inactiveDotColor="#90A4AE"
+          dotColor="#d69426"
+          
+          inactiveDotColor="#616161"
         //    paginationBoxVerticalPadding={10}
-          autoplay
-          circleLoop
+           autoplay
+            circleLoop
         //   resizeMethod={'resize'}
           resizeMode={'cover'}
           paginationBoxStyle={{
@@ -38,12 +39,10 @@ return(
             width: 15,
             height: 15,
             borderRadius: 8,
-            marginHorizontal: 0,
+            marginHorizontal: -9,
             padding: 0,
-            margin: 0,
-          
-            backgroundColor: ""
-          }}
+            margin: 5,borderWidth:2,borderColor:'#fff'
+            }}
            ImageComponentStyle={{borderRadius: 15, width: '95%' ,marginTop: 0}}
            imageLoadingColor="#2196F3"
           
@@ -65,10 +64,10 @@ return(
               onPress={()=>navigation.navigate('supplier')}
 
                 style={styles.cardview}>
-              <View style={{height:'80%',width:'100%',borderRadius:15,borderWidth:0}}>
-               <Image style={{height:'100%',width:'100%',borderRadius:10}} source={require('../../../Assets/images/deal_logohome1.jpg')}/>
+              <View style={styles.imgcard}>
+               <Image style={styles.img1} source={require('../../../Assets/images/deal_logohome1.jpg')}/>
                </View>
-               <View style={{height:'19%',width:'100%',alignItems:'center',justifyContent:'center',alignSelf:'center'}}>
+               <View style={styles.ttview}>
                 <Text>  {item.title} </Text>
                </View>
               </TouchableOpacity>
@@ -104,5 +103,6 @@ const DATA = [
     "https://source.unsplash.com/1024x768/?water",
     "https://source.unsplash.com/1024x768/?girl",
     "https://source.unsplash.com/1024x768/?tree",
+    
    
   ]

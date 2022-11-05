@@ -27,12 +27,12 @@ export default StyleSheet.create({
     },
     title: {
         color: colors.btcolor,
-        marginLeft: 10,
+        // marginLeft: 10,
         fontSize:16,
-        fontWeight:'500'
+        fontWeight:'500',
     },
     main: {
-        paddingHorizontal: 10,
+        paddingHorizontal: 0,
          marginTop: 10
     },
     text2: {
@@ -41,16 +41,16 @@ export default StyleSheet.create({
         fontWeight: '400',
     },
     line:{ 
-        borderWidth:0.5,
+        borderWidth:0.8,
          marginTop: 10,
-         backgroundColor:'#fddac0'
+         borderColor:'#fddac0'
         },
         line1:{ 
             borderWidth:0.2,
-             marginTop: 10,
-             backgroundColor:'#fddac0',
-             width:'90%',
-             alignSelf:'flex-end'
+             marginTop: 5,marginBottom:5,
+             borderColor:colors.lightGrey,
+             width:'92%',
+             marginLeft:40
             },
     button:{
        paddingVertical:12,

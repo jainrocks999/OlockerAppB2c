@@ -15,15 +15,15 @@ export default StyleSheet.create({
         // // backgroundColor: '#fddac0',
         // borderBottomEndRadius: hp("27%"),
         // borderBottomStartRadius: hp('27%'),
-        height:250,width:'100%',
-        alignItems: 'center',
-        alignSelf: 'center',
+        height:'100%',width:'100%',
+        //  alignItems: 'center',
+        //  alignSelf: 'center',
     },
 
     top: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        backgroundColor: '#fddac0',
+        // backgroundColor: '#fddac0',
          paddingHorizontal: 15
     },
     circles: {
@@ -86,7 +86,7 @@ export default StyleSheet.create({
     button: {
         backgroundColor: colors.btcolor,
         paddingHorizontal: 20,
-        paddingVertical: 10,
+        paddingVertical: 13,
         borderRadius: 20,
         width: '48%',
         alignItems: 'center',
@@ -94,9 +94,7 @@ export default StyleSheet.create({
     },
     bottomv: {
         alignItems: 'center',
-        justifyContent: 'space-between',
-        marginTop: 2,
-        // flexDirection:'row',
+       
     },
     text1: {
         fontSize: 15,
@@ -118,7 +116,7 @@ export default StyleSheet.create({
     },
     textbt: {
         fontSize: 11,
-         width: '33%'
+         width: '33%',color:colors.blue
     },
     btext:{
         color:'#fff',

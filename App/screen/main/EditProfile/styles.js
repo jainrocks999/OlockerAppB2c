@@ -5,6 +5,7 @@ export default StyleSheet.create({
 container:{
 flex:1,
 backgroundColor:'#fddac0',
+backgroundColor:'#f65c78',
 marginBottom:0
 
 },
@@ -19,8 +20,8 @@ circle:{
     borderRadius:35
 },
 name:{
-    marginLeft:15,
-    fontWeight:'600'
+    marginLeft:-156,
+    fontWeight:'600',
 },
 scrol:{
     flex:1,
@@ -28,14 +29,23 @@ scrol:{
     backgroundColor:'#fff',
     borderRadius:15
 },
-
-    
+edit:{
+    color:colors.black,
+    fontFamily:'Acephimere',
+    fontWeight:'500',
+    marginTop:-20
+},
+   img:{
+    height:'100%',
+    width:'100%',
+    borderRadius:45,
+}, 
    
     view:
     {
         flexDirection:'row',
         alignItems:'center',
-        // justifyContent:'space-between',
+         justifyContent:'space-between',
         paddingHorizontal:10
        
     },
@@ -45,12 +55,15 @@ scrol:{
 
     },
     picker:{
-        width:'40%',
-        borderBottomWidth:0.4
+        width:'80%',
+        borderBottomWidth:0.4,
+        borderBottomColor:colors.lightGrey
     },
     picker1:{
-        width:'33.5%',
-        borderBottomWidth:0.4
+        width:'41.5%',
+        borderBottomWidth:0.4,
+        borderBottomColor:colors.lightGrey
+
     },
     main1:{
         paddingVertical:10,
@@ -68,7 +81,7 @@ scrol:{
 
       },
       card2:{
-          marginTop:10,
+          marginTop:10,paddingHorizontal:10
        
         },
        

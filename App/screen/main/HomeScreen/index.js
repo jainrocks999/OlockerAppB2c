@@ -96,7 +96,7 @@ const HomeScreen =()=>{
             margin: 0,
             backgroundColor: "rgba(128, 128, 128, 0.92)"
           }}
-           ImageComponentStyle={{borderRadius: 0, width: '100%', marginTop: 0,height:170}}
+           ImageComponentStyle={{width: '100%',}}
         //   imageLoadingColor="#2196F3"
           
         />
@@ -118,7 +118,7 @@ const HomeScreen =()=>{
             showsHorizontalScrollIndicator={true}
             horizontal={true}
             data={DATA}
-            style={{marginTop:7}}
+            style={{marginTop:7,paddingHorizontal:7}}
             renderItem={({item}) => (
               <TouchableOpacity
               onPress={()=>navigation.navigate('alldeal')}
@@ -163,7 +163,7 @@ const HomeScreen =()=>{
                     <View style={styles.img2}>
                <Image style={styles.img3} source={require('../../../Assets/images/olocker_logo_homebx1.jpg')}/>
                <View style={styles.cardimg}>
-                  <Image style={styles.img3} 
+                  <Image style={styles.img4} 
                    source={require('../../../Assets/images/next_homeicon.png')}
                   />
                   </View>
@@ -180,12 +180,12 @@ const HomeScreen =()=>{
                 <View style={styles.img2}>
                <Image style={styles.img3} source={require('../../../Assets/images/olocker_logo_homebx2.png')}/>
                   <View style={styles.cardimg}>
-                  <Image style={styles.img3} 
+                  <Image style={styles.img4} 
                    source={require('../../../Assets/images/next_homeicon.png')}
                   />
                   </View>
                  <View style={styles.cardfotter}>
-                   <Text style={[styles.text2]}>Jewellery Insurance</Text>
+                   <Text style={[styles.text2]}>Loan Against Jewellery </Text>
                  </View>
                  </View>
            </TouchableOpacity>

@@ -28,7 +28,7 @@ const MyProducts = () => {
         <View style={styles.main}>
          <View style={[styles.card1,{backgroundColor:'#fff'}]}>
          <Image style={styles.img}  source={require('../../../Assets/icon/filter_icon.png')}/>
-           <Text style={styles.textcard}>SORT BY PRICE</Text>
+           <Text style={[styles.textcard,{textAlign:'center',marginTop:3}]}>SORT BY PRICE</Text>
          </View>
          <View style={styles.card1}>
           <TouchableOpacity onPress={()=>manage()}

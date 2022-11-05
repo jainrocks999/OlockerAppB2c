@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import { View,Text, SafeAreaView,TouchableOpacity , ScrollView,TextInput } from "react-native";
+import { View,Text, SafeAreaView,TouchableOpacity , ScrollView,TextInput ,Image} from "react-native";
 import styles from "./styles";
 import Icon1 from 'react-native-vector-icons/AntDesign';
 import { useNavigation } from "@react-navigation/native";
@@ -41,23 +41,28 @@ return(
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.scrol} >
       <View style={styles.main1}>
+        
           <View style={styles.view}>
+
            <View style={styles.circle}>
+           <Image style={styles.img} source={require('../../../Assets/images/men.png')}/>
 
            </View>
            <Text style={styles.name}>NAME </Text>
+           <Text style={styles.edit}>Edit</Text>
+
           </View>
         <View style={styles.card2}>
         <View style={styles.main4}>
                     
-                      <View style={{width:'33%'}} >
+                      <View style={{width:'20%',marginLeft:-5}} >
                       <View style={styles.picker}>
                       <RNPickerSelect
                                        onValueChange={(val)=>setGender(val)}
                                       items={data}
                                       style={{ 
                                       
-                                       inputAndroid: { width:'100%',fontSize:14,marginBottom:-1, },
+                                       inputAndroid: { width:'100%',fontSize:14,marginBottom:-1,marginLeft:-4 },
                                        inputIOS: { width:'100%',fontSize:14,marginBottom:-1,borderWidth:0 },
                                       placeholder:{color:colors.lightGrey,fontSize:14,borderWidth:0}
                                       }}
@@ -72,8 +77,8 @@ return(
                   </View>
                       </View>
                    <View style ={styles.picker1} >
-                     <TextInput 
-                      placeholder='Fisrt name '
+                     <TextInput style={{marginLeft:0}}
+                      placeholder='First name '
                      />
                     </View>
                     <View style ={styles.picker1} >
@@ -83,22 +88,24 @@ return(
                     </View>
               </View> 
             
-              <View style={[styles.main4,{borderBottomWidth:0.4}]}>
+              <View style={[styles.main4,{borderBottomWidth:0.4,        borderBottomColor:colors.lightGrey
+}]}>
                   <View style={{alignSelf:'center'}}>
-                  <Text >Email:</Text>
+                  <Text style={{marginLeft:-5}}>Email :</Text>
                   </View>
-              <TextInput style={{width:'80%'}}
+              <TextInput style={{width:'82%'}}
                       placeholder='Email ID'
                      />
               </View>
-              <View style={[styles.main4,{borderBottomWidth:0.4}]}>
+              <View style={[styles.main4,{borderBottomWidth:0.4,        borderBottomColor:colors.lightGrey
+}]}>
                   <View style={{alignSelf:'center'}}>
-                  <Text >DOB:</Text>
+                  <Text style={{marginLeft:-5}} >DOB :</Text>
                   </View>
                   <TouchableOpacity
-                style={{ width: '70%',height:50 }}
+                style={{ width: '70%',height:47 }}
                 onPress={() => showDatepicker()}>
-                <Text style={{ marginLeft: -32, fontSize: 14,marginTop:16,color:colors.lightGrey}}>{`${date2}`}</Text>
+                <Text style={{ marginLeft: -36, fontSize: 14,marginTop:16,color:colors.lightGrey}}>{`${date2}`}</Text>
               </TouchableOpacity>
               {show && (
                 <DateTimePicker
@@ -115,36 +122,40 @@ return(
                 />
               )}
               </View>
-              <View style={[styles.main4,{borderBottomWidth:0.4}]}>
+              <View style={[styles.main4,{borderBottomWidth:0.4,        borderBottomColor:colors.lightGrey
+}]}>
                   <View style={{alignSelf:'center'}}>
-                  <Text >Mobile:</Text>
+                  <Text style={{marginLeft:-5}} >Mobile :</Text>
                   </View>
-              <TextInput style={{width:'80%'}}
-                      placeholder='Mobile Numebr'
+              <TextInput style={{width:'82%'}}
+                      placeholder='Mobile Number'
                      />
               </View>
-              <View style={[styles.main4,{borderBottomWidth:0.4}]}>
+              <View style={[styles.main4,{borderBottomWidth:0.4,        borderBottomColor:colors.lightGrey
+}]}>
                   <View style={{alignSelf:'center'}}>
-                  <Text >Pincode:</Text>
+                  <Text style={{marginLeft:-5}} >Pin Code :</Text>
                   </View>
-              <TextInput style={{width:'80%'}}
+              <TextInput style={{width:'82%'}}
                       placeholder='Pincode'
                      />
               </View>
-              <View style={[styles.main4,{borderBottomWidth:0.4}]}>
+              <View style={[styles.main4,{borderBottomWidth:0.4,        borderBottomColor:colors.lightGrey
+}]}>
                   <View style={{alignSelf:'center'}}>
-                  <Text >City:</Text>
+                  <Text style={{marginLeft:-5}}>City :</Text>
                   </View>
-              <TextInput style={{width:'80%'}}
-                      placeholder='city'
+              <TextInput style={{width:'82%'}}
+                      placeholder='City'
                      />
               </View>
 
-              <View style={[styles.main4,{borderBottomWidth:0.4}]}>
+              <View style={[styles.main4,{borderBottomWidth:0.4,        borderBottomColor:colors.lightGrey
+}]}>
                   <View style={{alignSelf:'center'}}>
-                  <Text >State:</Text>
+                  <Text style={{marginLeft:-5}} >State :</Text>
                   </View>
-              <TextInput style={{width:'80%'}}
+              <TextInput style={{width:'82%'}}
                       placeholder='State'
                      />
          </View>
@@ -152,7 +163,7 @@ return(
        
           
           <TouchableOpacity 
-                          onPress={()=>navigation.navigate("otp")}
+                          // onPress={()=>navigation.navigate("otp")}
                         style={styles.button}>
                       <Text style={{color: '#fff',fontSize:13}}>SAVE PROFILE</Text>
                  </TouchableOpacity>

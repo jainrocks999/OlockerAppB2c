@@ -1,5 +1,5 @@
 import React from "react";
-import { View,Text, SafeAreaView,TouchableOpacity ,FlatList, ScrollView} from "react-native";
+import { View,Text, SafeAreaView,FlatList, ScrollView,Image} from "react-native";
 import styles from "./styles";
 import StoreBottm from '../../../Component/StoreBottomTab'
 import { useNavigation } from "@react-navigation/native";
@@ -10,17 +10,24 @@ return(
     <SafeAreaView style={styles.container}>
       <ScrollView>
       <View style={styles.card}>
-      <View style={{borderWidth:0.2}}/>
+      {/* <View style={{borderWidth:0.2}}/> */}
           <FlatList
             data={DATA}
           horizontal={false}
             renderItem={({item,index}) => (
               <View onPress={()=>navigation.navigate('alldeal')}
                 style={styles.cardview}>
-             <View style={{paddingHorizontal:10}}>
-                 <Text>{item.title}</Text>
+             <View style={styles.circleview}>
+                <View style={styles.circle}>
+                <Image style={styles.img} source={require('../../../Assets/images/men.png')}/>
+                </View>
+                <View style={styles.textview}>
+                 <Text style={{fontWeight:'bold'}}>{item.title}</Text>
                  </View>
-                 <View style={{borderWidth:0.2,marginTop:10}}/>
+                 <Text style={{fontSize:11}}>23 Feb 2021</Text>
+                 </View>
+               
+                 <View style={{borderWidth:0.2,marginTop:0}}/>
                   </View>
                
          

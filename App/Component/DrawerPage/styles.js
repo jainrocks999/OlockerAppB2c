@@ -7,8 +7,8 @@ export default StyleSheet.create({
     title: {
         fontFamily:'Poppins-SemiBold',
         fontSize:16,
-        width:'80%',
-        color:'#fff'
+        // width:'80%',
+        color:'#fff',
     },
     caption: {
         fontSize: 14,

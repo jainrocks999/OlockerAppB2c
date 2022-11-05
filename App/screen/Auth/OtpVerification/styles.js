@@ -13,10 +13,16 @@ export default StyleSheet.create({
     paddingHorizontal: 50,
     alignItems: 'center',
   },
-
+imgbcg:{
+  height:230,
+  width:300,
+  alignSelf:'center',
+  marginBottom:40
+},
+img:{height:'100%',width:'100%'},
   main1: {
     paddingVertical: 10,
-    backgroundColor: '#fa8a86',
+    backgroundColor: colors.btcolor,
   },
   title: {
     // color: '#979797',
@@ -24,24 +30,7 @@ export default StyleSheet.create({
     fontFamily: 'Acephimere',
   },
 
-  card: {
-    // shadowColor: 'black',
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    shadowOffset: {height: 2, width: 0},
-    elevation: 2,
-    // borderRadius: 10,
-    //backgroundColor: 'white',
-    paddingHorizontal: 15,
-    paddingVertical: 10,
-    //marginTop: 10,
-    //borderWidth: 1,
-  },
-  image: {
-    width: 28,
-    height: 28,
-    marginLeft: -10,
-  },
+ 
   textinput: {
     alignItems: 'center',
     justifyContent: 'center',

@@ -18,7 +18,23 @@ main:{
    alignItems:'center',
    alignSelf:'center'
 },
-
+ttview:{
+  height:'19%',
+  width:'100%',
+  alignItems:'center',
+  justifyContent:'center',
+  alignSelf:'center'
+},
+img1:{
+  height:'100%',
+  width:'100%',
+  borderRadius:10
+},
+imgcard:{
+  height:'80%',
+  width:'100%',
+  borderRadius:15,
+  borderWidth:0},
 slider1:{
     marginTop:10,
     height:hp('25%'),

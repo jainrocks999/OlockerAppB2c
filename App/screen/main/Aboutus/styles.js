@@ -9,16 +9,19 @@ marginBottom:0
 
 },
 main:{
-    backgroundColor:"#fddac0",
-    height:'100%',marginBottom:hp('5%')
+    backgroundColor:"#fddac0",borderRadius:10,
+    // height:'100%',
+// borderWidth:5
 },
 main1:{
-height:hp('15%'),
-width:wp('115%'),
-borderBottomLeftRadius:hp('15%'),
-borderBottomRightRadius:hp('15%'),
+height:hp('17%'),
+width:wp('100%'),
+borderBottomLeftRadius:hp('13%'),
+borderBottomRightRadius:hp('13%'),
 alignSelf:'center',
-backgroundColor:colors.white
+backgroundColor:colors.white,alignItems:'center',justifyContent:'center'
+//  borderWidth:8,
+// borderTopRightRadius:hp('4.5%'),borderTopLeftRadius:hp('3%')
 },
 rec:{
     borderBottomWidth: 30,

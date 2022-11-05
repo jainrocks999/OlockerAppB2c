@@ -14,7 +14,13 @@ export default StyleSheet.create({
         backgroundColor: colors.white,
         borderRadius: 5
     },
-    card1:{width:'100%',height:15,backgroundColor:colors.lightGrey,borderRadius:15,marginTop:15},
+    card1:{
+        width:'95%',
+        marginLeft:7,
+        backgroundColor:colors.lightGrey,
+        borderRadius:15,
+        marginTop:15
+    },
     top:{
         flexDirection:'row',
         justifyContent:'space-between',
@@ -32,7 +38,7 @@ export default StyleSheet.create({
     title: {
         color: colors.black,
         marginLeft: 10,
-        fontSize:16,
+        fontSize:14,
         fontWeight:'500'
     },
     main: {
@@ -47,12 +53,12 @@ export default StyleSheet.create({
     line:{ 
         borderWidth:0.7,
          marginTop: 10,
-         borderColor:'#fddac0'
+         borderColor:'#fddac0',width:'96%',alignSelf:'center'
         },
         line1:{ 
-            borderWidth:0.5,
+            borderWidth:0.6,
              marginTop: 10,
-             borderColor:'#fddac0'
+             borderColor:'#fddac0',width:'100%',alignSelf:'center'
             },
     button:{
        paddingVertical:12,

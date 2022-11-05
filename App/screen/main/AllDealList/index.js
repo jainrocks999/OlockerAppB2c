@@ -1,9 +1,8 @@
 import React from "react";
-import { View,Text, SafeAreaView,TouchableOpacity ,FlatList,Image} from "react-native";
+import { View,Text, SafeAreaView,TouchableOpacity ,FlatList,Image,ScrollView} from "react-native";
 import styles from "./styles";
 import { useNavigation } from "@react-navigation/native";
 import StoreBottom from '../../../Component/StoreBottomTab'
-import { ScrollView } from "native-base";
 import colors from "../../../constant/colors";
 const Loyalty =()=>{
   const navigation =useNavigation();
@@ -22,8 +21,8 @@ return(
          <Text style={{color:colors.blue,textAlign:'right',fontWeight:'500'}}>Deal Partner</Text>
 
          </View>
-         <View style={{height:20,width:100,alignSelf:'flex-end',marginRight:0}}>
-         <Image style={{height:'100%',width:'100%'}}  source={require('../../../Assets/images/grabon_icon.png')}/>       
+         <View style={{height:21,width:100,alignSelf:'flex-end',marginRight:0}}>
+         <Image style={{height:'100%',width:'100%',}}  source={require('../../../Assets/images/grabon_icon.png')}/>       
          </View>
          </View>
       </View>

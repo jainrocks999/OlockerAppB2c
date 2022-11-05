@@ -23,6 +23,16 @@ export default StyleSheet.create({
     borderRadius:5,
     paddingHorizontal:10
   },
+  top:{
+    flexDirection:'row',
+    justifyContent:'space-between'
+  },
+  imgbcg:{
+    height:80,
+    width:150,
+    marginRight:10
+  },
+  img:{height:'100%',width:'100%'},
   view1:{
     alignSelf:'center',
     width:'9%'
@@ -38,7 +48,7 @@ export default StyleSheet.create({
   },
   text:{
     color:colors.black,
-    fontWeight:'700',
+    fontWeight:'900',
   },
   button: {
     backgroundColor:'rgba(237,102,96,255)',

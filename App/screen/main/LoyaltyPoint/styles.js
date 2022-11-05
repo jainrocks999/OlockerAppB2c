@@ -66,7 +66,8 @@ card: {
        alignSelf:'flex-end'
    },
    text:{
-       color:colors.white, fontFamily:'Acephimere',
+       color:colors.white, 
+    //    fontFamily:'Acephimere',
    },
    tt:{
     color:colors.blue,fontWeight:'700', fontFamily:'Acephimere',

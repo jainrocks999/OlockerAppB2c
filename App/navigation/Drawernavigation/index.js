@@ -39,14 +39,14 @@ function MyDrawer() {
               <TouchableOpacity  
                onPress={()=>navigation.navigate('Loyalty')}
               style={{marginLeft:10}}>
-              <Icon name="gift" size={20} color={'#fa8a86'} />
+              <Icon name="gift" size={18} color={colors.btcolor} />
               </TouchableOpacity>
             <TouchableOpacity 
             onPress={()=>navigation.navigate('MyFav')}
            style={{marginLeft:5}}
             
            >
-          <Icon1 name="heart" size={20} color={'#fa8a86'} />
+          <Icon1 name="heart" size={20} color={colors.btcolor} />
          
           </TouchableOpacity>
           </View>
@@ -68,16 +68,16 @@ function MyDrawer() {
          ),
          
             headerLeft: () => (
-              <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-between',width:'70%'}}>
+              <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-between',width:'57%'}}>
               <TouchableOpacity        
               onPress={()=>navigation.toggleDrawer()}
 
-              style={{marginLeft:5}}
+              style={{marginLeft:15}}
   
               >
              <Icon1 name="menu" size={27}  />
              </TouchableOpacity>
-             <Text style={{color:colors.blue,fontWeight:'700',fontFamily:'Acephimere'}}>PROFILE</Text>
+             <Text style={{color:colors.blue,fontWeight:'700',fontFamily:'Acephimere'}}>Profile</Text>
              </View>
            ),
         
@@ -92,7 +92,7 @@ function MyDrawer() {
           headerTitleAlign:'center',
           headerBackVisible:(false),
           headerTitle:()=>(
-            <View>
+            <View style={{marginLeft:-120}}>
             <Text style={{color:colors.blue,fontWeight:'700',fontFamily:'Acephimere'}}>Mangal Jewellers</Text>
             </View>
          ),

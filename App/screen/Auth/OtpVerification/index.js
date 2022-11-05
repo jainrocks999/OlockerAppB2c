@@ -2,9 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {View, Text, Image, TouchableOpacity, TextInput,ScrollView,SafeAreaView} from 'react-native';
 import styles from './styles';
 import { useNavigation } from '@react-navigation/native';
-import { NativeBaseProvider, Checkbox, HStack,Box } from "native-base";
 import Icon from 'react-native-vector-icons/AntDesign';
-import colors from '../../../constant/colors';
 
 
 const Login = () => {
@@ -14,8 +12,8 @@ const Login = () => {
     <View style={styles.container}>
       <ScrollView>
        <View style={styles.main1}>
-       <View style={{height:230,width:300,alignSelf:'center',marginBottom:40}}>
-            <Image style={{height:'100%',width:'100%'}} 
+       <View style={styles.imgbcg}>
+            <Image style={styles.img} 
             source={require('../../../Assets/images/otp.png')}/>
             </View>
        </View>
@@ -50,7 +48,7 @@ const Login = () => {
               style={styles.button}>
                  <View style={styles.buttonV}>
               <View/>
-              <View>
+              <View style={{marginLeft:15}}>
               <Text style={{color: '#fff',fontFamily:'Acephimere'}}>{"Verify & Proceed"}</Text>
               </View>    
               <View >

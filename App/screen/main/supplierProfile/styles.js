@@ -53,14 +53,14 @@ card2: {
     paddingHorizontal: 25,marginTop:-10,
 },
 cardview1: {
-    height:170,
+    height:hp('25%'),
   
     backgroundColor: '#fff',
    flexDirection:'row',
     margin: 5,
     borderRadius: 10,
     elevation: 5,
-    width: '48%',
+    width: wp('40%'),
     alignItems:'center',justifyContent:'center',
 },
 cardview2: {

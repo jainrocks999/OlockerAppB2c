@@ -18,14 +18,14 @@ return(
                  <Text style={styles.text1}>RETAILER CODE</Text>
                 <View style={styles.Input1}>
                   <TextInput style={styles.input}
-                  placeholder="Relatiler code"
+                  placeholder="Retailer code"
                    
                   />
 
                 </View>
                 <View style={styles.Input1}>
                   <TextInput style={styles.input}
-                  placeholder="Enter Referal Code If Any"
+                  placeholder="Enter Referral Code If Any"
                    
                   />
 
@@ -35,7 +35,7 @@ return(
               <View style={styles.buttonView}>
            <TouchableOpacity 
             style={[styles.button]}>
-             <Text style={styles.text}>Submit</Text>
+             <Text style={styles.text}>SUBMIT</Text>
           
            </TouchableOpacity> 
          </View>

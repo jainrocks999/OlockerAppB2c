@@ -54,9 +54,16 @@ view3:
         width:'100%',
         marginTop:5
     },
+    view2:
+    {
+        flexDirection:'row',
+        //  alignItems:'center',
+        justifyContent:'space-between',
+        marginTop:5,marginHorizontal:-22
+    },
     text1:{
         color:colors.btcolor,
-        fontSize:13,fontFamily:'Acephimere'
+        fontSize:13,fontFamily:'Acephimere',alignSelf:'center'
         
 
     },
@@ -99,10 +106,10 @@ view3:
         loanview:{
             width:'60%',
             borderWidth:0.2,
-            height:35,
+            height:36,
             flexDirection:'row',
             paddingHorizontal:10,
-            paddingVertical:5,
+            // paddingVertical:5,
             justifyContent:'space-between',
             borderRadius:5
         },

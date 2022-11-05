@@ -29,11 +29,6 @@ card: {
     //marginTop: 10,
     //borderWidth: 1,
   },
-  image: {
-    width: 28,
-    height: 28,
-    marginLeft:-10
-  },
   textinput:{
     alignItems:'center',
     justifyContent:'center',
@@ -49,7 +44,7 @@ card: {
    textAlign:'center'
     },
   input: {
-      borderBottomWidth:0.2,
+      borderBottomWidth:0.2,borderBottomColor:colors.lightGrey,
   width:'100%',
   marginTop: 20,alignItems:'center',
 //   paddingHorizontal:20,
@@ -77,7 +72,7 @@ fontFamily:'Acephimere'
 },
  view1:{
    flexDirection:'row',
-   marginTop:10,borderBottomWidth:0
+   marginTop:10,
   },
   text1:{
     color:'#000000',
@@ -85,12 +80,28 @@ fontFamily:'Acephimere'
      fontSize:12,
     fontFamily:'Acephimere',
     //  textDecorationLine:'underline',
-    marginTop:0.5
+   alignSelf:'center'
   },
   text2:{
-    color:'#9a9a9a',
+    color:'#9a9a9a',marginLeft:20,
     fontSize:12,
     fontFamily:'Acephimere',
-    //  textDecorationLine:'underline'
-  }
+    alignSelf:'center',
+  //  textDecorationLine:'underline', 
+   marginTop:0,
+  },
+  imgbcg:{
+    height:300,
+    width:300,
+    alignSelf:'center',
+    marginBottom:20
+  },
+  img:{
+    height:'100%',width:'100%',
+  },
+bottom:{
+   justifyContent:'center',
+   alignSelf:'center'
+},
+tt2:{color: '#fff',marginLeft:25,fontFamily:'Acephimere'}
 })

@@ -35,8 +35,9 @@ import About from '../screen/main/Aboutus';
 import Feedback from '../screen/main/Feedback';
 import Drawer1 from '../navigation/Drawernavigation/index';
 import Savingscheme from '../screen/main/Savingscheme';
-import Paymentmethod from '../screen/main/PaymentMethod'
-import PaymentStatus from '../screen/main/PaymentStatus'
+import Paymentmethod from '../screen/main/PaymentMethod';
+import PaymentStatus from '../screen/main/PaymentStatus';
+import SavingScheme1 from '../screen/main/SavingScheme1';
 const Stack = createNativeStackNavigator();
 function App() {
   return (
@@ -122,7 +123,7 @@ function App() {
           title: '',
           // headerTintColor: '#fa8a86',
             headerStyle: {
-               backgroundColor: '#fa8a86',
+               backgroundColor: colors.btcolor,
             
             },
             headerShadowVisible:(false),
@@ -148,19 +149,21 @@ function App() {
             },
             headerTitleAlign:'center',
             headerBackVisible:(false),
-            headerTitle:()=>(
-              <View>
-                  <Text style={{fontWeight:'700',color:colors.blue,fontFamily:'Acephimere' }}>Loyalty Points</Text>
-              </View>
-            ),
+            // headerTitle:()=>(
+            //   <View>
+            //       <Text style={{fontWeight:'700',color:colors.blue,fontFamily:'Acephimere' }}>Loyalty Points</Text>
+            //   </View>
+            // ),
             headerLeft:()=>(
-              <View style={{flexDirection:'row',}}>
+              <View style={{flexDirection:'row',alignItems:'center',}}>
                < TouchableOpacity onPress={()=>navigation.goBack()}
                >
              <Icon name="ios-chevron-back" size={27}  />
                 
                </TouchableOpacity>
-               
+               <View style={{marginLeft:20}}>
+                  <Text style={{fontWeight:'700',color:colors.blue,fontFamily:'Acephimere' }}>Loyalty Points</Text>
+              </View>
                 </View>
             ),
         })}
@@ -178,12 +181,23 @@ function App() {
           headerTitleAlign:'center',
           // headerBackVisible:(false),
           headerTintColor:colors.lightGrey,
-
-          headerTitle:()=>(
-            <View>
+          headerLeft:()=>(
+            <View style={{flexDirection:'row',alignItems:'center',}}>
+             < TouchableOpacity onPress={()=>navigation.goBack()}
+             >
+           <Icon name="ios-chevron-back" size={27}  />
+              
+             </TouchableOpacity>
+             <View style={{marginLeft:20}}>
                 <Text style={{fontWeight:'700',color:colors.blue,fontFamily:'Acephimere' }}>Loyalty Points</Text>
             </View>
+              </View>
           ),
+          // headerTitle:()=>(
+          //   <View>
+          //       <Text style={{fontWeight:'700',color:colors.blue,fontFamily:'Acephimere' }}>Loyalty Points</Text>
+          //   </View>
+          // ),
           // headerLeft:()=>(
           //   <View style={{flexDirection:'row',}}>
           //    < TouchableOpacity onPress={()=>navigation.goBack()}
@@ -216,10 +230,10 @@ function App() {
      options={({ navigation }) => ({
       headerTitle:()=>(
         <View style={{width:'100%',marginRight:10}}>
-        <Text style={{fontSize:15,color:colors.blue,fontFamily:'Acephimere'}}>Add Retailer</Text>
+        <Text style={{fontSize:15,color:colors.blue,fontFamily:'Acephimere',fontWeight:'700'}}>Add Jeweller</Text>
         </View>
         ),
-       headerTintColor: '#979797',
+       headerTintColor:colors.blue,
       
         headerStyle: {
            backgroundColor: '#ffffff',
@@ -258,7 +272,7 @@ function App() {
       //    </TouchableOpacity>
       //  ),
         headerTitle:()=>(
-          <View>
+          <View style={{marginLeft:-150}}>
       
           <Text style={{fontSize:15,color:colors.blue,fontFamily:'Acephimere',fontWeight:'700'}}>My Jewellers</Text>
           </View>
@@ -286,7 +300,7 @@ function App() {
        headerBackVisible:(false),
       headerTitle:()=>(
         <View>
-        <Text style={{color:colors.blue,fontWeight:'500',fontFamily:'Acephimere'}}>Cleartrip</Text>
+        <Text style={{color:colors.blue,fontWeight:'700',fontFamily:'Acephimere'}}>Cleartrip</Text>
         </View>
       ),
      headerLeft: () => (
@@ -294,7 +308,7 @@ function App() {
        style={{marginLeft:-10}}
         
        >
-      <Icon name="ios-chevron-back" size={27} />
+      <Icon name="ios-chevron-back" size={27} color={colors.blue}/>
       </TouchableOpacity>
     )
   })}
@@ -324,15 +338,15 @@ function App() {
       title: '',
        headerTintColor: '#979797',
         headerStyle: {
-           backgroundColor: '#fddac0',
+           backgroundColor: '#f8d4bb',
         
         },
         headerTitleAlign:'center',
         headerShadowVisible:(false),
         // headerBackVisible:(false),
         headerTitle:()=>(
-          <View>
-          <Text style={{color:colors.blue,fontWeight:'500',fontFamily:'Acephimere'}}>Chain</Text>
+          <View style={{width:'100%'}}>
+          <Text style={{color:colors.blue,fontWeight:'700',fontFamily:'Acephimere'}}>Bangles</Text>
           </View>
         ),     
     }}
@@ -340,7 +354,7 @@ function App() {
      <Stack.Screen name="Smart" component={Smart} 
      options={{
       title: '',
-       headerTintColor: '#979797',
+       headerTintColor:colors.blue,
         headerStyle: {
            backgroundColor: '#fff',
         
@@ -349,7 +363,7 @@ function App() {
         // headerBackVisible:(false),
         headerTitle:()=>(
           <View style={{width:'100%',marginLeft:-10}}> 
-          <Text style={{color:colors.blue,fontWeight:'600',fontFamily:'Acephimere'}}>Online Deals</Text>
+          <Text style={{color:colors.blue,fontWeight:'700',fontFamily:'Acephimere'}}>Online Deals</Text>
           </View>
         ),
 
@@ -397,6 +411,7 @@ function App() {
         },
         headerTitleAlign:'center',
         headerBackVisible:(false),
+        headerShadowVisible:(false),
         headerTitle:()=>(
           <View>
           <Text style={{fontWeight:'700',fontFamily:'Acephimere'}}>Jewellery on Emi</Text>
@@ -446,8 +461,8 @@ function App() {
       headerTitleAlign:'center',
       // headerBackVisible:(false),
       headerTitle:()=>(
-        <View>
-        <Text style={{color:colors.blue,fontWeight:'500',fontFamily:'Acephimere'}}>Mangal Jewellers</Text>
+        <View style={{width:'100%',marginRight:20}}>
+        <Text style={{color:colors.blue,fontWeight:'700',fontFamily:'Acephimere'}}>Mangal Jewellers</Text>
         </View>
      ),
      
@@ -490,6 +505,7 @@ function App() {
       headerTitleAlign:'center',
        headerBackVisible:(false),
       headerShadowVisible:(false),
+
       headerTitle:()=>(
         <View>
         <Text style={{color:colors.blue,fontWeight:'700',fontFamily:'Acephimere'}}>My Savings Schemes</Text>
@@ -501,7 +517,7 @@ function App() {
       style={{marginLeft:-10}}
        onPress={()=>navigation.goBack()}
       >
-     <Icon name="ios-chevron-back" size={27}  />
+     <Icon name="ios-chevron-back" size={27} color={colors.blue} />
      </TouchableOpacity>
      {/* <Text style={{marginLeft:10,fontWeight:'700',fontFamily:'Acephimere'}}>Jewellery on Emi</Text> */}
      </View>
@@ -529,7 +545,7 @@ function App() {
       style={{marginLeft:-10}}
        onPress={()=>navigation.goBack()}
       >
-     <Icon name="ios-chevron-back" size={27}  />
+     <Icon name="ios-chevron-back" size={27} color={colors.blue}  />
      </TouchableOpacity>
      {/* <Text style={{marginLeft:10,fontWeight:'700',fontFamily:'Acephimere',fontFamily:'Acephimere'}}>Jewellery on Emi</Text> */}
      </View>
@@ -556,7 +572,7 @@ function App() {
       style={{marginLeft:-10}}
        onPress={()=>navigation.goBack()}
       >
-     <Icon name="ios-chevron-back" size={27} color={"#fa8a86"} />
+     <Icon name="ios-chevron-back" size={27} color={colors.blue} />
      </TouchableOpacity>
      {/* <Text style={{marginLeft:10,fontWeight:'700',fontFamily:'Acephimere'}}>Jewellery on Emi</Text> */}
      </View>
@@ -576,9 +592,9 @@ function App() {
             headerTitleAlign:'center',
             headerShadowVisible:(false),
             // headerBackVisible:(false),
-            headerTintColor:colors.lightGrey,
+            headerTintColor:colors.blue,
             headerTitle:()=>(
-              <View>
+              <View style={{width:'100%',marginRight:10}}>
               <Text style={{fontWeight:'700',color:colors.blue,fontFamily:'Acephimere'}}>Notification</Text>
               </View>
 
@@ -594,6 +610,36 @@ function App() {
          
         })}
         />
+        <Stack.Screen name="saving12" component={SavingScheme1} 
+         options={({ navigation }) => ({
+          title: '',
+          // headerTintColor: '#fa8a86',
+            headerStyle: {
+               backgroundColor:'#faebd7',
+            
+            },
+            headerTitleAlign:'center',
+            headerShadowVisible:(false),
+             headerBackVisible:(false),
+            headerTintColor:colors.blue,
+            headerTitle:()=>(
+              <View style={{}}>
+              <Text style={{fontWeight:'700',color:colors.blue,fontFamily:'Acephimere'}}>Savings Schemes</Text>
+              </View>
+
+            ),
+            headerLeft: () => (
+              <TouchableOpacity onPress={()=>navigation.goBack()}
+              style={{marginLeft:-10}}
+               
+              >
+             <Icon name="ios-chevron-back" size={27} />
+             </TouchableOpacity>
+           )
+         
+        })}
+        />
+
          <Stack.Screen name="ProductList" component={productlist} 
      options={({ navigation }) => ({
       title: '',
@@ -618,13 +664,13 @@ function App() {
           </TouchableOpacity>
         <TouchableOpacity 
         onPress={()=>navigation.navigate('MyFav')}
-       style={{marginLeft:4}}
+       style={{marginLeft:8}}
         
        >
      <Icon name="md-heart-outline" size={25}  />
      
       </TouchableOpacity>
-      <TouchableOpacity   style={{marginLeft:4}}>
+      <TouchableOpacity   style={{marginLeft:8}}>
       <Icon2 name="email-outline" size={25}   />
       </TouchableOpacity> 
       </View>

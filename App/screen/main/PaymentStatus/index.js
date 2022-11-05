@@ -17,14 +17,14 @@ const Loyalty = () => {
                     <View style={[styles.top]}>
                    
                     <Text style={styles.title}>Your payment is successful !</Text>
-                    <View style={{height:43,width:48,alignItems:'center',justifyContent:'center',marginTop:10,}}>
-                    <Image style={{height:"100%",width:"100%",tintColor:'green',borderWidth:2}} source={require('../../../Assets/images/successfully.png')}/>                  
+                    <View style={{height:48,width:48,alignItems:'center',justifyContent:'center',marginTop:10,}}>
+                    <Image style={{height:"100%",width:"100%",tintColor:'green',borderWidth:2}} source={require('../../../Assets/images/successful_icon.png')}/>                  
                     </View>
                     </View>
                     <View style={styles.main}>
                        <Text style={{marginTop:0}}> Order date : 18-06-2021</Text>
                        <Text style={{marginTop:10}}>PAYMENT REFERENCE NUMBER</Text>
-                       <Text style={{fontSize:16,color:'black',marginTop:10}}>PROLLN-028976</Text>
+                       <Text style={{fontSize:16,color:'black',marginTop:10,fontWeight:'500'}}>PROLLN-028976</Text>
 
                      
                        <View style={{height:50,width:45,alignItems:'center',justifyContent:'center',marginTop:10,}}>

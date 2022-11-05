@@ -15,7 +15,7 @@ const Loyalty = () => {
                 <View style={styles.main1}>
                     <View style={styles.circle}>
   
-                    <Image style={{height:'100%',width:'100%',borderRadius:40}} 
+                    <Image style={{height:'100%',width:'100%',borderRadius:60}} 
                      source={require('../../../Assets/images/deal_logohome1.jpg')}/>
                     </View>
 
@@ -29,7 +29,7 @@ const Loyalty = () => {
                             <Text style={[styles.title1, { color: colors.blue, marginTop: 10 }]}>TOTAL POINTS</Text>
                         </View>
                         <View style={{ alignSelf: 'center',}}>
-                            <Text style={[styles.title1, { color: colors.blue, marginTop: -5,marginRight:14 }]}>REDEEMED</Text>
+                            <Text style={[styles.title1, { color: colors.blue, marginTop: -5,marginRight:10 }]}>REDEEMED</Text>
                             <Text style={[styles.title1, { color: colors.btcolor, marginTop: 5,marginRight:16 }]}>0</Text>
                         </View>
                         <View style={{ alignSelf: 'center',alignItems:'center',}}>
@@ -61,17 +61,18 @@ const Loyalty = () => {
                             <Text>Expiry date</Text>
                         </View>
                         <View style={styles.bottomv2}>
-                            <Text>23-09-2022</Text>
-                            <Text>100</Text>
-                            <Text>Download</Text>
-                            <Text>23-05-2032</Text>
+                            <Text style={{width:'24%',fontSize:12}}>23-09-2022</Text>
+                            <Text style={{width:'21%',fontSize:12,marginLeft:5}}>100</Text>
+                            <Text style={{width:'29%',fontSize:12,marginLeft:-1}}>Download</Text>
+                            <Text style={{width:'28%',fontSize:12,marginLeft:0}}>23-05-2032</Text>
 
 
                         </View>
                     </View>
                 </View>
                 <View style={{flexDirection:'row'}}>
-                <Text style={[styles.title,{marginTop:10,alignSelf:'flex-start',fontWeight:'700',textAlignVertical:'center'}]}>* Note:</Text>
+                   
+                <Text style={[styles.title,{marginTop:10,alignSelf:'flex-start',fontWeight:'700',}]}>* Note :</Text>
                 <Text style={[styles.title,{marginTop:10,alignSelf:'flex-start',}]}> 1 Loyalty Point = 1 INR</Text>
 
                </View>
