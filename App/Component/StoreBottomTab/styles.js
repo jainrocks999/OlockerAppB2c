@@ -1,21 +1,20 @@
-import { Dimensions, StyleSheet } from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
 import colors from '../../constant/colors';
 export default StyleSheet.create({
   header: {
     flexDirection: 'row',
     paddingHorizontal: 15,
-    backgroundColor:colors.btcolor,
+    backgroundColor: colors.btcolor,
     alignItems: 'center',
     justifyContent: 'space-between',
-      opacity: 50,
-     paddingVertical:5,
-     shadowColor:colors.black,
-    shadowOpacity:10,
-    shadowOffset:{height:4,width:2},
-    elevation:3,
-   // borderTopWidth:3,
+    opacity: 50,
+    paddingVertical: 8,
+    shadowColor: colors.black,
+    shadowOpacity: 10,
+    shadowOffset: {height: 4, width: 2},
+    elevation: 3,
+    // borderTopWidth:3,
     // borderTopColor:'#afb3b0'
-    
   },
 
   itemSeperator: {
@@ -39,14 +38,15 @@ export default StyleSheet.create({
     padding: 4,
     textAlign: 'center',
   },
-  text:{
+  text: {
     fontSize: 12,
-    color:colors.white,
-    marginTop:5,
-    fontFamily:'Acephimere',marginRight:7
+    color: colors.white,
+    marginTop: 5,
+    fontFamily: 'Acephimere',
+    marginRight: 7,
   },
-  container:{
-    justifyContent: 'center', 
+  container: {
+    justifyContent: 'center',
     alignItems: 'center',
-  }
+  },
 });

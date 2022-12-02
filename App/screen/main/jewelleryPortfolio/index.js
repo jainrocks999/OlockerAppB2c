@@ -27,26 +27,42 @@ const Loyalty = () => {
             // horizontal={true}
             data={DATA}
             style={styles.list}
-            renderItem={({item}) => (
+            renderItem={({item, index}) => (
               <TouchableOpacity style={styles.cardview}>
-                <Text style={styles.text}>{item.title}</Text>
                 <View
                   style={{
                     flexDirection: 'row',
                     justifyContent: 'space-between',
-                    marginTop: 5,
+                    marginTop: 0,alignItems:'center',
                   }}>
-                  <Text style={styles.text1}>{'Number of item'}</Text>
-                  <Text style={styles.text1}>{'0'}</Text>
+                  <Text style={styles.text}>{item.title}</Text>
+                  {index === 0 ? null : (
+                    <Text
+                      style={{
+                        textDecorationLine: 'underline',
+                        color: '#92525c',
+                      }}>
+                      VIEW ALL
+                    </Text>
+                  )}
+                </View>
+
+                <View
+                  style={{
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                  }}>
+                  <Text style={{marginTop: 10}}>{'Number of items'}</Text>
+                  <Text style={{marginTop: 10}}>{'0'}</Text>
                 </View>
                 <View
                   style={{
                     flexDirection: 'row',
                     justifyContent: 'space-between',
-                    marginTop: 5,
+                    marginTop: 13,
                   }}>
-                  <Text style={styles.text1}>{'Insured Input value'}</Text>
-                  <Text style={styles.text1}>{'₹ 0.00'}</Text>
+                  <Text style={{marginTop: 0}}>{'Insured Input value'}</Text>
+                  <Text style={{marginTop: 0}}>{'₹ 0.00'}</Text>
                 </View>
               </TouchableOpacity>
             )}
@@ -70,14 +86,14 @@ export default Loyalty;
 const DATA = [
   {
     id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-    title: 'First Item',
+    title: 'Total Jewellery portfolio',
   },
   {
     id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
-    title: 'Second Item',
+    title: 'My Insured Jewellery',
   },
   {
     id: '58694a0f-3da1-471f-bd96-145571e29d72',
-    title: 'Third Item',
+    title: 'My Uninsured Jewellery',
   },
 ];

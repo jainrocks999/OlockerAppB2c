@@ -22,62 +22,60 @@ const Loyalty = () => {
     <SafeAreaView style={styles.container}>
       <ScrollView style={{paddingHorizontal: 10}}>
         <View style={styles.card}>
-          <View style={ {paddingHorizontal: 10}}>
-            <Text style={styles.title}>2 Invoices</Text>
+          <View style={{paddingHorizontal: 10}}>
+            <Text style={[styles.title, {marginLeft: 6}]}>2 Invoices</Text>
             <View style={styles.line} />
           </View>
           <View style={styles.main}>
-            
-            <View style={[styles.top, {paddingHorizontal:10}]}>
+            <View style={[styles.top, {paddingHorizontal: 10}]}>
               <View>
-              <Text style={{fontSize: 16, color: 'black', }}>
-              PROLLN-028976
-            </Text>
+                <Text style={{fontSize: 16, color: 'black'}}>
+                  PROLLN-028976
+                </Text>
                 <Text style={{}}>Invoice number</Text>
-               
-                  <Text style={{ fontWeight: '500'}}>
-                    Billing Date{' '}
-                    <Text style={{fontWeight: '500', color: colors.blue}}>
+
+                <Text style={{fontWeight: '500'}}>
+                  Billing Date{' '}
+                  <Text style={{fontWeight: '500', color: colors.blue}}>
                     31 July 2021
                   </Text>
-                  </Text>
-                  
-               
+                </Text>
               </View>
-             
+
               <Text
-                style={{marginLeft: 10, fontWeight: '600', color: colors.blue}}>
-                ₹ 250000
+                style={{
+                  marginLeft: 10,
+                  fontWeight: '600',
+                  color: colors.blue,
+                  alignSelf: 'center',
+                }}>
+                ₹ 2500
               </Text>
-              
             </View>
           </View>
           <View style={styles.main}>
-            
-            <View style={[styles.top, {paddingHorizontal:10}]}>
+            <View style={[styles.top, {paddingHorizontal: 10}]}>
               <View>
-              <Text style={{fontSize: 16, color: 'black', }}>
-              PROLLN-028976
-            </Text>
+                <Text style={{fontSize: 16, color: 'black'}}>
+                  PROLLN-028976
+                </Text>
                 <Text style={{}}>Invoice number</Text>
-                  <Text style={{ fontWeight: '500'}}>
-                    Billing Date{' '}
-                    <Text style={{fontWeight: '500', color: colors.blue}}>
+                <Text style={{fontWeight: '500'}}>
+                  Billing Date{' '}
+                  <Text style={{fontWeight: '500', color: colors.blue}}>
                     31 July 2021
                   </Text>
-                  </Text>
-               
-                
+                </Text>
               </View>
-            
-              <View style={{alignSelf:'flex-end'}}>
+
+              <View style={{alignSelf: 'flex-end'}}>
                 <Text
                   style={{
-                   alignSelf:'flex-end',
+                    alignSelf: 'flex-end',
                     fontWeight: '600',
                     color: colors.blue,
                   }}>
-                  ₹ 250000
+                  ₹ 2500
                 </Text>
                 <Text
                   style={{
@@ -89,16 +87,15 @@ const Loyalty = () => {
                   Late payment fee ₹ 100
                 </Text>
               </View>
-             
             </View>
           </View>
         </View>
 
-        <View style={styles.card}>
+        <View style={[styles.card, {marginTop: 10}]}>
           <View style={[styles.top, {paddingHorizontal: 10}]}>
             <View>
               <Text
-                style={{fontSize: 20, fontWeight: '500', color: colors.blue}}>
+                style={{fontSize: 18, fontWeight: '500', color: colors.blue}}>
                 Total Payable
               </Text>
               <Text style={{fontWeight: '500', marginTop: 10}}>
@@ -107,7 +104,7 @@ const Loyalty = () => {
             </View>
             <Text style={styles.title}>₹ 5100</Text>
           </View>
-          <View style={[styles.main, {paddingHorizontal: 30}]}>
+          <View style={[styles.main, {paddingHorizontal: 15}]}>
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
               <RadioButton
                 value="first"

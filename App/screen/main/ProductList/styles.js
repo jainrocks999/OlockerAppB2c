@@ -23,14 +23,14 @@ export default StyleSheet.create({
     paddingHorizontal: 3,
   },
   textcard: {
-    marginLeft: 10,
+    marginLeft: 5,
     color: '#000',
-    fontSize: 13,fontFamily:'Acephimere'
+    fontSize: 13,
+    fontFamily: 'Acephimere',
   },
   img: {
     height: 18,
-    width: 18,
-    marginTop: 5,
+    width: 18,marginLeft:5,
     tintColor: colors.blue,
   },
   touch: {

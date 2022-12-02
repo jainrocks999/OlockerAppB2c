@@ -1,65 +1,65 @@
-// export default{
-//   lightpink:'#fa8a86',
-//   darkpink:'#ed6660',
-//   textcolor:'#c6c3c4',
-//   placeholdercolor:'#808080',
-// }
-import { StyleSheet } from "react-native";
-import colors from "../../../constant/colors";
+import {StyleSheet} from 'react-native';
+import colors from '../../../constant/colors';
 export default StyleSheet.create({
-  container:{
+  container: {
     flex: 1,
-    backgroundColor:'#fff'
+    backgroundColor: '#fff',
   },
-  main1:{
-    paddingHorizontal:10,
-    marginTop:20,
+  main1: {
+    paddingHorizontal: 10,
+    marginTop: 10,
   },
-  main:{
-    flexDirection:'row',
-    marginTop:10,
-    paddingVertical:5,
-    backgroundColor:"#c6c3c4",
-    borderRadius:5,
-    paddingHorizontal:10
+  main: {
+    flexDirection: 'row',
+    marginTop: 10,
+    paddingVertical: 5,
+    backgroundColor: '#e3e3e3',
+    borderRadius: 5,
+    paddingHorizontal: 10,
   },
-  top:{
-    flexDirection:'row',
-    justifyContent:'space-between'
+  top: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
-  imgbcg:{
-    height:80,
-    width:150,
-    marginRight:10
+  imgbcg: {
+    height: 76,
+    width: '99%',
+    marginRight: 5,
   },
-  img:{height:'100%',width:'100%'},
-  view1:{
-    alignSelf:'center',
-    width:'9%'
+  img: {
+    height: '100%',
+    width: '100%', 
+    marginTop: -7, 
+    marginBottom: 5
   },
-  picker:{
-    width:'24%',
-    marginLeft:-8
+  view1: {
+    alignSelf: 'center',
+    width: '9%',
   },
-  icon:{
-    alignSelf:'center',
-    alignItems:'center',
-    marginTop:18
+  picker: {
+    width: '24%',
+    marginLeft: -8,
   },
-  text:{
-    color:colors.black,
-    fontWeight:'900',
+  icon: {
+    alignSelf: 'center',
+    alignItems: 'center',
+    marginTop: 18,
+  },
+  text: {
+    color: colors.black,
+    fontWeight: '900',
   },
   button: {
-    backgroundColor:'rgba(237,102,96,255)',
-     alignItems: 'center',
+    backgroundColor: 'rgba(237,102,96,255)',
+    alignItems: 'center',
     borderRadius: 5,
-    // justifyContent: 'space-between',
     marginTop: 10,
     width: '100%',
-   paddingVertical:17,
+    paddingVertical: 17,
   },
-  image:{
-    height:15,width:15,marginRight:35,
-  }
-})
+  image: {
+    height: 15,
+    width: 15,
+    marginRight: 35,
+  },
+});

@@ -11,30 +11,29 @@ export default StyleSheet.create({
   },
   main: {
     paddingHorizontal: 50,
-    alignItems: 'center',
   },
-imgbcg:{
-  height:230,
-  width:300,
-  alignSelf:'center',
-  marginBottom:40
-},
-img:{height:'100%',width:'100%'},
+  imgbcg: {
+    height: 230,
+    width: 300,
+    alignSelf: 'center',
+    marginBottom: 15,
+  },
+  img: {height: '100%', width: '100%'},
   main1: {
     paddingVertical: 10,
     backgroundColor: colors.btcolor,
   },
   title: {
     // color: '#979797',
-    marginRight: 15,
+    marginRight: 0,
     fontFamily: 'Acephimere',
   },
 
- 
   textinput: {
     alignItems: 'center',
     justifyContent: 'center',
     width: wp('100%'),
+    marginTop: 10,
   },
   input1: {
     fontSize: 18,
@@ -43,25 +42,19 @@ img:{height:'100%',width:'100%'},
     width: '80%',
     fontWeight: '700',
     fontFamily: 'Acephimere',
-    textAlign:'center'
+    textAlign: 'center',
   },
   input: {
-    borderBottomColor:'#979797',
+    borderBottomColor: '#979797',
     borderBottomWidth: 0.2,
     width: '100%',
-    marginTop: 20,
     alignItems: 'center',
-    justifyContent: 'center',
-
-    //   paddingHorizontal:20
   },
 
   buttonView: {paddingHorizontal: 10, alignItems: 'center'},
   button: {
     backgroundColor: colors.btcolor,
-    // alignItems: 'center',
     borderRadius: 5,
-    // justifyContent: 'space-between',
     marginTop: 30,
     width: '100%',
     paddingVertical: 17,
@@ -73,6 +66,6 @@ img:{height:'100%',width:'100%'},
   },
   row: {
     flexDirection: 'row',
-    marginTop: 30,
+    marginTop: 20,
   },
 });
