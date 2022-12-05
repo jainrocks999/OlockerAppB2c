@@ -12,7 +12,7 @@ export default StyleSheet.create({
   main: {
     flexDirection: 'row',
     marginTop: 10,
-    paddingVertical: 5,
+    // paddingVertical: 5,
     backgroundColor: '#e3e3e3',
     borderRadius: 5,
     paddingHorizontal: 10,
@@ -53,7 +53,7 @@ export default StyleSheet.create({
     backgroundColor: 'rgba(237,102,96,255)',
     alignItems: 'center',
     borderRadius: 5,
-    marginTop: 10,
+    marginTop: 15,
     width: '100%',
     paddingVertical: 17,
   },

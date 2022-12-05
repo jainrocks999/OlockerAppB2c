@@ -185,7 +185,7 @@ const Productdetail = () => {
             <Text style={styles.btext}>ENQUIRE NOW</Text>
           </TouchableOpacity>
         </View>
-        {/* <View style={{height: 15}} /> */}
+        <View style={{height: 15}} />
       </ScrollView>
     </View>
   );

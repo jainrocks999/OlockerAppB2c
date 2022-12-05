@@ -75,7 +75,6 @@ const MyProducts = () => {
             numColumns={2}
             renderItem={({item, index}) => (
               <View
-                // onPress={()=>navigation.navigate('alldeal')}
                 style={styles.cardview}>
                 <TouchableOpacity
                   onPress={() => navigation.navigate('productdetail')}

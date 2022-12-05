@@ -128,7 +128,7 @@ const Loyalty = () => {
                 onPress={() => setChecked('second')}
               />
               <Image
-                style={{height: '47%', width: '47%', marginLeft: 5}}
+                style={{height: 19, width: 150, marginLeft: 5}}
                 source={require('../../../Assets/images/gp_payment.png')}
               />
             </View>
