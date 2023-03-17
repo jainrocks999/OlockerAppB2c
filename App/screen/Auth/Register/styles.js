@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet,Platform} from 'react-native';
 import colors from '../../../constant/colors';
 export default StyleSheet.create({
   container: {
@@ -43,7 +43,7 @@ export default StyleSheet.create({
   icon: {
     alignSelf: 'center',
     alignItems: 'center',
-    marginTop: 18,
+    marginTop: Platform.OS=='android'?18:2,
   },
   text: {
     color: colors.black,

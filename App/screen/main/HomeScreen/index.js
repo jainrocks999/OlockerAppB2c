@@ -9,6 +9,7 @@ import {
   Image,
   ImageBackground,
   Alert,
+  Platform
 } from 'react-native';
 import styles from './styles';
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -126,7 +127,7 @@ const HomeScreen = () => {
               }}>
               <Text style={styles.text2}>Online</Text>
 
-              <Switch size="md" onTrackColor="#fff" offThumbColor="#ed6660" />
+              <Switch size={Platform.OS=='ios'?"sm":'md'} onTrackColor="#fff" offThumbColor="#ed6660" />
 
               <Text style={[styles.text2, {color: colors.lightGrey}]}>
                 Local

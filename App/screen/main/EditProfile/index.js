@@ -7,6 +7,7 @@ import {
   ScrollView,
   TextInput,
   Image,
+  Platform,
 } from 'react-native';
 import styles from './styles';
 import Icon1 from 'react-native-vector-icons/AntDesign';
@@ -64,7 +65,7 @@ const Loyalty = () => {
                   source={require('../../../Assets/images/men.png')}
                 />
               </View>
-              <Text style={[styles.name,{fontSize:18}]}>Yogendra Yadav </Text>
+              <Text style={[styles.name,{fontSize:18}]}>John Abraham </Text>
               <TouchableOpacity onPress={() => navigation.navigate('update')}>
                 <Text style={styles.edit}>Edit</Text>
               </TouchableOpacity>
@@ -72,7 +73,7 @@ const Loyalty = () => {
             <View style={styles.card2}>
               <View style={styles.main4}>
                 <View style={{width: '20%', marginLeft: -5}}>
-                  <View style={styles.picker}>
+                  <View style={[styles.picker,{height:40,justifyContent:'center'}]}>
                     <RNPickerSelect
                       onValueChange={val => setGender(val)}
                       items={data}
@@ -103,7 +104,7 @@ const Loyalty = () => {
                           style={{
                             marginRight: 7,
                             alignItems: 'center',
-                            marginTop: 17,
+                            marginTop:Platform.OS=='android'?17:2,
                           }}>
                           <Icon1 name="caretdown" color={colors.lightGrey} />
                         </View>
@@ -113,12 +114,14 @@ const Loyalty = () => {
                 </View>
                 <View style={styles.picker1}>
                   <TextInput
-                    style={{marginLeft: 0}}
+                    style={{marginLeft: 0,height:40}}
                     placeholder="First name "
                   />
                 </View>
                 <View style={styles.picker1}>
-                  <TextInput placeholder="Last name " />
+                  <TextInput
+                   style={{marginLeft: 0,height:40}}
+                   placeholder="Last name " />
                 </View>
               </View>
 
@@ -130,7 +133,7 @@ const Loyalty = () => {
                 <View style={{alignSelf: 'center'}}>
                   <Text style={{marginLeft: -5}}>Email :</Text>
                 </View>
-                <TextInput style={{width: '82%'}} placeholder="Email ID" />
+                <TextInput style={{width: '82%',height:40}} placeholder="Email ID" />
               </View>
               <View
                 style={[
@@ -141,13 +144,13 @@ const Loyalty = () => {
                   <Text style={{marginLeft: -5}}>DOB :</Text>
                 </View>
                 <TouchableOpacity
-                  style={{width: '70%', height: 47}}
+                  style={{width: '70%', height: 40,justifyContent:'center'}}
                   onPress={() => showDatepicker()}>
                   <Text
                     style={{
-                      marginLeft: -36,
+                      marginLeft: Platform.OS=='android'?-36:30,
                       fontSize: 14,
-                      marginTop: 16,
+                      // marginTop: 16,
                       color: colors.lightGrey,
                     }}>{`${date2}`}</Text>
                 </TouchableOpacity>
@@ -161,6 +164,7 @@ const Loyalty = () => {
                     minimumDate={new Date()}
                     maximumDate={new Date(2300, 12, 31)}
                     dateFormat="day month year"
+                    // style={{paddingHorizontal:10,marginRight:100}}
                     // display={Platform.OS == 'android'?'calendar':'calendar'}
                   />
                 )}
@@ -173,7 +177,7 @@ const Loyalty = () => {
                 <View style={{alignSelf: 'center'}}>
                   <Text style={{marginLeft: -5}}>Mobile :</Text>
                 </View>
-                <TextInput style={{width: '82%'}} placeholder="Mobile Number" />
+                <TextInput style={{width: '82%',height:40}} placeholder="Mobile Number" />
               </View>
               <View
                 style={[
@@ -183,7 +187,7 @@ const Loyalty = () => {
                 <View style={{alignSelf: 'center'}}>
                   <Text style={{marginLeft: -5}}>Pin Code :</Text>
                 </View>
-                <TextInput style={{width: '82%'}} placeholder="Pincode" />
+                <TextInput style={{width: '82%',height:40}} placeholder="Pincode" />
               </View>
               <View
                 style={[
@@ -193,7 +197,7 @@ const Loyalty = () => {
                 <View style={{alignSelf: 'center'}}>
                   <Text style={{marginLeft: -5}}>City :</Text>
                 </View>
-                <TextInput style={{width: '82%'}} placeholder="City" />
+                <TextInput style={{width: '82%',height:40}} placeholder="City" />
               </View>
 
               <View
@@ -204,7 +208,7 @@ const Loyalty = () => {
                 <View style={{alignSelf: 'center'}}>
                   <Text style={{marginLeft: -5}}>State :</Text>
                 </View>
-                <TextInput style={{width: '82%'}} placeholder="State" />
+                <TextInput style={{width: '82%',height:40}} placeholder="State" />
               </View>
 
               {/*           

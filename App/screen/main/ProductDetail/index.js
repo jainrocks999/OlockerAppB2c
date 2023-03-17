@@ -12,7 +12,7 @@ import {
 import {useNavigation} from '@react-navigation/native';
 import {SliderBox} from 'react-native-image-slider-box';
 import styles from './styles';
-import Icon from 'react-native-vector-icons/EvilIcons';
+// import Icon from 'react-native-vector-icons/EvilIcons';
 import colors from '../../../constant/colors';
 const Productdetail = () => {
   const navigation = useNavigation();
@@ -35,14 +35,14 @@ const Productdetail = () => {
             style={styles.main}>
             <View style={styles.top}>
               <TouchableOpacity onPress={() => click3()} style={styles.circles}>
-                <Icon
+                {/* <Icon
                   name="heart"
                   size={24}
                   color={click == true ? 'grey' : '#ed6660'}
-                />
+                /> */}
               </TouchableOpacity>
               <TouchableOpacity onPress={() => share()} style={styles.circles}>
-                <Icon name="share-google" size={24} color={'#ed6660'} />
+                {/* <Icon name="share-google" size={24} color={'#ed6660'} /> */}
               </TouchableOpacity>
             </View>
             <View style={{zIndex: 5, marginTop: -22}}>

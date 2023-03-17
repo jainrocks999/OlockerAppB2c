@@ -26,6 +26,7 @@ function MyDrawer() {
           headerStyle: {
             backgroundColor: '#fff',
           },
+          headerStatusBarHeight:0,
           headerLeft: () => (
             <View
               style={{
@@ -45,6 +46,7 @@ function MyDrawer() {
                     fontWeight: '700',
                     fontFamily: 'Acephimere',
                     fontSize: 19,
+                    marginRight:-4
                   }}>
                   Dashboard
                 </Text>
@@ -74,6 +76,7 @@ function MyDrawer() {
           headerStyle: {
             backgroundColor: '#fff',
           },
+          headerStatusBarHeight:0,
           headerTitleAlign: 'center',
           headerBackVisible: false,
           headerTitle: () => <View></View>,
@@ -111,6 +114,7 @@ function MyDrawer() {
           headerStyle: {
             backgroundColor: '#fff',
           },
+          headerStatusBarHeight:0,
           headerTitleAlign: 'center',
           headerBackVisible: false,
           headerTitle: () => <View></View>,
@@ -148,6 +152,7 @@ function MyDrawer() {
           headerStyle: {
             backgroundColor: '#fff',
           },
+          headerStatusBarHeight:0,
           headerTitleAlign: 'center',
           headerBackVisible: false,
           headerTitle: () => (
@@ -189,6 +194,7 @@ function MyDrawer() {
           headerStyle: {
             backgroundColor: '#fff',
           },
+          headerStatusBarHeight:0,
           headerLeft: () => (
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
               <TouchableOpacity
@@ -221,6 +227,7 @@ function MyDrawer() {
           headerStyle: {
             backgroundColor: '#fff',
           },
+          headerStatusBarHeight:0,
           headerLeft: () => (
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
               <TouchableOpacity

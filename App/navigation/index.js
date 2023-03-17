@@ -221,6 +221,7 @@ function App() {
                     color: colors.blue,
                     fontFamily: 'Acephimere',
                     fontWeight: '700',
+                    marginLeft:20
                   }}>
                   Add Jeweller
                 </Text>
@@ -493,7 +494,7 @@ function App() {
             headerStyle: {
               backgroundColor: '#fff',
             },
-            // headerTitleAlign:'center',
+            headerTitleAlign:'center',
             // headerBackVisible:(false),
             headerTitle: () => (
               <View>
@@ -508,6 +509,7 @@ function App() {
                 </Text>
               </View>
             ),
+           
           })}
         />
         <Stack.Screen

@@ -104,17 +104,17 @@ const MyProducts = () => {
                           setLiked([...liked, index]);
                         }
                       }}>
-                      <Icon
+                      {/* <Icon
                         name="heart"
                         size={25}
                         color={liked.includes(index) ? 'grey':'#ed6660' }
-                      />
+                      /> */}
                     </TouchableOpacity>
 
                     <TouchableOpacity
                       onPress={() => share1()}
                       style={styles.circles}>
-                      <Icon name="share-google" size={25} color={'#ed6660'} />
+                      {/* <Icon name="share-google" size={25} color={'#ed6660'} /> */}
                     </TouchableOpacity>
                   </View>
                 </View>

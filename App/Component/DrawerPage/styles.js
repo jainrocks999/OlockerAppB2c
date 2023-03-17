@@ -1,19 +1,19 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet,Platform} from 'react-native';
 
 export default StyleSheet.create({
   drawerContent: {
-    marginTop: -4,
+    // marginTop: Platform.OS=='ios'?-54:-4,
     height: '100%',
   },
   title: {
-    fontFamily: 'Poppins-SemiBold',
+    // fontFamily: 'Poppins-SemiBold',
     fontSize: 16,
     // width:'80%',
     color: '#fff',
   },
   caption: {
     fontSize: 14,
-    fontFamily: 'Poppins-Medium',
+    // fontFamily: 'Poppins-Medium',
     color: '#000',
   },
   drawers: {
@@ -48,7 +48,7 @@ export default StyleSheet.create({
   },
   text: {
     marginLeft: 10,
-    fontFamily: 'Poppins-SemiBold',
+    // fontFamily: 'Poppins-SemiBold',
     fontSize: 16,
   },
   icon: {

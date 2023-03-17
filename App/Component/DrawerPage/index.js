@@ -50,11 +50,11 @@ const DrawerContent = () => {
 
   return (
     <SafeAreaView style={{flex: 1}}>
-      <DrawerContentScrollView style={{height: '100%'}}>
+      <DrawerContentScrollView  contentContainerStyle={{ paddingTop: 0 }} style={{height: '100%'}}>
         {/* <View style={styles.drawerContent}> */}
         <ScrollView
           showsVerticalScrollIndicator={true}
-          style={styles.drawerContent}>
+          style={[styles.drawerContent,{flex:1}]}>
           <ImageBackground
             style={[styles.drawers]}
             source={require('../../Assets/images/sidmenu_bg32.png')}>
@@ -66,6 +66,7 @@ const DrawerContent = () => {
                 marginRight: 20,
                 borderWidth: 3,
                 borderColor: '#fff',
+               
               }}>
               <Image
                 style={{
@@ -82,7 +83,7 @@ const DrawerContent = () => {
                 <Text style={styles.title}>{'Welcome'}</Text>
                 <Text
                   style={[styles.title, {marginTop: -3, fontWeight: '700'}]}>
-                  {'Yogendra Yadav'}
+                  {'John Abraham'}
                 </Text>
               </View>
               {/* <TouchableOpacity

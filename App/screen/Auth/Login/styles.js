@@ -44,6 +44,7 @@ export default StyleSheet.create({
     width: '80%',
     fontWeight: '600',
     textAlign: 'center',
+    height:40
   },
   input: {
     borderBottomWidth: 0.2,
