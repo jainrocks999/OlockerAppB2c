@@ -9,14 +9,30 @@ import {
   SafeAreaView,
 } from 'react-native';
 import styles from './styles';
-import {useNavigation} from '@react-navigation/native';
+import {StackActions, useNavigation} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
+import {useSelector, useDispatch} from 'react-redux';
+import Loading from '../../../Component/Loader';
 
 const Login = () => {
   const navigation = useNavigation();
+  const [otp, setOtp] = useState('');
+  const SrNo = useSelector(state => state.data1);
+  const isFetching = useSelector(state => state.isFetching);
+  const dispatch = useDispatch();
+  const validate = () => {
+    dispatch({
+      type: 'VAlidate_Otp',
+      otp,
+      SrNo,
+      navigation,
+    });
+  };
+
   return (
     <SafeAreaView style={{flex: 1}}>
+      {isFetching ? <Loading /> : null}
       <View style={styles.container}>
         <KeyboardAwareScrollView
           // contentContainerStyle={{flex:1}}
@@ -39,6 +55,8 @@ const Login = () => {
                 <View style={styles.textinput}>
                   <TextInput
                     style={styles.input1}
+                    value={otp}
+                    onChangeText={txt => setOtp(txt)}
                     placeholder=""
                     placeholderTextColor={'#808080'}
                     returnKeyType="go"
@@ -64,7 +82,10 @@ const Login = () => {
                 </TouchableOpacity>
               </View>
               <TouchableOpacity
-                onPress={() => navigation.navigate('main')}
+                onPress={() =>
+                  //navigation.navigate('main')
+                  validate()
+                }
                 style={styles.button}>
                 <View style={styles.buttonV}>
                   <View />

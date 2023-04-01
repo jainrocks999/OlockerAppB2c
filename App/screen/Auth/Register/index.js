@@ -15,6 +15,7 @@ import styles from './styles';
 import RNPickerSelect from 'react-native-picker-select';
 import {useNavigation} from '@react-navigation/native';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
+import {Registration} from '../../../Redux/Api';
 const App = () => {
   const [language, setLanguage] = useState('key0');
   const navigation = useNavigation();
@@ -30,8 +31,8 @@ const App = () => {
           <View style={styles.main1}>
             <View style={styles.top}>
               <View style={styles.imgbcg}>
-                <Image 
-                  resizeMode='contain'
+                <Image
+                  resizeMode="contain"
                   style={styles.img}
                   source={require('../../../Assets/images/regis.png')}
                 />
@@ -46,7 +47,13 @@ const App = () => {
                 {/* <Icon name="user" size={19} /> */}
               </View>
               <View style={styles.picker}>
-                <View style={{width: '50%', marginLeft: 6,height:40,justifyContent:'center'}}>
+                <View
+                  style={{
+                    width: '50%',
+                    marginLeft: 6,
+                    height: 40,
+                    justifyContent: 'center',
+                  }}>
                   <RNPickerSelect
                     onValueChange={val => setGender(val)}
                     items={data}
@@ -79,7 +86,7 @@ const App = () => {
                   />
                 </View>
               </View>
-              <View style={{width: '33%',justifyContent:'center'}}>
+              <View style={{width: '33%', justifyContent: 'center'}}>
                 <TextInput
                   style={{
                     width: '90%',
@@ -89,7 +96,7 @@ const App = () => {
                   placeholder="First Name "
                 />
               </View>
-              <View style={{width: '33%',justifyContent:'center'}}>
+              <View style={{width: '33%', justifyContent: 'center'}}>
                 <TextInput
                   style={{
                     width: '90%',
@@ -114,7 +121,7 @@ const App = () => {
                     width: '100%',
                     alignItems: 'center',
                     fontFamily: 'Acephimere',
-                    height:40
+                    height: 40,
                   }}
                   placeholder="Enter Email"
                 />
@@ -134,7 +141,7 @@ const App = () => {
                     width: '100%',
                     alignItems: 'center',
                     fontFamily: 'Acephimere',
-                    height:40
+                    height: 40,
                   }}
                   placeholder="Enter Mobile Number "
                 />
@@ -155,7 +162,7 @@ const App = () => {
                     width: '90%',
                     alignItems: 'center',
                     fontFamily: 'Acephimere',
-                    height:40
+                    height: 40,
                   }}
                   placeholder="Enter Code"
                 />
@@ -171,7 +178,8 @@ const App = () => {
             </View>
 
             <TouchableOpacity
-              onPress={() => navigation.navigate('Login')}
+              // onPress={() => navigation.navigate('Login')}
+              onPress={() => Registration()}
               style={styles.button}>
               <Text style={{color: '#fff', fontFamily: 'Acephimere'}}>
                 Sign up

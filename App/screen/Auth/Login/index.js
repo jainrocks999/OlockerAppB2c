@@ -14,12 +14,20 @@ import {NativeBaseProvider, Checkbox, HStack, Box} from 'native-base';
 import Icon from 'react-native-vector-icons/AntDesign';
 import colors from '../../../constant/colors';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
+//import mainurl from '../../../Redux/Constant';
+import Loading from '../../../Component/Loader';
+import {useDispatch, useSelector} from 'react-redux';
+import {LoginwithMobile} from '../../../Redux/Api';
 
 const Login = () => {
   const navigation = useNavigation();
   const [chheck, setCheck] = useState('');
+  const [mobileNumber, setMobileNumbe] = useState('');
+  const isFetching = useSelector(state => state.isFetching);
+  const dispatch = useDispatch();
   return (
     <SafeAreaView style={{flex: 1}}>
+      {isFetching && <Loading />}
       <View style={styles.container}>
         <KeyboardAwareScrollView
           // contentContainerStyle={{flex:1}}
@@ -44,6 +52,8 @@ const Login = () => {
                 <View style={styles.textinput}>
                   <TextInput
                     style={styles.input1}
+                    value={mobileNumber}
+                    onChangeText={txt => setMobileNumbe(txt)}
                     placeholder="Enter your mobile number"
                     placeholderTextColor={'#808080'}
                     returnKeyType="go"
@@ -54,7 +64,16 @@ const Login = () => {
 
             <View style={styles.buttonView}>
               <TouchableOpacity
-                onPress={() => navigation.navigate('otp')}
+                onPress={async () =>
+                  //navigation.navigate('otp')
+                  {
+                    dispatch({
+                      type: 'User_Login_Request',
+                      mobile: mobileNumber,
+                      navigation,
+                    });
+                  }
+                }
                 style={styles.button}>
                 <View style={styles.buttonV}>
                   <View></View>
